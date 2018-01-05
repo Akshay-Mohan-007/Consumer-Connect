@@ -1,3 +1,0 @@
-<aura:event type="APPLICATION" description="Event to Invoke Basic Information Save">
-    <aura:attribute name="sChildComponent" type="String"/>
-</aura:event>

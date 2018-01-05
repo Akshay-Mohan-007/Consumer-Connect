@@ -1,2 +1,0 @@
-<!-- created for DATEPICKER -->
-<aura:event type="COMPONENT" description="Dispatched when a date cell is clicked" />

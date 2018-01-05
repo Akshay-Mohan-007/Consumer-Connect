@@ -1,9 +1,0 @@
-.THIS .slds-button__icon { fill: white;}
-.THIS .slds-button__icon:hover { fill: white;}
-.THIS .slds-button_destructive { outline: none; }
-.THIS .slds-button_destructive:hover, .THIS .slds-button_destructive:focus  { background-color: rgb(194, 57, 52);}
-.THIS .slds-icon-text-default { fill: white }
-.THIS .errorAccordianSection { border: 1px solid #c23934;}
-.THIS .slds-accordion__summary-heading{ font-size: 0.8rem;line-height: 1.55;}
-.THIS .slds-is-open, .THIS .slds-accordion__summary { margin-bottom: 0rem; }
-.THIS .slds-list_dotted { font-size:0.8rem; }
