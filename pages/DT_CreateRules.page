@@ -1,0 +1,65 @@
+<!-- 
+ * Page Name    : DT_CreateRule
+ * Description  : Rule Create/Edit Page.    
+ * Created By   : Nidhin V K
+ * Created On   : 07-28-2016
+
+ * Modification Log:  
+ * --------------------------------------------------------------------------------------------------------------------------------------
+ * Developer                Date        Modification ID      Description 
+ * --------------------------------------------------------------------------------------------------------------------------------------
+ * Nidhin V K            07-28-2016        1000            Initial version
+ *
+ *
+ -->
+ <apex:page standardcontroller="DT_Rule__c" extensions="DT_RuleExtension">
+    
+    <apex:sectionHeader title="Rule {!$Label.DT_LABEL_EDIT}" subtitle="{!DT_Rule__c.Name}"/>
+    <!-- Go Back Link -->
+    <div class="ptBreadcrumb">
+        &nbsp;«&nbsp;<apex:outputLink value="/apex/DT_ViewRuleList">{!$Label.DT_BACK_TO_LIST}: Rules</apex:outputLink>
+    </div>
+    <apex:form >
+        
+        <apex:pageMessages rendered="{!bShowError}"/>
+        <!-- Show Deactivate Button only if it is active -->
+        <apex:commandButton value="Deactivate" action="{!toggleActivate}" rendered="{!DT_Rule__c.DT_IsActive__c}"/>
+        <apex:pageBlock tabStyle="DT_Rule__c" title="{!$Label.DT_CREATE} Rule"  mode="edit">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!save}"/>
+                <apex:commandButton action="{!cancel}" value="Cancel"/>
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection title="{!$Label.DT_INFORMATION}" columns="2" collapsible="false">
+               
+                    <apex:inputField label="{!$Label.DT_LABEL_RULE + ' ' + $Label.DT_NAME}" id="nameID" value="{!DT_Rule__c.Name}" required="true"/>
+                    
+                    <!-- Allow edit if new record -->
+                    <apex:selectList label="{!$Label.DT_TARGET_OBJECT}" id="sobjID" value="{!DT_Rule__c.DT_Target_SObject_API_Name__c}" size="1" rendered="{!bAllowEditSobj}" required="true">
+                        <apex:selectOptions value="{!lstTargetObjects}"/>
+                    </apex:selectList>
+                    
+                    <apex:outputField label="{!$Label.DT_TARGET_OBJECT}" id="sobjIDAlt" value="{!DT_Rule__c.DT_Target_SObject_API_Name__c}" rendered="{!NOT(bAllowEditSobj)}"/>
+                    
+                    <apex:inputField label="{!$Label.DT_LABEL_RULE + ' ' + $Label.DT_FIELD_DESCRIPTION}" id="descID" value="{!DT_Rule__c.DT_Rule_Description__c}" />
+                    
+                    <!-- Allow edit if new record -->
+                    <apex:inputField label="{!$Label.DT_FIELD_RULE_TYPE}" id="ruleTypeID" value="{!DT_Rule__c.DT_Rule_Type__c}" rendered="{!bAllowEditSobj}"/>
+                    
+                    <apex:outputField label="{!$Label.DT_FIELD_RULE_TYPE}" id="ruleTypeIDAlt" value="{!DT_Rule__c.DT_Rule_Type__c}" rendered="{!NOT(bAllowEditSobj)}"/>
+                    
+                    <apex:inputField label="{!$Label.DT_FIELD_RULE_PRIORITY}" id="priorityID" value="{!DT_Rule__c.DT_Priority__c}"/>
+
+                    <apex:inputField label="{!$Label.DT_FIELD_TASK_NAME}" id="taskNameID" value="{!DT_Rule__c.DT_Task_Name__c}"/>
+
+                    <apex:inputField label="{!$Label.DT_FIELD_TASK_CODE}" id="taskCodeID" value="{!DT_Rule__c.DT_Task_Code__c}"/>
+
+                    <!-- <apex:inputField label="{!$Label.DT_FIELD_TASK_DESCRIPTION}" id="taskdescID" value="{!DT_Rule__c.DT_Description__c}"/> -->
+
+                    <apex:inputField label="{!$Label.DT_FIELD_MODULE}" id="moduleID" value="{!DT_Rule__c.DT_Module__c}"/>
+                    
+            </apex:pageBlockSection>    
+        </apex:pageBlock>
+    </apex:form>
+    
+</apex:page>

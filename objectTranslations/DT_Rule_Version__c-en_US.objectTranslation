@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Rule Version</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Rule Versions</value>
+    </caseValues>
+    <fields>
+        <label><!-- Activated Date --></label>
+        <name>DT_Activated_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assignee --></label>
+        <name>DT_Assignee__c</name>
+        <picklistValues>
+            <masterLabel>Assign it back to the Submitted Person</masterLabel>
+            <translation><!-- Assign it back to the Submitted Person --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Assignment Type --></label>
+        <name>DT_Assignment_Type__c</name>
+        <picklistValues>
+            <masterLabel>Manual</masterLabel>
+            <translation><!-- Manual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queue</masterLabel>
+            <translation><!-- Queue --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Criteria Logic --></label>
+        <name>DT_Criteria_Logic__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deactivated Date --></label>
+        <name>DT_Deactivated_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- External ID --></label>
+        <name>DT_External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Active ? --></label>
+        <name>DT_IsActive__c</name>
+    </fields>
+    <fields>
+        <label><!-- Landing Navigation --></label>
+        <name>DT_Navigation__c</name>
+        <relationshipLabel><!-- Rule Versions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Queue Name --></label>
+        <name>DT_Queue_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rule --></label>
+        <name>DT_Rule__c</name>
+        <relationshipLabel><!-- Rule Versions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Version Description --></label>
+        <name>DT_Version_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Version Number --></label>
+        <name>DT_Version_Number__c</name>
+    </fields>
+    <layouts>
+        <layout>DT Rule Version Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Assignee Cannot Be None --></errorMessage>
+        <name>Assignee_Cannot_Be_Blank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only for Application, Assignee can be Case Manager --></errorMessage>
+        <name>Only_Application_Can_have_CaseManager</name>
+    </validationRules>
+</CustomObjectTranslation>

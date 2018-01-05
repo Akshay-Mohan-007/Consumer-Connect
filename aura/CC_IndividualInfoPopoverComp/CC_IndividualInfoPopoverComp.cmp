@@ -1,0 +1,145 @@
+<!--***************************************************************************************************************************************
+ * NAME   : CC_IndividualInfoPopoverComp
+ * DESCRIPTION  : Content for Comment Modal
+ * @AUTHOR   : Sayari Mandal
+ * @DATE   : 11-23-2017
+ *
+ * MODIFICATION LOG:  
+ * ***************************************************************************************************************************************
+ * DEVELOPER            DATE            DESCRIPTION 
+ * ***************************************************************************************************************************************
+ * Sayari Mandal        11-23-2017      Initial Version
+ * Sayari Mandal        11-29-2017      Enhancements
+ ****************************************************************************************************************************************-->
+
+
+
+<aura:component controller="CC_IndividualInfoPopoverController" extends="c:CC_BaseSuperComponent" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+
+<aura:handler name="init" value="{!this}" action="{!c.doInit}" />  
+<aura:handler event="c:PopoverEvent" action="{!c.popoverInit}"/>
+    
+<aura:attribute name="bPopover" type="boolean" default="true"/>
+    
+<aura:attribute name="sAppId" type="String"/>
+<aura:attribute name="sAppName" type="String" />
+<aura:attribute name="sIndName" type="String" />
+<aura:attribute name="sGenderInfo" type="String" />
+<aura:attribute name="sAge" type="String" />
+<aura:attribute name="sResult" type="String" />
+<aura:attribute name="sGenderLBL" type="String" />
+  
+    
+<aura:attribute name="mapLabels" type="Map"/>
+
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    <lightning:layout horizontalAlign="left" multipleRows="true">	
+        <lightning:layoutItem flexibility="grow" size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12" class="slds-show_small slds-p-around_xx-small section-background">
+           <div class="slds-media" >
+                        <div class="slds-media__figure slds-align_absolute-center">
+                        
+                          <span class="slds-avatar">
+                            <aura:if isTrue="{!v.sGenderInfo == 'FEMALE'}">
+                              <img alt="{!v.sIndName}" src="https://www.lightningdesignsystem.com/assets/images/avatar2.jpg" title="User avatar" />
+                            </aura:if>
+                            <aura:if isTrue="{!v.sGenderInfo == 'MALE'}">
+                              <img alt="{!v.sIndName}" src="https://www.lightningdesignsystem.com/assets/images/avatar1.jpg" title="User avatar" />
+                            </aura:if>
+                        </span>
+                        </div>
+
+
+                        <div class="slds-media__body slds-p-around_xxx-small">
+                           <h3 id="entity-header" class="slds-text-title_caps ind-app" > {!v.mapLabels.CC_LBL_Application} ({!v.sAppName})</h3> 
+                           <h2 id="entity-header" class="slds-text-title_caps ind-name" >
+                              <span class="mypopover link-text" 
+                               name="popover" 
+                               label="Show Popover" 
+                               onclick="{!c.handleShowPopover}" 
+                               >{!v.sIndName}</span></h2>
+                            <h3 id="entity-header" class="slds-text-title_caps ind-age">
+                            {!v.mapLabels.CC_LBL_AGE}: {!v.sAge}</h3>
+                            <h3 id="entity-header" class="slds-text-title_caps ind-gender">
+                           {!v.sGenderLBL}: {!v.sGenderInfo}</h3>
+                        </div>
+            </div>
+            
+            
+            
+           
+            
+         </lightning:layoutItem>
+        
+        
+         <!--Start:Sayari[29-Nov-2017]: Responsive behaviour:this div appears for small screens only  -->
+         <!--<lightning:layoutItem flexibility="grow" size="3" largeDeviceSize="3" mediumDeviceSize="3" smallDeviceSize="3" class="slds-hide_small slds-p-around_xx-small slds-align_absolute-center">
+             <button class="slds-button slds-icon-waffle_container" title="Open Menu" onclick="{!c.toggleMenu}">
+                     <span class="slds-icon-waffle">
+                         <span class="slds-r1"></span>
+                         <span class="slds-r2"></span>
+                         <span class="slds-r3"></span>
+                         <span class="slds-r4"></span>
+                         <span class="slds-r5"></span>
+                         <span class="slds-r6"></span>
+                         <span class="slds-r7"></span>
+                         <span class="slds-r8"></span>
+                         <span class="slds-r9"></span>
+                     </span>
+                     <span class="slds-assistive-text">Open Menu</span>
+                     <p>Menu</p>
+              </button>
+          </lightning:layoutItem> -->
+          <lightning:layoutItem flexibility="grow" size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12" class="slds-hide_small slds-p-around_xxx-small">
+             <div class="slds-media" style="background-color: #c9c7c5;color: #0c0c0c;">
+                  
+                 <div class="slds-media__figure slds-p-around_x-small" id="toggle-btn-sec" style="margin: 0px;padding: 3rem 1rem;border-right: 1px solid rgb(176, 173, 171);">
+                     <button class="slds-button slds-icon-waffle_container" title="Open Menu" onclick="{!c.toggleMenu}">
+                     <span class="slds-icon-waffle">
+                         <span class="slds-r1"></span>
+                         <span class="slds-r2"></span>
+                         <span class="slds-r3"></span>
+                         <span class="slds-r4"></span>
+                         <span class="slds-r5"></span>
+                         <span class="slds-r6"></span>
+                         <span class="slds-r7"></span>
+                         <span class="slds-r8"></span>
+                         <span class="slds-r9"></span>
+                     </span>
+                     <span class="slds-assistive-text">Open Menu</span>
+                    </button>
+                     
+                    
+                 
+                 </div>
+                 
+                 
+                 <div class="slds-media__figure slds-align_absolute-center slds-p-around_small">
+                      <span class="slds-avatar">
+                          <aura:if isTrue="{!v.sGenderInfo == 'FEMALE'}">
+                              <img alt="{!v.sIndName}" src="https://www.lightningdesignsystem.com/assets/images/avatar2.jpg" title="User avatar" />
+                          </aura:if>
+                          <aura:if isTrue="{!v.sGenderInfo == 'MALE'}">
+                              <img alt="{!v.sIndName}" src="https://www.lightningdesignsystem.com/assets/images/avatar1.jpg" title="User avatar" />
+                          </aura:if>
+                      </span>
+                  </div>
+                  
+                  
+                  <div class="slds-media__body slds-p-around_xxx-small">
+                      <h3 id="entity-header" class="slds-text-title_caps" style="padding: 1rem 1rem 0.1rem 1rem;">{!v.mapLabels.CC_LBL_Application} ({!v.sAppName}) </h3> 
+                      <h2 id="entity-header" class="slds-text-title_caps" style="padding: 0.1rem 1rem;font-size: 1rem;">
+                          <span class="mypopover link-text" 
+                               name="popover" 
+                               label="Show Popover" 
+                               onclick="{!c.handleShowPopover}">{!v.sIndName}</span></h2>
+                      <h3 id="entity-header" class="slds-text-title_caps" style="padding: 0.1rem 1rem;">
+                          {!v.mapLabels.CC_LBL_AGE}: {!v.sAge}</h3>
+                      <h3 id="entity-header" class="slds-text-title_caps" style="padding: 0.1rem 1rem 1rem 1rem;">
+                          {!v.sGenderLBL}: {!v.sGenderInfo}</h3>
+                  </div>
+              </div>
+        </lightning:layoutItem>
+            
+        <!--Start:Sayari[29-Nov-2017]: Responsive behaviour:this div appears for small screens only -->
+    </lightning:layout>
+</aura:component>

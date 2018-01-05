@@ -1,0 +1,71 @@
+<!--***************************************************************************************************************************************
+ * NAME   : CC_BasicInformation_Comp
+ * DESCRIPTION  :Basic Information Page
+ *    
+ * @AUTHOR : Debalina
+ * @DATE   : 10-27-2017 
+ *
+ * MODIFICATION LOG:  
+ * ***************************************************************************************************************************************
+ * DEVELOPER               DATE               DESCRIPTION 
+ * ***************************************************************************************************************
+ * Debalina                10-27-2017         Initial Version
+ * Debalina                11-18-2017         Ticket 756 Pre default Contact value for Self Service
+ * Sayari                  12-02-2017         UI Modifications
+ * Sayari                  12-06-2017         UI Modifications
+ * Sayari                  12-07-2017         UI Modifications
+ * Debalina                12-08-2017         Code Review Comment Changes.
+****************************************************************************************************************************************-->
+
+<aura:component controller="CC_BasicInformation_Controller" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" extends="c:CC_BaseSuperComponent">
+    
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <aura:attribute name="objContact" type="Contact" description="Contact" 
+                    default="{ sobjectType: 'Contact',
+                             FirstName: '',
+                             LastName: '',
+                             CC_Suffix__c: '',
+                             CC_Middle_Initial__c: '',
+                             Birthdate: '',
+                             CC_SSN__c: '',
+                             CC_Gender__c: ''}"/>
+    <aura:attribute name="lstGenderOptions" type="List" />
+    <aura:attribute name="sSiteName" type="String" />
+    <aura:attribute name="lstSuffixOptions" type="List" />
+    <aura:attribute name="bErrorExists" type="Boolean" description="bErrorExists" default="false"  />
+    <aura:attribute name="bLoaded" type="Boolean" default="false"  />
+    <aura:attribute name="mapCustomMessages" type="Map" description="mapCustomMessages" default="{ a: 'label1', b: 'label2' }"/>
+    <aura:attribute name="lstAllPageErrors" type="String[]" />
+    
+    
+    <lightning:layout horizontalAlign="spread" multipleRows="true" class="slds-theme--default" >
+        <lightning:layoutItem flexibility="grow" size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12" class="slds-m-around_x-small">
+            <c:CC_SubPageHeader iconName="standard:people" pageName="{!v.mapCustomMessages.CC_SEC_BasicInfo}" errorListShow="{!v.lstAllPageErrors.length > 0}" lstErrors='{!v.lstAllPageErrors}'></c:CC_SubPageHeader>
+        </lightning:layoutItem>    
+    </lightning:layout> 
+     <div class="slds-box slds-box_x-small slds-m-around_small">
+        <aura:if isTrue="{!v.bLoaded}">
+          <c:CC_BasicInfo_Child sFirstName="{! v.objContact.FirstName }"
+                                 sLastName="{! v.objContact.LastName }"
+                                 sSuffix="{! v.objContact.CC_Suffix__c }"
+                                 sMiddleInitial="{! v.objContact.CC_Middle_Initial__c}"
+                                 dDOB="{! v.objContact.Birthdate }"
+                                 sSSN="{! v.objContact.CC_SSN__c }"
+                                 sGender="{! v.objContact.CC_Gender__c }"
+                                 lstGenderOptions="{! v.lstGenderOptions }"
+                                 lstSuffixOptions="{! v.lstSuffixOptions }"
+                                 mapCustomMessages="{! v.mapCustomMessages }"
+                                 bShowSSN="true"
+                                 relatedToIndividualHide="false"
+                                 aura:id="basicInfoId"/>
+        </aura:if>
+    </div>
+   <lightning:layout horizontalAlign="spread" multipleRows="true" class="slds-theme--default" > 
+      <lightning:layoutItem flexibility="grow" padding="around-small" size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12">
+          <lightning:button variant="brand" label="Next" onclick="{! c.save }"/>
+      </lightning:layoutItem>
+    </lightning:layout>
+    
+</aura:component>

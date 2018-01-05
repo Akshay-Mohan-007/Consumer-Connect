@@ -1,0 +1,35 @@
+<!--
+ ***************************************************************************************************************************************
+ * NAME   : CC_InternalDashboard
+ * DESCRIPTION  : Dashboard for Internal users.
+ *    				Before using this make sure that labels 'CC_SITE_NAME_SELF_SERVICE' 'CC_SITE_NAME_SERVICE_PROVIDER' and
+ *					custom settings field 'Task_Dashboard_Page_Size__c', 'Task_Dashboard_Pages_Per_Screen__c',
+ *					'App_Dashboard_Page_Size__c', 'App_Dashboard_Pages_Per_Screen__c' in 'CC_Master_Settings__c' are populated correctly
+ *    
+ * @AUTHOR   : Nidhin V K
+ * @DATE   : 11-13-2017
+ *
+ * MODIFICATION LOG:  
+ * ______________________________________________________________________________________________________________________________________
+ * DEVELOPER                DATE                DESCRIPTION 
+ * ______________________________________________________________________________________________________________________________________
+ * Nidhin V K               11-13-2017          Initial version        
+ *
+ ****************************************************************************************************************************************
+-->
+
+<aura:component access="global" extends="c:CC_BaseSuperComponent" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction">
+    <aura:attribute type="String" name="sQueueDevName" default="Application_Reviewer" description="Queue DeveloperName" />
+    <aura:attribute type="Boolean" name="bIsSF1" default="False" description="DeviceType" />
+   			
+   			<aura:if isTrue="{!(!v.bIsSF1)}">
+            	<c:CC_SubPageHeader iconName="standard:dashboard" pageName="{!$Label.c.CC_LBL_DASHBOARD}"/>
+            </aura:if>	
+            <c:CC_HeaderComponent Header1="{!$Label.c.CC_LBL_TASKS}"/>
+            <c:CC_TasksComponent sQueueDevName="{!v.sQueueDevName}" />
+            <aura:if isTrue="{!v.sQueueDevName == $Label.c.CC_APP_INITIATOR_QUEUE}">
+            	<c:CC_HeaderComponent Header1="{!$Label.c.CC_LBL_APPLICATIONS}"/>
+            	<c:CC_ApplicationsComponent />
+            </aura:if>
+       
+</aura:component>

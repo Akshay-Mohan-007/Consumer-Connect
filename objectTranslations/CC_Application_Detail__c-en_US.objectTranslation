@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Application Detail</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Application Details</value>
+    </caseValues>
+    <fields>
+        <label><!-- Currently Getting Program Name --></label>
+        <name>Currently_Getting_Program_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Getting the Service --></label>
+        <name>Getting_the_Service__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Program Currently Getting/Waitlist --></label>
+        <name>Other_Program_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Service Name --></label>
+        <name>Other_Service_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Application --></label>
+        <name>Related_Application__c</name>
+        <relationshipLabel><!-- Application Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Service Needed --></label>
+        <name>Service_Needed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service --></label>
+        <name>Service__c</name>
+        <relationshipLabel><!-- Application Details (Related To Service) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Capacity Review Pending</masterLabel>
+            <translation><!-- Capacity Review Pending --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Waiting List Program --></label>
+        <name>Waiting_List_Program__c</name>
+        <relationshipLabel><!-- Application Details(Related to Program) --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Application Detail Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Waiting list Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Service Type --></label>
+        <name>Service_Type</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Waitlist Type --></label>
+        <name>Waitlist_Type</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Waiver Programs --></label>
+        <name>Waiver_Programs</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

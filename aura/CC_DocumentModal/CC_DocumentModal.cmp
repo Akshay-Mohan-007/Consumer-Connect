@@ -1,0 +1,127 @@
+<!--***************************************************************************************************************************************
+ * NAME   : CC_FileUpload_Controller
+ * DESCRIPTION  : File Upload Controller
+ *    
+ * @AUTHOR   : Sayari Mandal
+ * @DATE   : 11-09-2017
+ *
+ * MODIFICATION LOG:  
+ * ***************************************************************************************************************************************
+ * DEVELOPER        DATE        DESCRIPTION 
+ * ***************************************************************************************************************************************
+ * Sayari Mandal       11-09-2017      Initial version 
+ * Akshay Mohan        15-Nov-2017     Integration with Apex Controller to load data & add fields in modal
+ ****************************************************************************************************************************************-->
+<aura:component access="global" extends="c:CC_BaseSuperComponent">
+    <aura:attribute name="bShowModal" type="boolean" default="false"/>
+    <aura:attribute name="bShowConfirm" type="boolean" default="false"/>
+    <aura:attribute name="bhasError" type="boolean" default="false"/>
+    <aura:attribute name="bDocTypeError" type="boolean" default="false"/>
+    <aura:attribute name="bDocStatus" type="boolean" default="false"/>
+    <aura:attribute name="bDocRevComments" type="boolean" default="false"/>
+    <aura:attribute name="wrapDoc" type="object"/>
+    <aura:attribute name="bDoReview" type="Boolean" default="false"/>
+    <aura:attribute name="lstDocTypes" type="List"/>
+    <aura:attribute name="mapLabels" type="Map"/>
+    <aura:attribute name="lstStatus" type="List"/>
+    <aura:attribute name="bDoingSave" type="Boolean" />
+    <aura:attribute name="lstErrors" type="List"/>
+    <aura:attribute name="bReviewComplete" type="Boolean" default="false"/>
+    <aura:attribute name="bShowCommentAndHistory" type="Boolean" default="false"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:registerEvent name="deleteOld" type="c:CC_DocumentTableRow_Event" />
+    
+    <div aura:id="docDetailModal" role="dialog" tabindex="-1" aria-labelledby="" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            <!-- ###### MODAL BOX HEADER Part Start From Here ######-->
+            <div class="slds-modal__header">
+                <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" onclick="{!c.closeModel}">
+                    X
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+                <h2 class="slds-text-heading--medium">Document Upload</h2>
+                
+                
+            </div>
+            
+            
+            
+            <!--###### MODAL BOX BODY Part Start From Here ######-->
+            <div class="slds-modal__content slds-p-around--medium">
+                <aura:if isTrue="{!v.lstErrors.length > 0}" >
+                    <c:CC_SmallErrorNotification lstErrors="{!v.lstErrors}"/>
+                </aura:if>
+                <lightning:layout horizontalAlign="left" multipleRows="true" class="slds-p-around_small">
+                    <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="8" mediumDeviceSize="6" smallDeviceSize="12" padding="around-small" class="slds-form-element">
+                        <lightning:select name="DocumentType" value="{!v.wrapDoc.sDocName}" 
+                                          label="{!v.mapLabels.CC_Label_Document_Type}" 
+                                          disabled="{!v.bDoReview}"
+                                          class="{! and(v.bhasError,v.bDocTypeError) ? 'slds-has-error required-asterisk' : 'required-asterisk'}">
+                            <aura:iteration items="{!v.lstDocTypes}" var="val">
+                                <option text="{!val.sValue}" value="{!val.sKey}" />
+                            </aura:iteration>
+                        </lightning:select>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="8" mediumDeviceSize="6" smallDeviceSize="12" padding="around-small" class="slds-form-element">
+                        <lightning:textarea name="DocumentComments" value="{!v.wrapDoc.sComments}"
+                                            disabled="{!v.bDoReview}"
+                                            label="{!v.mapLabels.CC_Label_Comments}" maxlength="131072">
+                            
+                        </lightning:textarea>
+                    </lightning:layoutItem>
+                    <aura:if isTrue="{! and(!empty(v.wrapDoc.sId),(!v.bDoReview))}">
+                        <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="8" mediumDeviceSize="6" smallDeviceSize="12" padding="around-small" class="slds-form-element">
+                            <lightning:fileUpload label="Select File" accept=".pdf, .png," recordId="{!v.wrapDoc.sId}" multiple="false"
+                                                  onuploadfinished="{!c.handleUploadFinished}" />
+                        </lightning:layoutItem>
+                    </aura:if>
+                </lightning:layout>
+                
+                <aura:if isTrue="{!or(v.bDoReview,and(!empty(v.wrapDoc.sStatus),v.bReviewComplete))}">
+                    <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="8" mediumDeviceSize="6" smallDeviceSize="12" padding="around-small" class="slds-form-element">
+                        <lightning:select name="Status" value="{!v.wrapDoc.sStatus}" 
+                                          label="{!v.mapLabels.CC_Label_Status}"	
+                                          disabled="{!v.bReviewComplete}"
+                                          class="{! and(v.bhasError,v.bDocStatus) ? 'slds-has-error required-asterisk' : 'required-asterisk'}">
+                            <aura:iteration items="{!v.lstStatus}" var="val">
+                                <option text="{!val.sValue}" value="{!val.sKey}" />
+                            </aura:iteration>
+                        </lightning:select>
+                    </lightning:layoutItem>
+                    
+                    <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="8" mediumDeviceSize="6" smallDeviceSize="12" padding="around-small" class="slds-form-element">
+                        <lightning:textarea name="DocumentComments" value="{!v.wrapDoc.sReviewComments}"
+                                            class="{! and(v.bhasError,v.bDocRevComments) ? 'slds-has-error required-asterisk' : 'required-asterisk'}"
+                                            disabled="{!v.bReviewComplete}"
+                                            label="{!v.mapLabels.CC_Label_Review_Comments}" maxlength="131072">
+                        </lightning:textarea>
+                    </lightning:layoutItem>
+                </aura:if>
+            </div>
+            
+            <div class="slds-modal__footer">
+                <!--{!v.lstButtons}-->
+                <lightning:button variant="brand" label="{!v.mapLabels.CC_Label_Save}" onclick="{!c.save}"/>
+                <lightning:button variant="neutral" label="Close" onclick="{! c.closeModel }" />
+            </div>
+            <aura:if isTrue="{!v.bShowConfirm}" > 
+                <c:CC_ConfirmationModal showDialog="{!v.bShowConfirm}">   
+                    <aura:set attribute="dialogHeader"> 
+                        {!v.mapLabels.CC_Confirm_Header}
+                    </aura:set>
+                    <aura:set attribute="dialogBody"> 
+                        <p>{!v.mapLabels.CC_Document_Not_Uploaded_Warning}</p>
+                    </aura:set>
+                    <aura:set attribute="dialogFooter"> 
+                        <button class="slds-button slds-button--neutral " onclick="{!c.handleNo}">{!v.mapLabels.CC_Confirm_No}</button>
+                        <button class="slds-button slds-button--brand" onclick="{!c.handleYes}">{!v.mapLabels.CC_Confirm_Yes}</button>
+                    </aura:set>
+                </c:CC_ConfirmationModal>
+            </aura:if>
+            
+        </div>
+    </div>
+    <div class="slds-backdrop slds-backdrop--open"></div>
+    
+</aura:component>

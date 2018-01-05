@@ -1,0 +1,188 @@
+<!--***************************************************************************************************************************************
+ * NAME   : CC_LivingSituation
+ * DESCRIPTION  :Living Situation Page
+ *    
+ * @AUTHOR   : Sayari Mandal
+ * @DATE   : 11-15-2017
+ *
+ * MODIFICATION LOG:  
+ * ***************************************************************************************************************************************
+ * DEVELOPER               DATE               DESCRIPTION 
+ * ***************************************************************************************************************************************
+ * Sayari Mandal           11-15-2017         Initial Version
+ * Debalina                11-15-2017         JS and Backend Integration
+ * Debalina                11-17-2017         Ticket 748
+ ****************************************************************************************************************************************-->
+
+<aura:component >
+    <aura:attribute name="showModal" type="boolean" default="false"/>
+    <aura:attribute name="options" type="List" />
+    <aura:attribute name="selectedService" type="String" default=""/>
+    <aura:attribute name="sOtherServiceName" type="String" default=""/>
+    <aura:attribute name="sOtherProgName" type="String" default=""/>
+    <aura:attribute name="selectedProgram" type="String" default=""/>
+    <aura:attribute name="objParameters" type="Object" default=""/>
+    <aura:attribute name="sConcatServProg" type="String" default=""/>
+    <aura:attribute name="sOtherLabel" type="String" default=""/>
+
+    <aura:attribute name="bCurrentlyGetting" type="Boolean" default="false"/>
+    <aura:attribute name="bNeededInFuture" type="Boolean" default="false"/>
+    <aura:attribute name="bErrorExist" type="Boolean" default="false"/>
+    <aura:attribute name="bErrNoCurrentFuture" type="Boolean" default="false"/>
+    <aura:attribute name="bErrOtherService" type="Boolean" default="false"/>
+    <aura:attribute name="bErrOtherProgram" type="Boolean" default="false"/>
+    <aura:attribute name="bSelectedServiceError" type="Boolean" default="false"/>
+    <aura:attribute name="bSelectedProgramError" type="Boolean" default="false"/>
+    <aura:attribute name="bServiceProgCombinationError" type="Boolean" default="false"/>
+
+    <aura:attribute name="lstServiceOptions" type="List" />
+    <aura:attribute name="lstPrograms" type="List" />
+    <aura:attribute name="lstProgramOptions" type="List" />
+    <aura:attribute name="lstSelectedService" type="List"/>
+    <aura:attribute name="lstAllError" type="List"/>
+    <aura:attribute name="bLoaded" type="Boolean" default="false"/>
+    <aura:attribute name="mapProgramService" type="Map" />
+    <aura:attribute name="bDisableSave" type="Boolean" default="false"/>
+
+    
+
+    <aura:method name="setInitialValue" action="{!c.setValues}">
+        <aura:attribute name="objService" type="Object"/>
+        <aura:attribute name="callback" type="Function"/>
+    </aura:method>
+    <aura:registerEvent name="addEvent" type="c:CC_ServiceRowRetrievalEvent"/>
+    <aura:attribute name="mapLabels" type="Map"/>
+    <aura:handler name="init" value="{!this}" action="{!c.loadOptions}" />
+
+    <!-- <lightning:layout horizontalAlign="left" multipleRows="true">
+      <lightning:layoutItem flexibility="grow" size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize=" 12" class="slds-m-around_x-small">
+        <div aria-labelledby="detailform"> -->
+         
+        <!-- </div>
+    </lightning:layoutItem>
+    </lightning:layout> -->
+    
+    <aura:if isTrue="{!v.bLoaded}">
+       <div role="dialog" tabindex="-1" aria-labelledby="" class="slds-modal slds-fade-in-open ">
+        <div class="slds-modal__container">
+          <!-- ###### MODAL BOX HEADER Part Start From Here ######-->
+          <div class="slds-modal__header">
+            <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" onclick="{!c.closeModel}">
+            X
+            <span class="slds-assistive-text">{!v.mapLabels.CC_Label_Close}</span>
+            </button>
+            <h2 id="header99" class="slds-text-heading--medium">{!v.mapLabels.CC_Label_Add_Service}</h2>
+          </div>
+          <!--###### MODAL BOX BODY Part Start From Here ######-->
+          <div class="slds-modal__content slds-p-around--medium">
+              
+              <!--<aura:if isTrue="{!v.bServiceProgCombinationError}" >
+                <c:CC_ErrorNotification lstErrors="{!v.lstAllError}"/>
+              </aura:if> -->
+              
+               <aura:if isTrue="{!v.lstAllError.length > 0}" >
+                 <c:CC_SmallErrorNotification lstErrors="{!v.lstAllError}"/>
+               </aura:if>
+              <lightning:layout horizontalAlign="left" multipleRows="true">
+  			       <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="8" mediumDeviceSize="8" smallDeviceSize="12" padding="around-small">
+                       <lightning:select name="serviceNames" 
+                                        class="{! v.bSelectedServiceError ? 'slds-has-error required-asterisk':'required-asterisk'}"
+                                        label="{!v.mapLabels.CC_Label_Select_Service}"
+                                        aura:id="serviceName" 
+                                        value="{!v.selectedService}"
+                                        onchange="{!c.clearOtherService}"
+                                        >
+                            <option text="{!$Label.c.CC_LBL_SELECT}" value=""/>
+                            <aura:iteration items="{!v.lstServiceOptions}" var="item">
+                                <option text="{!item}" value="{!item}"/>
+                             </aura:iteration>
+                        </lightning:select>
+                   </lightning:layoutItem>
+              </lightning:layout>
+              
+              <aura:if isTrue="{!v.selectedService == $Label.c.CC_LBL_OTHER}"> 
+                 <lightning:layout horizontalAlign="left" multipleRows="true">
+                      <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="8" mediumDeviceSize="8" smallDeviceSize="12" padding="around-small">
+                          <lightning:input value="{!v.sOtherServiceName}" 
+                                            type="text" 
+                                            class="{! v.bErrOtherService ? 'slds-has-error required-asterisk':'required-asterisk'}"
+                                            label="{!$Label.c.CC_Label_Enter_Service_Name}" 
+                                            name="Other Service" aura:id="otherService"
+                                            maxlength="50"
+                                           />
+                      </lightning:layoutItem>
+                  </lightning:layout>
+              </aura:if>
+              
+              <lightning:layout horizontalAlign="left" multipleRows="true">
+  			           <lightning:layoutItem flexibility="grow" size="12" largeDeviceSize="8" mediumDeviceSize="8" smallDeviceSize="12" padding="around-small">
+                          <lightning:input value="{!v.bCurrentlyGetting}" 
+                                           type="toggle" 
+                                           class="{! v.bErrNoCurrentFuture? 'toggle-error':''}"
+                                           label="{!v.mapLabels.CC_Label_Individual_availing_service}" 
+                                           name="CurrentlyGetting" 
+                                           checked="{!v.bCurrentlyGetting}"
+                                          />
+                   </lightning:layoutItem>
+              </lightning:layout>
+              
+              <aura:if isTrue="{!v.bCurrentlyGetting == true}"> 
+              <lightning:layout horizontalAlign="left" multipleRows="true">
+  			       <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="8" mediumDeviceSize="8" smallDeviceSize="12" padding="around-small">
+                          <lightning:select name="programName" 
+                                            label="{!v.mapLabels.CC_Label_Select_Prog}" 
+                                            aura:id="programName" 
+                                            value="{!v.selectedProgram}" 
+                                            onchange="{!c.clearOtherProg}" 
+                                            class="{! v.bSelectedProgramError ? 'slds-has-error required-asterisk':'required-asterisk'}"
+                                            >
+                            <option text="{!$Label.c.CC_LBL_SELECT}" value=""/>
+                            <aura:iteration items="{!v.lstProgramOptions}" var="item">
+                                <option text="{!item}" value="{!item}"/>
+                             </aura:iteration>
+                        </lightning:select>
+                   </lightning:layoutItem>
+              </lightning:layout>
+
+                  <aura:if isTrue="{!v.selectedProgram == $Label.c.CC_LBL_OTHER}"> 
+                      <lightning:layout horizontalAlign="left" multipleRows="true" >
+                          <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="8" mediumDeviceSize="8" smallDeviceSize="12"  padding="around-small">
+                              <lightning:input type="text" 
+                                               value="{!v.sOtherProgName}"
+                                               label="{!v.mapLabels.CC_Label_Enter_Prog}"
+                                               class="{! v.bErrOtherProgram ? 'slds-has-error required-asterisk':'required-asterisk'}" 
+                                               name="Other Program"
+                                               maxlength="50"
+                                               aura:id="otherProgram"/>
+                          </lightning:layoutItem>
+                      </lightning:layout>
+                  </aura:if>
+              </aura:if>
+              
+              
+              
+              <lightning:layout horizontalAlign="left" multipleRows="true">
+  			       <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="8" mediumDeviceSize="8" smallDeviceSize="12"  padding="around-small">
+                          <lightning:input checked="{!v.bNeededInFuture}" 
+                                          value="{!v.bNeededInFuture}"
+                                          type="toggle" 
+                                          class="{! v.bErrNoCurrentFuture? 'toggle-error':''}"
+                                          label="{!v.mapLabels.CC_Label_Individual_Req_Service}" 
+                                          name="Service Required" aura:id="future"/>
+                   </lightning:layoutItem>
+              </lightning:layout>
+              
+              
+              
+              
+          </div>
+          <!--###### MODAL BOX FOOTER Part Start From Here ######-->
+          <div class="slds-modal__footer">
+              <lightning:button variant="neutral" label="{!v.mapLabels.CC_Label_Cancel}" onclick="{! c.closeModel }" />
+              <lightning:button variant="brand" disabled="{!v.bDisableSave}"  label="{!v.mapLabels.CC_Label_Save}" onclick="{! c.saveData }" />
+         </div>
+        </div>
+      </div>
+      <div class="slds-backdrop slds-backdrop--open"></div>
+    </aura:if>
+</aura:component>

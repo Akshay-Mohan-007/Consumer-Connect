@@ -1,0 +1,79 @@
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+@media screen and (min-width: 320px) 
+  and (max-width: 667px) 
+  { 
+    
+    .THIS#nav-bar{
+    
+      position: absolute;
+      background: rgb(221, 219, 218);
+      z-index: 9;
+       left:-1rem;
+      transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      
+      
+    }
+    
+    .THIS.slide-in {
+      animation: slide-in 0.5s forwards;
+      -webkit-animation: slide-in 0.5s forwards;
+     }
+
+    .THIS.slide-out {
+        animation: slide-out 0.5s forwards;
+        -webkit-animation: slide-out 0.5s forwards;
+    }
+
+
+}
+
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+@media screen and (min-width: 414px) 
+  and (max-width: 736px) 
+  { 
+    
+    .THIS#nav-bar{
+      position: absolute;
+      background: rgb(221, 219, 218);
+      z-index: 9;
+      left:-1rem;
+      transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    
+    }
+    
+    .THIS.slide-in {
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+   }
+
+    .THIS.slide-out {
+        animation: slide-out 0.5s forwards;
+        -webkit-animation: slide-out 0.5s forwards;
+    }
+
+
+}
+
+
+    
+@keyframes slide-in {
+    100% { transform: translateX(0%); }
+}
+
+@-webkit-keyframes slide-in {
+    100% { -webkit-transform: translateX(0%); }
+}
+    
+@keyframes slide-out {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+@-webkit-keyframes slide-out {
+    0% { -webkit-transform: translateX(0%); }
+    100% { -webkit-transform: translateX(-100%); }
+}

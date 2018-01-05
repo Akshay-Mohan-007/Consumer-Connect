@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Error Log</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Error Logs</value>
+    </caseValues>
+    <fields>
+        <label><!-- Class Method --></label>
+        <name>DT_Class_Method__c</name>
+    </fields>
+    <fields>
+        <label><!-- Class Name --></label>
+        <name>DT_Class_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error Message --></label>
+        <name>DT_Error_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error Type --></label>
+        <name>DT_Error_Type__c</name>
+        <picklistValues>
+            <masterLabel>Apex Trigger</masterLabel>
+            <translation><!-- Apex Trigger --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Validation</masterLabel>
+            <translation><!-- Business Validation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Component</masterLabel>
+            <translation><!-- Component --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DML Errors</masterLabel>
+            <translation><!-- DML Errors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integration Batch Job</masterLabel>
+            <translation><!-- Integration Batch Job --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integration Inbound</masterLabel>
+            <translation><!-- Integration Inbound --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integration Outbound</masterLabel>
+            <translation><!-- Integration Outbound --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VF Controller</masterLabel>
+            <translation><!-- VF Controller --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Specifies the type of exception --></help>
+        <label><!-- Exception Type --></label>
+        <name>DT_Exception_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Instance --></label>
+        <name>DT_Instance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Message --></label>
+        <name>DT_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object ID --></label>
+        <name>DT_Object_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source URL --></label>
+        <name>DT_Source_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Username --></label>
+        <name>DT_Username__c</name>
+        <relationshipLabel><!-- Error Logs --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Error Log Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

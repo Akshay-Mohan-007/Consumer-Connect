@@ -1,0 +1,63 @@
+<!--***************************************************************************************************************************************
+ * NAME   : CC_ServiceTableRow
+ * DESCRIPTION  : Row for Add New Service Table
+ *    
+ * @AUTHOR   : Sayari Mandal
+ * @DATE   : 
+ *
+ * MODIFICATION LOG:  
+ * ***************************************************************************************************************************************
+ * DEVELOPER        DATE        DESCRIPTION 
+ * ***************************************************************************************************************************************
+ * Sayari Mandal        11-10-2017      Initial Version
+ * Debalina Chaterjee                   Integration with backend
+ * Sayari Mandal        12-02-2017      Removed 'slds-truncate' from table columns
+ * Sayari Mandal        12-04-2017      Aligned the table colums accordingly
+ ****************************************************************************************************************************************-->
+
+
+<aura:component extends="c:CC_BaseSuperComponent"  access="global">
+
+    <aura:registerEvent name="editEvent" type="c:CC_ServiceRowRetrievalEvent"/>
+    <aura:registerEvent name="deleteEvent" type="c:CC_ServiceRowRetrievalEvent"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <aura:attribute name="bIsReadOnly" type="boolean" default="false"/>
+    <aura:attribute name="serviceDetail" type="Object"/>
+    <aura:attribute name="sServiceName" type="String"/>
+    <aura:attribute name="sProgramName" type="String"/>
+    
+    <tr>
+        <td data-label="SERVICE">
+          <div title="">{!v.sServiceName}</div>
+        </td>
+        <td data-label="GETTING THE SERVICE" class="slds-text-align_center">
+             <aura:if isTrue="{!v.serviceDetail.bGettingCurrently == true}"> 
+                  <lightning:icon iconName="utility:check" variant="check" size="x-small"/>
+               <aura:set attribute="else">
+                  <lightning:icon iconName="utility:close" variant="cross" size="x-small"/>
+               </aura:set>
+            </aura:if>
+        </td>
+        <td data-label="SERVICE NEEDED" class="slds-text-align_center">
+              <aura:if isTrue="{!v.serviceDetail.bNeededInFuture  == true}"> 
+                  <lightning:icon iconName="utility:check" variant="check" size="x-small"/>
+               <aura:set attribute="else">
+                  <lightning:icon iconName="utility:close" variant="cross" size="x-small"/>
+               </aura:set>
+            </aura:if>
+        </td>
+        <td data-label="PROGRAM NAME">
+          <div title="">{!v.sProgramName}</div>
+        </td>
+        <td data-label="ACTION" class="slds-text-align_center">
+              
+                <lightning:buttonIcon disabled="{!v.bIsReadOnly}" iconName="utility:edit" variant="border" size="small" onclick="{! c.editRecord }" title="Edit Record" alternativeText="Edit Record" />
+                <lightning:buttonIcon disabled="{!v.bIsReadOnly}" iconName="utility:delete" class="error-color" variant="border" size="small" onclick="{! c.deleteRecord }" title="Delete Record" alternativeText="Delete Record" />
+
+        </td>
+         
+       
+      </tr>
+	
+</aura:component>

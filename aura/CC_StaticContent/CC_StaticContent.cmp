@@ -1,0 +1,19 @@
+<aura:component >
+    <aura:attribute name="label" type="String"/>
+    <aura:attribute name="text" type="String"/>
+    <aura:attribute name="phone" type="String"/>
+    
+    <label class="slds-form-element__label slds-no-flex" >
+                   <span>{!v.label}</span>
+                </label>
+                <div class="slds-form-element__control slds-grow">
+                    <aura:if isTrue="{! !empty(v.phone)}">
+                    	<p><lightning:formattedPhone value="{!v.phone}" /></p>
+                    	<aura:set attribute="else">
+                    		<p>{!v.text}</p>
+                    	</aura:set>
+                    </aura:if>
+                </div>
+    
+	
+</aura:component>

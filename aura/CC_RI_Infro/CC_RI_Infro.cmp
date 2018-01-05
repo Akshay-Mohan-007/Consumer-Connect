@@ -1,0 +1,152 @@
+<!-- **************************************************************************************************************************************
+ * NAME   : CC_RI_Infro
+ * DESCRIPTION  : .
+ *    
+ * @AUTHOR   : Pankaj Sharma
+ * @DATE   : 11-10-2017
+ *
+ * MODIFICATION LOG:  
+ * ___________________________________________________________________________________________________________________________
+ * DEVELOPER				DATE				DESCRIPTION 
+ * ___________________________________________________________________________________________________________________________
+ * 					       
+ * Sayari Mandal            11-27-2017          UI Modifications
+ * Sayari Mandal            12-02-2017          UI Modifications
+ *************************************************************************************************************************************** -->
+<aura:component extends="c:CC_BaseSuperComponent" controller="CC_Representative_InformationController"  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="repContactInfo" type="Contact" />
+    <aura:attribute name="legContactInfo" type="Contact"/>
+    <aura:attribute name="appInfo" type="CC_Application__c"/>
+    <aura:attribute name="strAppId" type="String"/>
+    <aura:attribute name="lstMainPhnType" type="List"/>
+    <aura:attribute name="bErrIsOnWait" type="boolean" default="false"/>
+    <aura:attribute name="bErrNoWaitItem" type="boolean" default="false"/>
+    <aura:attribute name="lstOtherPhnType" type="List"/>
+    <aura:attribute name="lstPhyState" type="List"/>
+    <aura:attribute name="mapStatePicklist" type="Map"/>
+    <aura:attribute name="lstPreferredLanguage" type="List"/>
+    <aura:attribute name="bBothAddressSameForRep" type="Boolean" default="false"/>
+    <aura:attribute name="bBothAddressSameForLeg" type="Boolean" default="false"/>
+    <aura:attribute name="bIsValidatedFrmChild" type="Boolean" default="false"/> 
+    <aura:attribute name="bIsDataLoaded" type="Boolean" default="false"/> 
+    <aura:attribute name="bIsError" type="Boolean" default="false"/>
+    <aura:attribute name="LiveInSamePlaceValueLeg" type="String"/>
+    <aura:attribute name="LiveInSamePlaceValueRep" type="String"/>
+    <aura:attribute name="lstAllError" type="List"/> 
+    <aura:attribute name="mapLabels" type="Map" />
+    <aura:attribute name="rDetailshide" type="String"/>
+    <aura:attribute name="gDetailshide" type="String" />
+    <aura:attribute name="gDetailshide2" type="String" />
+    <aura:attribute name="rLiveInSamePlace" type="String"/>
+    <aura:attribute name="gLiveInSamePlace" type="String"/>
+    <aura:attribute name="lstRelatedToIndividual" type="List"/>
+    <aura:attribute name="lstSuffix" type="List"/>    
+    <aura:attribute name="options1" type="List"/>
+    <aura:attribute name="options2" type="List" />
+    <aura:attribute name="options3" type="List" />
+    <aura:attribute name="lLiveInSamePlace" type="List"/>
+    
+    <aura:method name="save" action="{!c.save}" access="PUBLIC">
+        <aura:attribute name="callback" type="Function"/>
+    </aura:method>
+   <c:CC_SubPageHeader iconName="standard:contact" pageName="{!v.mapLabels.CC_LBL_REPRESENTATIVE_INFORMATION}" errorListShow="{!v.lstAllError.length> 0}" lstErrors='{!v.lstAllError}'></c:CC_SubPageHeader>
+    
+    <aura:if isTrue="{!v.bIsDataLoaded}">
+      <lightning:layout horizontalAlign="left" multipleRows="true">
+        <lightning:layoutItem flexibility="grow" size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12" padding="around-small">
+            
+            <div class="slds-form-element__legend slds-form-element__label text-justify">{!v.mapLabels.CC_Auth_Rep_Some1_Whom_Ind_Can_Name_To_Help}</div>
+            
+            <lightning:radioGroup aura:id="radioButtonGroup1"
+                                  name="radioButtonGroup1"
+                                  label="{!v.mapLabels.CC_Does_Individual_have_Auth_Rep}"
+                                  options="{!v.options1 }"
+                                  value="{!v.rDetailshide}"
+                                  class="{! v.bErrIsOnWait ? 'slds-has-error required-asterisk-legend':'required-asterisk-legend'}"
+                                  
+                                  />
+            
+            
+        </lightning:layoutItem>
+        
+        <lightning:layoutItem flexibility="grow" size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12" padding="around-small">
+            <div class="slds-form-element__legend slds-form-element__label text-justify">{!v.mapLabels.CC_Legal_Guardian_Court_Appointed_Adult}.<span>{!v.mapLabels.CC_Guardian_Appointed_By_State}</span></div>
+            <lightning:radioGroup aura:id="radioButtonGroup2"
+                                  name="radioButtonGroup2"
+                                  label="{!v.mapLabels.CC_individual_have_LegalGuardian}"
+                                  options="{!v.options2}"
+                                  value="{!v.gDetailshide}"
+                                  class="{! v.bErrIsOnWait ? 'slds-has-error required-asterisk-legend':'required-asterisk-legend'}"
+                                  /> 
+   
+            
+        </lightning:layoutItem> 
+   
+        </lightning:layout>
+        
+        <aura:if isTrue="{!v.rDetailshide[0]}">
+            <c:CC_RI_Child LiveInSamePlaceValue="{!v.LiveInSamePlaceValueRep}"
+                           bBothAddressSame="{!v.bBothAddressSameForRep}"
+                           lstPhyState="{!v.lstPhyState}"
+                           lstOtherPhnType="{!v.lstOtherPhnType}"
+                           lstMainPhnType2="{!v.lstMainPhnType}"
+                           lstPreferredLanguage="{!v.lstPreferredLanguage}"
+                           AppInformation="{!v.appInfo}"
+                           mapdependentPicklist="{!v.mapStatePicklist}"
+                           lstRelatedToIndividual2="{!v.lstRelatedToIndividual}"
+                           lstSuffix2="{!v.lstSuffix}" 
+                           contactInformation="{!v.repContactInfo}"
+                           RLInfo="{!v.mapLabels.CC_Authorized_Representative_Information}"
+                           RLContactInfo="{!v.mapLabels.CC_Representative_Contact_Information}"
+                           LiveAtSamePlacelabel="{!v.mapLabels.CC_You_Your_Rep_LiveAt_Same_Place}"
+                           mapLabels="{!v.mapLabels}"
+                           lLiveInSamePlace="{!v.lLiveInSamePlace}"
+                           aura:id="cRiChildcmp"
+                           />
+            <aura:if isTrue="{!v.gDetailshide[0]}">
+                <lightning:layoutItem flexibility="grow" size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12" padding="around-small">
+                    <lightning:radioGroup aura:id="radioButtonGroup3"
+                                          name="radioButtonGroup3"
+                                          label="{!v.mapLabels.CC_PERSON_ALSO_LEGAL_GUARDIAN_OF_INDIVIDUAL}"
+                                          options="{!v.options3 }"
+                                          value="{!v.gDetailshide2}"
+                                          required="true"
+                                          />
+                </lightning:layoutItem>
+            </aura:if>
+            
+            
+        </aura:if>
+        
+        
+        <aura:if isTrue="{!or(and(or(v.gDetailshide[0]=='true',v.gDetailshide=='true'), or(v.gDetailshide2[0]=='true',v.gDetailshide2=='true'),or(v.rDetailshide[0]=='true',v.rDetailshide=='true')),
+                         and(or(v.rDetailshide[0]=='false',v.rDetailshide=='false'),or(v.gDetailshide[0]=='true',v.gDetailshide=='true')))}">
+            
+            <c:CC_RI_Child LiveInSamePlaceValue="{!v.LiveInSamePlaceValueLeg}"
+                           bBothAddressSame="{!v.bBothAddressSameForLeg}"
+                           lstPhyState="{!v.lstPhyState}"
+                           lstOtherPhnType="{!v.lstOtherPhnType}"
+                           lstMainPhnType2="{!v.lstMainPhnType}"
+                           mapdependentPicklist="{!v.mapStatePicklist}"
+                           lstPreferredLanguage="{!v.lstPreferredLanguage}"
+                           lstRelatedToIndividual2="{!v.lstRelatedToIndividual}"
+                           lstSuffix2="{!v.lstSuffix}" 
+                           AppInformation="{!v.appInfo}"
+                           contactInformation="{!v.legContactInfo}"
+                           RLInfo="{!v.mapLabels.CC_Legal_Guardian_Information}"
+                           RLContactInfo="{!v.mapLabels.CC_Legal_Guardian_Contact_Information}"
+                           LiveAtSamePlacelabel="{!v.mapLabels.CC_You_Your_Guardian_LiveAt_Same_Place}"
+                           mapLabels="{!v.mapLabels}" 
+                           lLiveInSamePlace="{!v.lLiveInSamePlace}"
+                           aura:id="cLgChildcmp"
+                           />
+            
+        </aura:if>
+        
+       
+        
+    </aura:if>
+    
+</aura:component>
