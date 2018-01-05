@@ -1,0 +1,76 @@
+<!--
+ ***************************************************************************************************************************************
+ * NAME   : CC_WaitlistedApplicationList
+ * DESCRIPTION  : Controller for CC_WaitlistedApplicationList, Lists all the Waitlisted Applications assigned to the user.
+ *    				Before using this make sure that the custom settings field 'WL_App_List_Page_Size__c', 
+ *					'WL_App_List_Pages_Per_Screen__c' in 'CC_Master_Settings__c' are populated correctly
+ *    
+ * @AUTHOR   : Nidhin V K
+ * @DATE   : 15-Dec-2017
+ *
+ * MODIFICATION LOG:  
+ * ______________________________________________________________________________________________________________________________________
+ * DEVELOPER                DATE                DESCRIPTION 
+ * ______________________________________________________________________________________________________________________________________
+ * Nidhin V K               15-Dec-2017          Initial version         
+ ****************************************************************************************************************************************
+-->
+<aura:component access="global" controller="CC_WaitlistedApplicationListController" extends="c:CC_BaseSuperComponent" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction">
+    <aura:attribute type="Integer" name="iPageSize" default="5"/>
+    <aura:attribute type="Integer" name="iPagesPerChunk" default="5"/>
+    <aura:attribute type="Integer" name="iChunkSize" default="25"/>
+    <aura:attribute type="List" name="lstPageNumbers" default="[]" />
+    <aura:attribute type="String" name="sSortField" default="CreatedDate" />
+    <aura:attribute type="String" name="sSortOrder" default="DESC" />
+    <aura:attribute type="String" name="sSearchText" default="" />
+    <aura:attribute type="String" name="sSiteName" default="" />
+    <aura:attribute type="Integer" name="iSelectedPage" default="1" />
+    <aura:attribute type="Integer" name="iListSize" default="0" />
+    <aura:attribute type="Integer" name="iOffset" default="0" />
+    <aura:attribute type="Integer" name="iOffsetClient" default="0" />
+    <aura:attribute type="List" name="lstHeaders" default="[]" />
+    <aura:attribute type="List" name="lstTotalApps" default="[]" />
+    <aura:attribute type="List" name="lstApps" default="[]" />
+    <aura:attribute type="Boolean" name="bIsNotSelfService" default="true" />
+    <aura:attribute type="Map" name="mapLabels" />
+    <aura:attribute name="bIsError" type="Boolean" default="false" />
+    <aura:attribute name="lstAllError" type="List" />
+    <aura:attribute name="bDisableFirst" type="Boolean" default="false"/>
+	<aura:attribute name="bDisablePrevSet" type="Boolean" default="false"/>
+	<aura:attribute name="bDisableNextSet" type="Boolean" default="false"/>
+	<aura:attribute name="bDisableLast" type="Boolean" default="false"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="rowAction" event="c:GenericTableRowEvent" action="{!c.handleComponentEvent}" />
+	
+    <aura:if isTrue="{!v.bIsError}">
+        <c:CC_ErrorNotification lstErrors="{!v.lstAllError}" />
+    </aura:if>
+
+    <lightning:layout horizontalAlign="left" multipleRows="true">
+        <lightning:layoutItem flexibility="grow" size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" class="slds-p-around_xx-small slds-p-left_small">
+            <lightning:input type="search" name="search" value="{!v.sSearchText}" label="{!v.mapLabels.CC_SEARCH}" maxlength="50" />
+        </lightning:layoutItem>
+        <lightning:layoutItem flexibility="grow" size="12" largeDeviceSize="3" mediumDeviceSize="3" smallDeviceSize="12" class="slds-m-around_small slds-p-around_small slds-p-left_none">
+            <lightning:button variant="brand" label="{!v.mapLabels.CC_SEARCH}" onclick="{!c.searchTask}" />
+        </lightning:layoutItem>
+    </lightning:layout>
+
+    <lightning:layout horizontalAlign="left" multipleRows="true">
+        <lightning:layoutItem flexibility="grow" size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12" class="slds-p-around_xx-small slds-p-left_small">
+            <aura:if isTrue="{!!empty(v.lstApps)}">
+            	<c:CC_GenericTable thead="{!v.lstHeaders}" tbody="{!v.lstApps}"/>
+            </aura:if>
+        </lightning:layoutItem>
+    </lightning:layout>
+    <lightning:layout horizontalAlign="left" multipleRows="true">
+        <lightning:layoutItem flexibility="grow" class="slds-p-around_xx-small slds-p-left_small" size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12">
+            <lightning:button aura:id="first" disabled="{!v.bDisableFirst}" variant="brand" label="«" onclick="{!c.first}" />
+            <lightning:button aura:id="prevSet" disabled="{!v.bDisablePrevSet}" variant="brand" label="‹" onclick="{!c.prevSet}" />
+            <aura:iteration items="{!v.lstPageNumbers}" var="row" indexVar="index">
+                <lightning:button name="{!row}" aura:id="{!'some' + row}" variant="{!(row == v.iSelectedPage) ? 'brand' : 'inverse'}" label="{!row}" onclick="{!c.gotoSelectedPage}" class="pagination-button" />
+            </aura:iteration>
+            <lightning:button aura:id="nextSet" disabled="{!v.bDisableNextSet}" variant="brand" label="›" onclick="{!c.nextSet}" />
+            <lightning:button aura:id="last" disabled="{!v.bDisableLast}" variant="brand" label="»" onclick="{!c.last}" />
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>

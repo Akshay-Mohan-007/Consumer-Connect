@@ -1,0 +1,27 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global"  extends="c:CC_BaseSuperComponent">
+    
+    <aura:attribute name="accordianHeader1" type="Aura.Component[]"/>
+    <aura:attribute name="accordianHeader2" type="Aura.Component[]"/>
+    <aura:attribute name="accordianHeader3" type="Aura.Component[]"/>
+    <aura:attribute name="accordianHeader4" type="Aura.Component[]"/>
+    <aura:attribute name="accordianHeader5" type="Aura.Component[]"/>
+    <aura:attribute name="accordianSection1" type="Aura.Component[]"/>
+    <aura:attribute name="accordianSection2" type="Aura.Component[]"/>
+    <aura:attribute name="accordianSection3" type="Aura.Component[]"/>
+    <aura:attribute name="accordianSection4" type="Aura.Component[]"/>
+    <aura:attribute name="accordianSection5" type="Aura.Component[]"/>
+   
+    <aura:registerEvent name="editEvent" type="c:CC_ServiceRowRetrievalEvent"/>
+   
+     
+    
+    <lightning:accordion activeSectionName="">
+    
+     <lightning:accordionSection name="{!v.accordianHeader1}" label="{!v.accordianHeader1}">{!v.accordianSection1}</lightning:accordionSection>
+     <lightning:accordionSection name="{!v.accordianHeader2}" label="{!v.accordianHeader2}">{!v.accordianSection2}</lightning:accordionSection>
+     <lightning:accordionSection name="{!v.accordianHeader3}" label="{!v.accordianHeader3}">{!v.accordianSection3}</lightning:accordionSection>
+     <lightning:accordionSection name="{!v.accordianHeader4}" label="{!v.accordianHeader4}">{!v.accordianSection4}</lightning:accordionSection>
+     <lightning:accordionSection name="{!v.accordianHeader5}" label="{!v.accordianHeader5}">{!v.accordianSection5}</lightning:accordionSection>
+    </lightning:accordion>
+    
+</aura:component>

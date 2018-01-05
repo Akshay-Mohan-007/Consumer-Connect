@@ -1,0 +1,6 @@
+.THIS .slds-button:hover, .THIS .slds-button:focus, .THIS .slds-button:active
+ {
+    outline: 0;
+    box-shadow: 0 0 3px #ffffff;
+    color: #00396b
+}

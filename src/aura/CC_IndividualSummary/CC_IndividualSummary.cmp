@@ -1,0 +1,198 @@
+<aura:component controller="CC_IndividualSummary_Controller" extends="c:CC_BaseSuperComponent" access="global"
+    implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"  >
+    
+    <aura:attribute type="String" name="sContactId"  />
+    <aura:attribute type="String" name="sTaskId"  />
+    <aura:attribute type="Object" name="wrapIndiv" />
+    <aura:attribute type="String" name="sComponentName" />
+    <aura:attribute type="String" name="sLoadURL" />
+    <aura:attribute type="Boolean" name="bStarted" />
+    <aura:attribute type="Boolean" name="bIsLoaded" />
+    <aura:attribute type="Map" name="mapLabels" />
+    <aura:attribute name="bShowPrograms" type="boolean" default="false"/>
+    
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <ui:scrollerWrapper class="scrollerSize">
+    <aura:if isTrue="{!v.bShowPrograms}">
+        <c:CC_SubPageHeader iconName="standard:lead_list" pageName="{!v.mapLabels.CC_Individual_Summary}"></c:CC_SubPageHeader>
+    </aura:if>
+    
+    <c:CC_HeaderComponent Header1="{!v.mapLabels.CC_IndividualInformation}"/>
+    
+    <lightning:layout horizontalAlign="left" multipleRows="true">  
+    	<!--TKT-000839 fix start  --> 
+        <aura:if isTrue="{!v.bIsLoaded}">
+        <!--TKT-000839 fix end  -->
+        <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">   
+            <c:CC_StaticContent label="{!v.mapLabels.CC_IndividualName}" text="{!v.wrapIndiv.sIndivName}"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">   
+            <c:CC_StaticContent label="{!v.mapLabels.CC_Last_Case_Action_Date}" text="{!v.wrapIndiv.sCaseActionDate}"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">   
+            <c:CC_StaticContent label="{!v.mapLabels.CC_LBL_SSN}" text="{!v.wrapIndiv.sSSN}"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">   
+            <c:CC_StaticContent label="{!v.mapLabels.CC_LBL_DOB}" text="{!v.wrapIndiv.sDOB}"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">   
+            <c:CC_StaticContent label="{!v.mapLabels.CC_Age}" text="{!v.wrapIndiv.sAge}"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">   
+            <c:CC_StaticContent label="{!v.mapLabels.CC_LBL_Gender}" text="{!v.wrapIndiv.sGender}"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">   
+            <c:CC_StaticContent label="{!v.mapLabels.CC_Residence_Address}" text="{!v.wrapIndiv.sRAddress}"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">   
+            <c:CC_StaticContent label="{!v.mapLabels.CC_Mailing_Address}" text="{!v.wrapIndiv.sMAddress}"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">   
+            <c:CC_StaticContent label="{!v.mapLabels.CC_Primary_Phone}" phone="{!v.wrapIndiv.sPPhone}"/>
+        </lightning:layoutItem>
+
+        <!-- -->
+         <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">   
+            <c:CC_StaticContent label="{!v.mapLabels.CC_Primary_Phone_Ext}" text="{!v.wrapIndiv.sPExt}"/>
+        </lightning:layoutItem>
+        <!-- -->
+
+        <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">   
+            <c:CC_StaticContent label="{!v.mapLabels.CC_Secoandry_Phone}" phone="{!v.wrapIndiv.sSPhone}"/>
+        </lightning:layoutItem>
+
+        <!-- -->
+         <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">   
+            <c:CC_StaticContent label="{!v.mapLabels.CC_Secondary_Phone_Ext}" text="{!v.wrapIndiv.sSExt}"/>
+        </lightning:layoutItem>
+        <!-- -->
+
+        <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">   
+            <c:CC_StaticContent label="{!v.mapLabels.CC_Email}" text="{!v.wrapIndiv.sEmail}"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">   
+            <c:CC_StaticContent label="{!v.mapLabels.CC_Contact_Type_Legal_Guardian}" text="{!v.wrapIndiv.sLGName}"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">   
+            <c:CC_StaticContent label="{!v.mapLabels.CC_Label_Authorized_Rep}" text="{!v.wrapIndiv.sARName}"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">   
+            <c:CC_StaticContent label="{!v.mapLabels.CC_Label_CaseManagementAgency}" text="{!v.wrapIndiv.sCMA}"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">   
+            <c:CC_StaticContent label="{!v.mapLabels.CC_Label_CaseManager}" text="{!v.wrapIndiv.sCaseManager}"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">   
+            <c:CC_StaticContent label="{!v.mapLabels.CC_Label_CaseSupervisor}" text="{!v.wrapIndiv.sCaseSupervisor}"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">   
+            <c:CC_StaticContent label="{!v.mapLabels.CC_Case_Number}" text="{!v.wrapIndiv.sCase}"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">   
+            <c:CC_StaticContent label="{!v.mapLabels.CC_Case_Status}" text="{!v.wrapIndiv.sCaseStatus}"/>
+        </lightning:layoutItem>
+        <!--TKT-000839 fix start  -->
+        </aura:if>
+        <!--TKT-000839 fix end  -->
+    </lightning:layout>
+    
+    <aura:if isTrue="{!v.bShowPrograms}">
+        <c:CC_HeaderComponent Header1="{!v.mapLabels.CC_Waiver_Prog_Information}"/>
+        
+        <lightning:layout horizontalAlign="left" multipleRows="true">   
+            
+            <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12" padding="around-small"> 
+                
+                
+                <table class="slds-table slds-table_bordered slds-max-medium-table_stacked-horizontal">
+                    <thead>
+                        
+                        <tr class="slds-text-title_caps">
+                            <th scope="col">
+                                <div class="slds-truncate" title="Waiver Program">{!v.mapLabels.CC_LBL_WAIVER_PROGRAM}</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Application Status">{!v.mapLabels.CC_Application_Status}</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="LOC End Date">{!v.mapLabels.CC_Label_LocEndDate}</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Program Status">{!v.mapLabels.CC_Program_Status}</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Application Date">{!v.mapLabels.CC_Application_Date}</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Last Action Date">{!v.mapLabels.CC_Last_Action_Date}</div>
+                            </th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                         <aura:if isTrue="{!v.wrapIndiv.lstPrograms.length > 0}">
+                              <aura:iteration items="{!v.wrapIndiv.lstPrograms}" var="row" indexVar="index">
+                                <tr>
+                                    <td data-label="Waiver Program">
+                                        <div class="slds-truncate" title="{!row.wProgram}">{!row.sProgramName}</div>
+                                    </td>
+                                    <td data-label="Application Status">
+                                        <div class="slds-truncate" title="{!row.applnStatus}">{!row.sAppStatus}</div>
+                                    </td>
+                                    <td data-label="LOC End Date">
+                                        <div class="slds-truncate" title="{!row.locEndDate}">{!row.sLOCEndDate}</div>
+                                    </td>
+                                    <td data-label="Program Status">
+                                        <div class="slds-truncate" title="{!row.pStatus}">{!row.sProgramStatus}</div>
+                                    </td>
+                                    <td data-label="Application Date">
+                                        <div class="slds-truncate" title="{!row.applnDate}">{!row.sAppDate}</div>
+                                    </td>
+                                    <td data-label="Last Action Date">
+                                        <div class="slds-truncate" title="{!row.lastActionDate}">{!row.sLastActionDate}</div>
+                                    </td>
+                                    
+                                </tr>
+                                
+                            </aura:iteration>
+                        </aura:if>
+                        
+                        <aura:if isTrue="{!v.wrapIndiv.lstPrograms.length == 0}">
+                           <tr>
+                                <td colspan="6">
+                                    <div class="slds-truncate slds-text-align_center">{!v.mapLabels.CC_LBL_NO_RECORD_EXIST}</div>
+                                </td>
+                           </tr>
+                        </aura:if>
+                        
+                    </tbody>
+                </table>
+                
+            </lightning:layoutItem>
+            
+            
+            <!-- <lightning:layoutItem flexibility="grow" padding="around-small" size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12">
+                <lightning:button aura:id="first" variant="brand" label="«" onclick="{!c.first}" />
+                <lightning:button aura:id="prevSet" variant="brand" label="‹" onclick="{!c.prevSet}" />
+                <aura:iteration items="{!v.lstPageNumbers}" var="row" indexVar="index">
+                    <lightning:button name="{!row}" aura:id="{!'some' + row}" variant="{!(row == v.iSelectedPage) ? 'brand' : 'inverse'}" label="{!row}" onclick="{!c.gotoSelectedPage}" class="pagination-button" />
+                </aura:iteration>
+                <lightning:button aura:id="nextSet" variant="brand" label="›" onclick="{!c.nextSet}" />
+                <lightning:button aura:id="last" variant="brand" label="»" onclick="{!c.last}" />
+            </lightning:layoutItem> -->
+            <div class="slds-grid slds-grid_align-left slds-p-left_small slds-p-top_medium">
+                <aura:if isTrue="{! v.bStarted}">
+                    <lightning:button variant="brand" label="{!v.mapLabels.CC_CONTINUE}" onclick="{!c.next}" />
+                    <aura:set attribute="else">
+                        <lightning:button variant="brand" label="{!v.mapLabels.CC_START}" onclick="{!c.next}" />
+                    </aura:set>
+                </aura:if>
+            </div>
+            
+        </lightning:layout>
+        
+    </aura:if>
+    </ui:scrollerWrapper>
+</aura:component>

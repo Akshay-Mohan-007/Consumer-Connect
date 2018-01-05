@@ -1,0 +1,2180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customApplications>
+        <label><!-- Consumer Connect --></label>
+        <name>Consumer_Connect</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Consumer Connect --></label>
+        <name>Consumer_Connect_Lightning</name>
+    </customApplications>
+    <customLabels>
+        <label><!-- Application Date --></label>
+        <name>Application_Date</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_ACTION --></label>
+        <name>CC_ACTION</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_ADDRESS_LINE_1 --></label>
+        <name>CC_ADDRESS_LINE_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_ADDRESS_LINE_2 --></label>
+        <name>CC_ADDRESS_LINE_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_APPSUMMARY_HEADING --></label>
+        <name>CC_APPSUMMARY_HEADING</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_APP_CASE --></label>
+        <name>CC_APP_CASE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_APP_INITIATOR_QUEUE --></label>
+        <name>CC_APP_INITIATOR_QUEUE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_APP_NUMBER --></label>
+        <name>CC_APP_NUMBER</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_APP_STATUS_IN_PROGRESS --></label>
+        <name>CC_APP_STATUS_IN_PROGRESS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_APP_STATUS_REVIEWED --></label>
+        <name>CC_APP_STATUS_REVIEWED</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Account_RecType --></label>
+        <name>CC_Account_RecType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Age --></label>
+        <name>CC_Age</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_AppStatus_Complete --></label>
+        <name>CC_AppStatus_Complete</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_AppStatus_InProgress --></label>
+        <name>CC_AppStatus_InProgress</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_AppStatus_Terminated --></label>
+        <name>CC_AppStatus_Terminated</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_App_Intake_Profile --></label>
+        <name>CC_App_Intake_Profile</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_ApplicationIdForTesting --></label>
+        <name>CC_ApplicationIdForTesting</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_ApplicationIntake --></label>
+        <name>CC_ApplicationIntake</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_ApplicationReview --></label>
+        <name>CC_ApplicationReview</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Application_Date --></label>
+        <name>CC_Application_Date</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Application Intake Page --></label>
+        <name>CC_Application_Intake_Page</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Application Living Currently ICF --></label>
+        <name>CC_Application_Living_Currently_ICF</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Application Living Currently NH --></label>
+        <name>CC_Application_Living_Currently_NH</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Application Living Currently PF --></label>
+        <name>CC_Application_Living_Currently_PF</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Application_Review --></label>
+        <name>CC_Application_Review</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Application_Status --></label>
+        <name>CC_Application_Status</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Application Submitted --></label>
+        <name>CC_Application_Submitted</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Are_you_currently_on_waiting_list --></label>
+        <name>CC_Are_you_currently_on_waiting_list</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Auth_Rep_Some1_Whom_Ind_Can_Name_To_Help --></label>
+        <name>CC_Auth_Rep_Some1_Whom_Ind_Can_Name_To_Help</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Authorized_Representative_Information --></label>
+        <name>CC_Authorized_Representative_Information</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Back Button --></label>
+        <name>CC_Back_Button</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_CAPACITY_REVIEWER_QUEUE --></label>
+        <name>CC_CAPACITY_REVIEWER_QUEUE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_CITY --></label>
+        <name>CC_CITY</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_CONTACT_INFO_EMAIL --></label>
+        <name>CC_CONTACT_INFO_EMAIL</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_CONTACT_INFO_MAIN_PHN --></label>
+        <name>CC_CONTACT_INFO_MAIN_PHN</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_CONTACT_INFO_MAIN_PHN_DUP --></label>
+        <name>CC_CONTACT_INFO_MAIN_PHN_DUP</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_CONTACT_INFO_MAIN_PHN_TYPE --></label>
+        <name>CC_CONTACT_INFO_MAIN_PHN_TYPE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_CONTACT_INFO_OTHER_PHN --></label>
+        <name>CC_CONTACT_INFO_OTHER_PHN</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_CONTACT_INFO_OTHER_PHN_DUP --></label>
+        <name>CC_CONTACT_INFO_OTHER_PHN_DUP</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_CONTACT_INFO_OTHER_PHN_TYPE --></label>
+        <name>CC_CONTACT_INFO_OTHER_PHN_TYPE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_CONTACT_INFO_PREFERRED_LANG --></label>
+        <name>CC_CONTACT_INFO_PREFERRED_LANG</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_CONTACT_INFO_SPOKEN_LANG --></label>
+        <name>CC_CONTACT_INFO_SPOKEN_LANG</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_CONTACT_INFO_WRITTEN_LANG --></label>
+        <name>CC_CONTACT_INFO_WRITTEN_LANG</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_CONTINUE --></label>
+        <name>CC_CONTINUE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_COUNTY --></label>
+        <name>CC_COUNTY</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_CRITERIA_NOT_MEETING_REASON --></label>
+        <name>CC_CRITERIA_NOT_MEETING_REASON</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Capacity_Review --></label>
+        <name>CC_Capacity_Review</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Capacity Review Action Freed --></label>
+        <name>CC_Capacity_Review_Action_Freed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Capacity Review Status Disenrolled --></label>
+        <name>CC_Capacity_Review_Status_Disenrolled</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Capacity_Reviewer_Profile --></label>
+        <name>CC_Capacity_Reviewer_Profile</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_CaseMangementInformation --></label>
+        <name>CC_CaseMangementInformation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Case_Manager_Profile --></label>
+        <name>CC_Case_Manager_Profile</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Case_Number --></label>
+        <name>CC_Case_Number</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Case_Status --></label>
+        <name>CC_Case_Status</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Case_Status_Active --></label>
+        <name>CC_Case_Status_Active</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Case_Status_Closed --></label>
+        <name>CC_Case_Status_Closed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Case_Status_Closed_Not_Meet_Criteria --></label>
+        <name>CC_Case_Status_Closed_Not_Meet_Criteria</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Community_Dummy_Account --></label>
+        <name>CC_Community_Dummy_Account</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Community_License --></label>
+        <name>CC_Community_License</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Community_Plus_License --></label>
+        <name>CC_Community_Plus_License</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Confirm Delete --></label>
+        <name>CC_Confirm_Delete</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Confirm Header --></label>
+        <name>CC_Confirm_Header</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Confirm No --></label>
+        <name>CC_Confirm_No</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Confirm Yes --></label>
+        <name>CC_Confirm_Yes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Console Logger --></label>
+        <name>CC_Console_Logger</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_ContactIdForTesting --></label>
+        <name>CC_ContactIdForTesting</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Contact_Information --></label>
+        <name>CC_Contact_Information</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Contact_OtherInformation --></label>
+        <name>CC_Contact_OtherInformation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Contact_PhoneInformation --></label>
+        <name>CC_Contact_PhoneInformation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Contact_SaveButton --></label>
+        <name>CC_Contact_SaveButton</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Contact_SubmitButton --></label>
+        <name>CC_Contact_SubmitButton</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contact Type Legal Guardian --></label>
+        <name>CC_Contact_Type_Legal_Guardian</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contact Type Representative --></label>
+        <name>CC_Contact_Type_Representative</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_DATE_INITIATED --></label>
+        <name>CC_DATE_INITIATED</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_DOC_DETAIL_STATUS_INVALID --></label>
+        <name>CC_DOC_DETAIL_STATUS_INVALID</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_DUE_DATE --></label>
+        <name>CC_DUE_DATE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Date Format --></label>
+        <name>CC_Date_Format</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Document Delete Warning --></label>
+        <name>CC_Document_Delete_Warning</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Document Not Uploaded --></label>
+        <name>CC_Document_Not_Uploaded</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Document Not Uploaded Warning --></label>
+        <name>CC_Document_Not_Uploaded_Warning</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Document Review Header --></label>
+        <name>CC_Document_Review_Header</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Document Upload Header --></label>
+        <name>CC_Document_Upload_Header</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Documents --></label>
+        <name>CC_Documents</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Documents Not Required --></label>
+        <name>CC_Documents_Not_Required</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Documents Tab --></label>
+        <name>CC_Documents_Tab</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Does_Individual_have_Auth_Rep --></label>
+        <name>CC_Does_Individual_have_Auth_Rep</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_DummyApp --></label>
+        <name>CC_DummyApp</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_ERR_GIVE_COMMENTS --></label>
+        <name>CC_ERR_GIVE_COMMENTS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_ERR_RESERVE_CATEGORY --></label>
+        <name>CC_ERR_RESERVE_CATEGORY</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_ERR_SELECT_A_PROGRAM --></label>
+        <name>CC_ERR_SELECT_A_PROGRAM</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_ERR_WAIVER_CAPACITY_ACTION --></label>
+        <name>CC_ERR_WAIVER_CAPACITY_ACTION</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Email --></label>
+        <name>CC_Email</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Email_Address --></label>
+        <name>CC_Email_Address</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Enrolled Program Status Freed --></label>
+        <name>CC_Enrolled_Program_Status_Freed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Address_Format --></label>
+        <name>CC_Err_Address_Format</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_All_pages_are_not_saved --></label>
+        <name>CC_Err_All_pages_are_not_saved</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Cannot_Be_Blank --></label>
+        <name>CC_Err_Cannot_Be_Blank</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Cannot_Be_Future --></label>
+        <name>CC_Err_Cannot_Be_Future</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_City_Format --></label>
+        <name>CC_Err_City_Format</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Confirm_Date_Cannot_Future_Date --></label>
+        <name>CC_Err_Confirm_Date_Cannot_Future_Date</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_CurrentLiving --></label>
+        <name>CC_Err_CurrentLiving</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_DOB_Format --></label>
+        <name>CC_Err_DOB_Format</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_DOB_Future_Date --></label>
+        <name>CC_Err_DOB_Future_Date</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_DOB_Required --></label>
+        <name>CC_Err_DOB_Required</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_EmailFormatIsNotCorrect --></label>
+        <name>CC_Err_EmailFormatIsNotCorrect</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_EmailShdNotBlank --></label>
+        <name>CC_Err_EmailShdNotBlank</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Enter_Confirm_SSN --></label>
+        <name>CC_Err_Enter_Confirm_SSN</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Enter_Valid_Date --></label>
+        <name>CC_Err_Enter_Valid_Date</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Explain_CurrentLiving --></label>
+        <name>CC_Err_Explain_CurrentLiving</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Explain_PreferToLive --></label>
+        <name>CC_Err_Explain_PreferToLive</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_First_Name_Mandatory --></label>
+        <name>CC_Err_First_Name_Mandatory</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_First_Name_Not_Matching --></label>
+        <name>CC_Err_First_Name_Not_Matching</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Individual_Created --></label>
+        <name>CC_Err_Individual_Created</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Individual_Exists --></label>
+        <name>CC_Err_Individual_Exists</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Individual_Exists_App_Created --></label>
+        <name>CC_Err_Individual_Exists_App_Created</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Is_Waitlisted --></label>
+        <name>CC_Err_Is_Waitlisted</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Last_Name_Mandatory --></label>
+        <name>CC_Err_Last_Name_Mandatory</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Last_Name_Not_Matching --></label>
+        <name>CC_Err_Last_Name_Not_Matching</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_MainPhnDupMandatory --></label>
+        <name>CC_Err_MainPhnDupMandatory</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_MainPhnFormat --></label>
+        <name>CC_Err_MainPhnFormat</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_MainPhnMandatory --></label>
+        <name>CC_Err_MainPhnMandatory</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_MainPhnNotMatching --></label>
+        <name>CC_Err_MainPhnNotMatching</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_MainPhnTypeMandatory --></label>
+        <name>CC_Err_MainPhnTypeMandatory</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Mandatory --></label>
+        <name>CC_Err_Mandatory</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Middle_Name_Not_Matching --></label>
+        <name>CC_Err_Middle_Name_Not_Matching</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Midle_Initial --></label>
+        <name>CC_Err_Midle_Initial</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Name_Contains_Numbers --></label>
+        <name>CC_Err_Name_Contains_Numbers</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_No_Current_Future_Service --></label>
+        <name>CC_Err_No_Current_Future_Service</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_OtherCounty_Format --></label>
+        <name>CC_Err_OtherCounty_Format</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_OtherPhnDupMandatory --></label>
+        <name>CC_Err_OtherPhnDupMandatory</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_OtherPhnDupShdBlank --></label>
+        <name>CC_Err_OtherPhnDupShdBlank</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_OtherPhnFormat --></label>
+        <name>CC_Err_OtherPhnFormat</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_OtherPhnNotMatching --></label>
+        <name>CC_Err_OtherPhnNotMatching</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_OtherPhnTypeBlank --></label>
+        <name>CC_Err_OtherPhnTypeBlank</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Other_Program_Name --></label>
+        <name>CC_Err_Other_Program_Name</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Past_Date --></label>
+        <name>CC_Err_Past_Date</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Please_Enter_Comments --></label>
+        <name>CC_Err_Please_Enter_Comments</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Please_Enter_Confirm_Date --></label>
+        <name>CC_Err_Please_Enter_Confirm_Date</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Please_Enter_Confirm_Time --></label>
+        <name>CC_Err_Please_Enter_Confirm_Time</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_PreferredLangShdNotBlank --></label>
+        <name>CC_Err_PreferredLangShdNotBlank</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_PreferredToLive --></label>
+        <name>CC_Err_PreferredToLive</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_SSN_Len_Less_Than_9 --></label>
+        <name>CC_Err_SSN_Len_Less_Than_9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_SSN_Mismatch --></label>
+        <name>CC_Err_SSN_Mismatch</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Select_Time_Zone --></label>
+        <name>CC_Err_Select_Time_Zone</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Service_Needed_Exists --></label>
+        <name>CC_Err_Service_Needed_Exists</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Service_Needed_Required --></label>
+        <name>CC_Err_Service_Needed_Required</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Service_Period_Mandatory --></label>
+        <name>CC_Err_Service_Period_Mandatory</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Service_Prog_already_exist --></label>
+        <name>CC_Err_Service_Prog_already_exist</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_SpokenLangShdNotBlank --></label>
+        <name>CC_Err_SpokenLangShdNotBlank</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Suffix_Not_Matching --></label>
+        <name>CC_Err_Suffix_Not_Matching</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Urgency_Date_Format --></label>
+        <name>CC_Err_Urgency_Date_Format</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Waitlist_Services --></label>
+        <name>CC_Err_Waitlist_Services</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_Why_Service_Needed --></label>
+        <name>CC_Err_Why_Service_Needed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_WrittenLangShdNotBlank --></label>
+        <name>CC_Err_WrittenLangShdNotBlank</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_ZipCode_Format --></label>
+        <name>CC_Err_ZipCode_Format</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_ZipExt_Format --></label>
+        <name>CC_Err_ZipExt_Format</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_confirm_Applying_onBehalf_Applicant --></label>
+        <name>CC_Err_confirm_Applying_onBehalf_Applicant</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- .CC_Err_confirm_Signature_received --></label>
+        <name>CC_Err_confirm_Signature_received</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Err_confirm_correct_information --></label>
+        <name>CC_Err_confirm_correct_information</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Error_DocName_missing --></label>
+        <name>CC_Error_DocName_missing</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error Document Missing --></label>
+        <name>CC_Error_Document_Missing</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Error_Person_Related_To_Ind_Cannot_Blank --></label>
+        <name>CC_Error_Person_Related_To_Ind_Cannot_Blank</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error Phone Confirm Missing --></label>
+        <name>CC_Error_Phone_Confirm_Missing</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Error_Phone_Ext_Format --></label>
+        <name>CC_Error_Phone_Ext_Format</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Error_Phone_Ext_Missing --></label>
+        <name>CC_Error_Phone_Ext_Missing</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error Phone Format --></label>
+        <name>CC_Error_Phone_Format</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error Phone No Missing --></label>
+        <name>CC_Error_Phone_No_Missing</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error Phone Not Matching --></label>
+        <name>CC_Error_Phone_Not_Matching</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error Phone Type Missing --></label>
+        <name>CC_Error_Phone_Type_Missing</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Error_Please_Select_Ind_Have_Auth_Rep --></label>
+        <name>CC_Error_Please_Select_Ind_Have_Auth_Rep</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Error_ReviewComments_missing --></label>
+        <name>CC_Error_ReviewComments_missing</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Error_Status_missing --></label>
+        <name>CC_Error_Status_missing</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error Task Already Assigned --></label>
+        <name>CC_Error_Task_Already_Assigned</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Guardian_Appointed_By_State --></label>
+        <name>CC_Guardian_Appointed_By_State</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Guardian_Contact_Information --></label>
+        <name>CC_Guardian_Contact_Information</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_How_Auth_Rep_Related_To_Individual --></label>
+        <name>CC_How_Auth_Rep_Related_To_Individual</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_How_soon_are_the_services_needed --></label>
+        <name>CC_How_soon_are_the_services_needed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_INDIVIDUAL_INFORMATION --></label>
+        <name>CC_INDIVIDUAL_INFORMATION</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_INDIVIDUAL_NAME --></label>
+        <name>CC_INDIVIDUAL_NAME</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_IND_SEL_FOR_ALL_OPTNS --></label>
+        <name>CC_IND_SEL_FOR_ALL_OPTNS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_I_Don_t_Know --></label>
+        <name>CC_I_Don_t_Know</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_InProgress --></label>
+        <name>CC_InProgress</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_IndividualInformation --></label>
+        <name>CC_IndividualInformation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_IndividualName --></label>
+        <name>CC_IndividualName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Individual_Summary --></label>
+        <name>CC_Individual_Summary</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Is_This_Waiver_Application_Complete --></label>
+        <name>CC_Is_This_Waiver_Application_Complete</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LABEL_ADD_TO_WAITLIST --></label>
+        <name>CC_LABEL_ADD_TO_WAITLIST</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LABEL_CAPACITY_RESERVED --></label>
+        <name>CC_LABEL_CAPACITY_RESERVED</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LABEL_CAPACITY_REVIEW --></label>
+        <name>CC_LABEL_CAPACITY_REVIEW</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LABEL_CURRENTLY_ENROLLED --></label>
+        <name>CC_LABEL_CURRENTLY_ENROLLED</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LABEL_MANAGE_ALLOTMENT --></label>
+        <name>CC_LABEL_MANAGE_ALLOTMENT</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LABEL_NOT_ENOUGH_SEATS --></label>
+        <name>CC_LABEL_NOT_ENOUGH_SEATS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LABEL_OTHERCOUNTY --></label>
+        <name>CC_LABEL_OTHERCOUNTY</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LABEL_RESERVED --></label>
+        <name>CC_LABEL_RESERVED</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LABEL_RESERVED_CAPACITY --></label>
+        <name>CC_LABEL_RESERVED_CAPACITY</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LABEL_RESERVE_CATEGORY --></label>
+        <name>CC_LABEL_RESERVE_CATEGORY</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LABEL_SELECT_COUNTY --></label>
+        <name>CC_LABEL_SELECT_COUNTY</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LABEL_TOTAL --></label>
+        <name>CC_LABEL_TOTAL</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LABEL_TOTAL_WAIVER_CAPACITY --></label>
+        <name>CC_LABEL_TOTAL_WAIVER_CAPACITY</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LABEL_WAIVER_CAPACITY_ACTIONS --></label>
+        <name>CC_LABEL_WAIVER_CAPACITY_ACTIONS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LABEL_WHICH_WAIVER --></label>
+        <name>CC_LABEL_WHICH_WAIVER</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_AGE --></label>
+        <name>CC_LBL_AGE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_APPLICATIONS --></label>
+        <name>CC_LBL_APPLICATIONS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_APP_REJECTED --></label>
+        <name>CC_LBL_APP_REJECTED</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_Allocation_Status --></label>
+        <name>CC_LBL_Allocation_Status</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_Application --></label>
+        <name>CC_LBL_Application</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_COMMENTS_TO_APP_INITIATOR --></label>
+        <name>CC_LBL_COMMENTS_TO_APP_INITIATOR</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_COMMENTS_TO_CAP_REVIEWER --></label>
+        <name>CC_LBL_COMMENTS_TO_CAP_REVIEWER</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_Category --></label>
+        <name>CC_LBL_Category</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_Comment --></label>
+        <name>CC_LBL_Comment</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_CommentBy --></label>
+        <name>CC_LBL_CommentBy</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_CommentDate --></label>
+        <name>CC_LBL_CommentDate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_Comment_History --></label>
+        <name>CC_LBL_Comment_History</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_Confirm_SSN --></label>
+        <name>CC_LBL_Confirm_SSN</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_DASHBOARD --></label>
+        <name>CC_LBL_DASHBOARD</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_DOB --></label>
+        <name>CC_LBL_DOB</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_FirstName --></label>
+        <name>CC_LBL_FirstName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_Gender --></label>
+        <name>CC_LBL_Gender</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_LastName --></label>
+        <name>CC_LBL_LastName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_Middle_Initial --></label>
+        <name>CC_LBL_Middle_Initial</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_NO --></label>
+        <name>CC_LBL_NO</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_NO_RECORD_EXIST --></label>
+        <name>CC_LBL_NO_RECORD_EXIST</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_OTHER --></label>
+        <name>CC_LBL_OTHER</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_Program_Name --></label>
+        <name>CC_LBL_Program_Name</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_REPRESENTATIVE_INFORMATION --></label>
+        <name>CC_LBL_REPRESENTATIVE_INFORMATION</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_Reason --></label>
+        <name>CC_LBL_Reason</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_RevisionNeeded --></label>
+        <name>CC_LBL_RevisionNeeded</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_SELECT --></label>
+        <name>CC_LBL_SELECT</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_SELECT_RELATION --></label>
+        <name>CC_LBL_SELECT_RELATION</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_SSN --></label>
+        <name>CC_LBL_SSN</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_Status --></label>
+        <name>CC_LBL_Status</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_Suffix --></label>
+        <name>CC_LBL_Suffix</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_TASKS --></label>
+        <name>CC_LBL_TASKS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_UrgencyHeader --></label>
+        <name>CC_LBL_UrgencyHeader</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_UrgencyRequestDate --></label>
+        <name>CC_LBL_UrgencyRequestDate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_WAIVER_CONFIRMATION --></label>
+        <name>CC_LBL_WAIVER_CONFIRMATION</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LBL_WAIVER_PROGRAM --></label>
+        <name>CC_LBL_WAIVER_PROGRAM</name>
+    </customLabels>
+    <customLabels>
+        <label>Si</label>
+        <name>CC_LBL_YES</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LS_Is_the_living_situation_working --></label>
+        <name>CC_LS_Is_the_living_situation_working</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_LS_Where_do_you_live --></label>
+        <name>CC_LS_Where_do_you_live</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Add_New_Services --></label>
+        <name>CC_Label_Add_New_Services</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Add_Service --></label>
+        <name>CC_Label_Add_Service</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_AnotherTargetingCriteria --></label>
+        <name>CC_Label_AnotherTargetingCriteria</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_AppReviewerComments --></label>
+        <name>CC_Label_AppReviewerComments</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Attachments --></label>
+        <name>CC_Label_Attachments</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Authorized_Rep --></label>
+        <name>CC_Label_Authorized_Rep</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Behalf_of_Applicant --></label>
+        <name>CC_Label_Behalf_of_Applicant</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Cancel --></label>
+        <name>CC_Label_Cancel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Case --></label>
+        <name>CC_Label_Case</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_CaseManagementAgency --></label>
+        <name>CC_Label_CaseManagementAgency</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_CaseManager --></label>
+        <name>CC_Label_CaseManager</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_CaseManagerContact --></label>
+        <name>CC_Label_CaseManagerContact</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_CaseSupervisor --></label>
+        <name>CC_Label_CaseSupervisor</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Close --></label>
+        <name>CC_Label_Close</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Comments --></label>
+        <name>CC_Label_Comments</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_ConfirmDate --></label>
+        <name>CC_Label_ConfirmDate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_ConfirmTime --></label>
+        <name>CC_Label_ConfirmTime</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Contact_Info --></label>
+        <name>CC_Label_Contact_Info</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Correct_Information --></label>
+        <name>CC_Label_Correct_Information</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_CurrentLiving --></label>
+        <name>CC_Label_CurrentLiving</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_CurrentLivingDescription --></label>
+        <name>CC_Label_CurrentLivingDescription</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Date --></label>
+        <name>CC_Label_Date</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_DateOfBirth --></label>
+        <name>CC_Label_DateOfBirth</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Document_Type --></label>
+        <name>CC_Label_Document_Type</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_E_Sign --></label>
+        <name>CC_Label_E_Sign</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_EnrolledProgram --></label>
+        <name>CC_Label_EnrolledProgram</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Enter_Prog --></label>
+        <name>CC_Label_Enter_Prog</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Enter_Service_Name --></label>
+        <name>CC_Label_Enter_Service_Name</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Feed --></label>
+        <name>CC_Label_Feed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Feed_History --></label>
+        <name>CC_Label_Feed_History</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Getting_Service --></label>
+        <name>CC_Label_Getting_Service</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Hard_Signature_Received --></label>
+        <name>CC_Label_Hard_Signature_Received</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Header_Other_Question --></label>
+        <name>CC_Label_Header_Other_Question</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Individual_Req_Service --></label>
+        <name>CC_Label_Individual_Req_Service</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Individual_availing_service --></label>
+        <name>CC_Label_Individual_availing_service</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_IsCurrentLivingWorking --></label>
+        <name>CC_Label_IsCurrentLivingWorking</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Legal_Gurdian --></label>
+        <name>CC_Label_Legal_Gurdian</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_LivingSituation --></label>
+        <name>CC_Label_LivingSituation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_LocEndDate --></label>
+        <name>CC_Label_LocEndDate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Name --></label>
+        <name>CC_Label_Name</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_No_Feed_To_Display --></label>
+        <name>CC_Label_No_Feed_To_Display</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Phone_no --></label>
+        <name>CC_Label_Phone_no</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Physical_Address --></label>
+        <name>CC_Label_Physical_Address</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Please --></label>
+        <name>CC_Label_Please</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Posted_On --></label>
+        <name>CC_Label_Posted_On</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_PreferredLiving --></label>
+        <name>CC_Label_PreferredLiving</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_PreferredLivingDescription --></label>
+        <name>CC_Label_PreferredLivingDescription</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_ProgramSelected --></label>
+        <name>CC_Label_ProgramSelected</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Program_Name --></label>
+        <name>CC_Label_Program_Name</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Representative_Info --></label>
+        <name>CC_Label_Representative_Info</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Resident_Address --></label>
+        <name>CC_Label_Resident_Address</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Review_Comments --></label>
+        <name>CC_Label_Review_Comments</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Same_as_above --></label>
+        <name>CC_Label_Same_as_above</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Save --></label>
+        <name>CC_Label_Save</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_SelectWaiver --></label>
+        <name>CC_Label_SelectWaiver</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Select_Prog --></label>
+        <name>CC_Label_Select_Prog</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Select_Service --></label>
+        <name>CC_Label_Select_Service</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Selected_Notification --></label>
+        <name>CC_Label_Selected_Notification</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Service --></label>
+        <name>CC_Label_Service</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Service_Needed --></label>
+        <name>CC_Label_Service_Needed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Services --></label>
+        <name>CC_Label_Services</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Status --></label>
+        <name>CC_Label_Status</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_TargetingCrit_Comment --></label>
+        <name>CC_Label_TargetingCrit_Comment</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_TargetingCriteria --></label>
+        <name>CC_Label_TargetingCriteria</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Type_of_Document_Accepted --></label>
+        <name>CC_Label_Type_of_Document_Accepted</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_Uploaded_Docs --></label>
+        <name>CC_Label_Uploaded_Docs</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_View_Attachment --></label>
+        <name>CC_Label_View_Attachment</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_View_Attacments --></label>
+        <name>CC_Label_View_Attacments</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_WaiverTargetingCriteria --></label>
+        <name>CC_Label_WaiverTargetingCriteria</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_What_Is_Needed --></label>
+        <name>CC_Label_What_Is_Needed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_at --></label>
+        <name>CC_Label_at</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_on --></label>
+        <name>CC_Label_on</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Last_Action_Date --></label>
+        <name>CC_Last_Action_Date</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Last_Case_Action_Date --></label>
+        <name>CC_Last_Case_Action_Date</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Legal_Guardian_Contact_Information --></label>
+        <name>CC_Legal_Guardian_Contact_Information</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Legal_Guardian_Court_Appointed_Adult --></label>
+        <name>CC_Legal_Guardian_Court_Appointed_Adult</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Legal_Guardian_Information --></label>
+        <name>CC_Legal_Guardian_Information</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Living_Situation --></label>
+        <name>CC_Living_Situation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_MSG_APP_REJECTED --></label>
+        <name>CC_MSG_APP_REJECTED</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_MSG_APP_SAVED_SUCCESS --></label>
+        <name>CC_MSG_APP_SAVED_SUCCESS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_MSG_APP_SUBMISSION_SUCCESS --></label>
+        <name>CC_MSG_APP_SUBMISSION_SUCCESS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_MSG_APP_TERMINATION_SUCCESS --></label>
+        <name>CC_MSG_APP_TERMINATION_SUCCESS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_MY_TASKS --></label>
+        <name>CC_MY_TASKS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Mailing_Address --></label>
+        <name>CC_Mailing_Address</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Manage_Allotment --></label>
+        <name>CC_Manage_Allotment</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_NETWORK_NAME_SELF_SERVICE --></label>
+        <name>CC_NETWORK_NAME_SELF_SERVICE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_NONE --></label>
+        <name>CC_NONE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_NO_APPLICATION --></label>
+        <name>CC_NO_APPLICATION</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_NO_TASKS --></label>
+        <name>CC_NO_TASKS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Next Button --></label>
+        <name>CC_Next_Button</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_No --></label>
+        <name>CC_No</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_OTHER_COUNTY --></label>
+        <name>CC_OTHER_COUNTY</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_OTHER_QUESTIONS --></label>
+        <name>CC_OTHER_QUESTIONS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Other_Preferred_Language --></label>
+        <name>CC_Other_Preferred_Language</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Other_Written_Language --></label>
+        <name>CC_Other_Written_Language</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_PERSON_ALSO_LEGAL_GUARDIAN_OF_INDIVIDUAL --></label>
+        <name>CC_PERSON_ALSO_LEGAL_GUARDIAN_OF_INDIVIDUAL</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_PGM_STATUS_WAITLISTED --></label>
+        <name>CC_PGM_STATUS_WAITLISTED</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Page_Targeting --></label>
+        <name>CC_Page_Targeting</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Page_UrgencyNeed --></label>
+        <name>CC_Page_UrgencyNeed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Phone Confirmation --></label>
+        <name>CC_Phone_Confirmation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Phone_Extension --></label>
+        <name>CC_Phone_Extension</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Phone Number --></label>
+        <name>CC_Phone_Number</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Phone Type --></label>
+        <name>CC_Phone_Type</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Physical_Address --></label>
+        <name>CC_Physical_Address</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Physical_Address_Line1 --></label>
+        <name>CC_Physical_Address_Line1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Physical_Address_Line2 --></label>
+        <name>CC_Physical_Address_Line2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Portal Master ID --></label>
+        <name>CC_Portal_Master_ID</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Preferred_Language --></label>
+        <name>CC_Preferred_Language</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Primary_Phone --></label>
+        <name>CC_Primary_Phone</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Primary_Phone_Ext --></label>
+        <name>CC_Primary_Phone_Ext</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_ProgramName --></label>
+        <name>CC_ProgramName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Program_Status --></label>
+        <name>CC_Program_Status</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_RECEIVED_DATE --></label>
+        <name>CC_RECEIVED_DATE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_RT_Individual --></label>
+        <name>CC_RT_Individual</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_RT_Individual_Account --></label>
+        <name>CC_RT_Individual_Account</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_RT_Legal_Guardian --></label>
+        <name>CC_RT_Legal_Guardian</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_RT_Program --></label>
+        <name>CC_RT_Program</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_RT_ProgramDetail --></label>
+        <name>CC_RT_ProgramDetail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_RT_RepLeg_Info --></label>
+        <name>CC_RT_RepLeg_Info</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_RT_Representative --></label>
+        <name>CC_RT_Representative</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_RT_Service --></label>
+        <name>CC_RT_Service</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_RT_Service_Type --></label>
+        <name>CC_RT_Service_Type</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_RT_Waitlist_Type --></label>
+        <name>CC_RT_Waitlist_Type</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_RT_Waiver_AppDetail --></label>
+        <name>CC_RT_Waiver_AppDetail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Representative_Contact_Information --></label>
+        <name>CC_Representative_Contact_Information</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Representative_Information --></label>
+        <name>CC_Representative_Information</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Residence_Address --></label>
+        <name>CC_Residence_Address</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_SAME_AS_PHYSICAL_ADDRESS --></label>
+        <name>CC_SAME_AS_PHYSICAL_ADDRESS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_SEARCH --></label>
+        <name>CC_SEARCH</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_SEC_BasicInfo --></label>
+        <name>CC_SEC_BasicInfo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_SELECT_QUEUE --></label>
+        <name>CC_SELECT_QUEUE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_SITE_NAME_SELF_SERVICE --></label>
+        <name>CC_SITE_NAME_SELF_SERVICE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_SITE_NAME_SERVICE_PROVIDER --></label>
+        <name>CC_SITE_NAME_SERVICE_PROVIDER</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_START --></label>
+        <name>CC_START</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_STATE --></label>
+        <name>CC_STATE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_SameAsPhyAddress --></label>
+        <name>CC_SameAsPhyAddress</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Save &amp; Exit --></label>
+        <name>CC_Save_Exit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Secoandry_Phone --></label>
+        <name>CC_Secoandry_Phone</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Secondary_Phone_Ext --></label>
+        <name>CC_Secondary_Phone_Ext</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Select_County --></label>
+        <name>CC_Select_County</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Select_Date --></label>
+        <name>CC_Select_Date</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Select Document Type --></label>
+        <name>CC_Select_Document_Type</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Select Main Phone Type --></label>
+        <name>CC_Select_Main_Phone_Type</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Select Other Phone Type --></label>
+        <name>CC_Select_Other_Phone_Type</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Select_Relationship --></label>
+        <name>CC_Select_Relationship</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Select_Spoken_Language --></label>
+        <name>CC_Select_Spoken_Language</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Select_State --></label>
+        <name>CC_Select_State</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Select_Status --></label>
+        <name>CC_Select_Status</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Select_Suffix --></label>
+        <name>CC_Select_Suffix</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Select_Time_Zone --></label>
+        <name>CC_Select_Time_Zone</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Select_Written_Language --></label>
+        <name>CC_Select_Written_Language</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Select_preferred_Language --></label>
+        <name>CC_Select_preferred_Language</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_SelectedPrograms --></label>
+        <name>CC_SelectedPrograms</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Self_Service_Intake_Profile --></label>
+        <name>CC_Self_Service_Intake_Profile</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Service_Add_New_Service --></label>
+        <name>CC_Service_Add_New_Service</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Service_IsOnWaitingList --></label>
+        <name>CC_Service_IsOnWaitingList</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Service_ServicePeriod --></label>
+        <name>CC_Service_ServicePeriod</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Service_WaitingList --></label>
+        <name>CC_Service_WaitingList</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Service_WhyServiceNeeded --></label>
+        <name>CC_Service_WhyServiceNeeded</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Services --></label>
+        <name>CC_Services</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Spoken_Language --></label>
+        <name>CC_Spoken_Language</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Status_Capacity_Reserved --></label>
+        <name>CC_Status_Capacity_Reserved</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Status_Targeting_Criteria_Not_Met --></label>
+        <name>CC_Status_Targeting_Criteria_Not_Met</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Status_Waitlisted --></label>
+        <name>CC_Status_Waitlisted</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Summary --></label>
+        <name>CC_Summary</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_TASK_NAME --></label>
+        <name>CC_TASK_NAME</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tab Complete Icon --></label>
+        <name>CC_Tab_Complete_Icon</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tab Incomplete Icon --></label>
+        <name>CC_Tab_Incomplete_Icon</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Targeting_Criteria --></label>
+        <name>CC_Targeting_Criteria</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Urgency --></label>
+        <name>CC_Urgency</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Urgency_of_Need --></label>
+        <name>CC_Urgency_of_Need</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_WAITLISTED_APPLICATIONS --></label>
+        <name>CC_WAITLISTED_APPLICATIONS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Waitlisted Popover Filter Section --></label>
+        <name>CC_Waitlisted_Popover_Filter_Section</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Waitlisted Popover Header --></label>
+        <name>CC_Waitlisted_Popover_Header</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Waitlisted Popover No Individuals --></label>
+        <name>CC_Waitlisted_Popover_No_Individuals</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Waitlisted Popover Results Section --></label>
+        <name>CC_Waitlisted_Popover_Results_Section</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Waitlisted Popover Select --></label>
+        <name>CC_Waitlisted_Popover_Select</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Waiver_Confirmation --></label>
+        <name>CC_Waiver_Confirmation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Waiver_Prog_Information --></label>
+        <name>CC_Waiver_Prog_Information</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Waiver_Prog_Referred_To_Indiviual --></label>
+        <name>CC_Waiver_Prog_Referred_To_Indiviual</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Written_Language --></label>
+        <name>CC_Written_Language</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Yes --></label>
+        <name>CC_Yes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_You_Your_Guardian_LiveAt_Same_Place --></label>
+        <name>CC_You_Your_Guardian_LiveAt_Same_Place</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_You_Your_Rep_LiveAt_Same_Place --></label>
+        <name>CC_You_Your_Rep_LiveAt_Same_Place</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_ZIP_4 --></label>
+        <name>CC_ZIP_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_ZIP_CODE --></label>
+        <name>CC_ZIP_CODE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_individual_have_LegalGuardian --></label>
+        <name>CC_individual_have_LegalGuardian</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_why_the_services_are_needed --></label>
+        <name>CC_why_the_services_are_needed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Comments_To_Application_Reviewer --></label>
+        <name>Comments_To_Application_Reviewer</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Comments_To_Capacity_Reviewer --></label>
+        <name>Comments_To_Capacity_Reviewer</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Confirm_Date --></label>
+        <name>Confirm_Date</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Confirm_Time --></label>
+        <name>Confirm_Time</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_ADD_DAYS_WITH_TODAY --></label>
+        <name>DT_ADD_DAYS_WITH_TODAY</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_ASSIGNEE --></label>
+        <name>DT_ASSIGNEE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_ASSIGNEE_CASEMANAGER --></label>
+        <name>DT_ASSIGNEE_CASEMANAGER</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_ASSIGNEE_SUPERVISOR --></label>
+        <name>DT_ASSIGNEE_SUPERVISOR</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_ASSIGNEE_USER --></label>
+        <name>DT_ASSIGNEE_USER</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_ASSIGNMENT_TYPE --></label>
+        <name>DT_ASSIGNMENT_TYPE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_BACK_TO_LIST --></label>
+        <name>DT_BACK_TO_LIST</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_CLASS_RULE_EXTENSION --></label>
+        <name>DT_CLASS_RULE_EXTENSION</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_CLASS_RULE_VERSION_EXTENSION --></label>
+        <name>DT_CLASS_RULE_VERSION_EXTENSION</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_CLASS_RULE_VERSION_TRIGGER_HANDLER --></label>
+        <name>DT_CLASS_RULE_VERSION_TRIGGER_HANDLER</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_CREATE --></label>
+        <name>DT_CREATE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_CRITERIA_LOGIC --></label>
+        <name>DT_CRITERIA_LOGIC</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_ERROR_TYPE_APEX_TRIGGER --></label>
+        <name>DT_ERROR_TYPE_APEX_TRIGGER</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_ERROR_TYPE_BUSINESS_VALIDATION --></label>
+        <name>DT_ERROR_TYPE_BUSINESS_VALIDATION</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_ERROR_TYPE_VF_CONTROLLER --></label>
+        <name>DT_ERROR_TYPE_VF_CONTROLLER</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_FIELD_DESCRIPTION --></label>
+        <name>DT_FIELD_DESCRIPTION</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_FIELD_IS_ACTIVE --></label>
+        <name>DT_FIELD_IS_ACTIVE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_FIELD_MODULE --></label>
+        <name>DT_FIELD_MODULE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_FIELD_RULE --></label>
+        <name>DT_FIELD_RULE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_FIELD_RULE_PRIORITY --></label>
+        <name>DT_FIELD_RULE_PRIORITY</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_FIELD_RULE_TYPE --></label>
+        <name>DT_FIELD_RULE_TYPE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_FIELD_TASK_CODE --></label>
+        <name>DT_FIELD_TASK_CODE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_FIELD_TASK_DESCRIPTION --></label>
+        <name>DT_FIELD_TASK_DESCRIPTION</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_FIELD_TASK_NAME --></label>
+        <name>DT_FIELD_TASK_NAME</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_INFORMATION --></label>
+        <name>DT_INFORMATION</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_LABEL_BACK_TO --></label>
+        <name>DT_LABEL_BACK_TO</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Unknown Error --></label>
+        <name>DT_LABEL_CONTACT_ADMIN</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Deactivate Rule --></label>
+        <name>DT_LABEL_DEACTIVATE_RULE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Deactivate Rule --></label>
+        <name>DT_LABEL_DEACTIVATE_RULE_EDIT</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Deactivate Rule Version --></label>
+        <name>DT_LABEL_DEACTIVATE_RULE_VERSION</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_LABEL_EDIT --></label>
+        <name>DT_LABEL_EDIT</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Empty Record --></label>
+        <name>DT_LABEL_EMPTY_RECORD</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No Active Rule Versions found --></label>
+        <name>DT_LABEL_NO_ACTIVE_RULE_VERSION</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No Case associated to Application --></label>
+        <name>DT_LABEL_NO_CASE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No Criterias found --></label>
+        <name>DT_LABEL_NO_CRITERIA_FOUND</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No Fields selected --></label>
+        <name>DT_LABEL_NO_FIELDS_SELECTED</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- User does not have a Manager assigned --></label>
+        <name>DT_LABEL_NO_SUPERVISOR</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_LABEL_RULE --></label>
+        <name>DT_LABEL_RULE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_LABEL_RULE_CRITERIA --></label>
+        <name>DT_LABEL_RULE_CRITERIA</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_LABEL_RULE_VERSION --></label>
+        <name>DT_LABEL_RULE_VERSION</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_LBL_EMPTY_RECORD --></label>
+        <name>DT_LBL_EMPTY_RECORD</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_LBL_MASTER_RECORD_ID_MISSING --></label>
+        <name>DT_LBL_MASTER_RECORD_ID_MISSING</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_LBL_NO_ACTIVE_RULES --></label>
+        <name>DT_LBL_NO_ACTIVE_RULES</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_LBL_NO_ELIGIBLE_RULES --></label>
+        <name>DT_LBL_NO_ELIGIBLE_RULES</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_MAP_THE_FIELDS --></label>
+        <name>DT_MAP_THE_FIELDS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_METHOD_CHECK_VALIDATIONS --></label>
+        <name>DT_METHOD_CHECK_VALIDATIONS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_METHOD_DELETE_RULE --></label>
+        <name>DT_METHOD_DELETE_RULE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_METHOD_DELETE_VERSION --></label>
+        <name>DT_METHOD_DELETE_VERSION</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_METHOD_TOGGLE_ACTIVATE --></label>
+        <name>DT_METHOD_TOGGLE_ACTIVATE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_NAME --></label>
+        <name>DT_NAME</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_OPERATOR --></label>
+        <name>DT_OPERATOR</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_RECORD_TYPE_COMPARE --></label>
+        <name>DT_RECORD_TYPE_COMPARE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_RULE_TYPE_EMAIL --></label>
+        <name>DT_RULE_TYPE_EMAIL</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_RULE_TYPE_QUEUE --></label>
+        <name>DT_RULE_TYPE_QUEUE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_RULE_VER_TYPE_MANUAL --></label>
+        <name>DT_RULE_VER_TYPE_MANUAL</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_SOURCE_SOBJECT_FIELD --></label>
+        <name>DT_SOURCE_SOBJECT_FIELD</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Select Type --></label>
+        <name>DT_Select_Type</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_TARGET_OBJECT --></label>
+        <name>DT_TARGET_OBJECT</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_TARGET_TASK_FIELD --></label>
+        <name>DT_TARGET_TASK_FIELD</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Task Status In Progress --></label>
+        <name>DT_Task_Status_In_Progress</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_URL_VIEW_RULE_LIST --></label>
+        <name>DT_URL_VIEW_RULE_LIST</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_VALUE_TO_COMPARE --></label>
+        <name>DT_VALUE_TO_COMPARE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_VALUE_TO_MAP --></label>
+        <name>DT_VALUE_TO_MAP</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DT_VERSION_NUMBER --></label>
+        <name>DT_VERSION_NUMBER</name>
+    </customLabels>
+    <customLabels>
+        <label>Volver al</label>
+        <name>GMI_BackTo</name>
+    </customLabels>
+    <customLabels>
+        <label>Por favor, generar una clave de API de Google Maps</label>
+        <name>GMI_GenerateKey</name>
+    </customLabels>
+    <customLabels>
+        <label>es</label>
+        <name>GMI_GoogleLanguageCode</name>
+    </customLabels>
+    <customLabels>
+        <label>Ubicación se muestra mediante la dirección</label>
+        <name>GMI_LocalAddressFound</name>
+    </customLabels>
+    <customLabels>
+        <label>No se ha encontrado la dirección de Google</label>
+        <name>GMI_LocalAddressNotFound</name>
+    </customLabels>
+    <customLabels>
+        <label>Muestran en Google</label>
+        <name>GMI_LocalShowMap</name>
+    </customLabels>
+    <customLabels>
+        <label>Por favor, actualice la GoogleMapsInternational con un nuevo componente clave que puede ser generada a partir de</label>
+        <name>GMI_UpdateComponent</name>
+    </customLabels>
+    <customLabels>
+        <label>La URL del sitio web es necesario</label>
+        <name>GMI_WebsiteNeeded</name>
+    </customLabels>
+    <customLabels>
+        <label>http://maps.google.es</label>
+        <name>GMI_googleMapURL</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_Label_CaseManager --></label>
+        <name>IndividualInformation_CC_PopoverContent</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Individual_Meet_For_Another_Waiver --></label>
+        <name>Individual_Meet_For_Another_Waiver</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Individual_Meet_Waiver_Criteria --></label>
+        <name>Individual_Meet_Waiver_Criteria</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Select_Waiver_Targeting_Cretria --></label>
+        <name>Select_Waiver_Targeting_Cretria</name>
+    </customLabels>
+    <customPageWebLinks>
+        <label><!-- Pipeline Shaper --></label>
+        <name>Pipeline_Shaper_Flex</name>
+    </customPageWebLinks>
+    <customTabs>
+        <label><!-- Start Application --></label>
+        <name>CC_Start_Application</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Chatter Assassin --></label>
+        <name>Chatter_Assassin</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Home --></label>
+        <name>Home</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Home --></label>
+        <name>Home1</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- International Mapping Setup --></label>
+        <name>International_Mapping_Setup</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Perfect Date Wizard --></label>
+        <name>Perfect_Date_Wizard</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Rules --></label>
+        <name>Rules</name>
+    </customTabs>
+    <flowDefinitions>
+        <flows>
+            <fullName>CC_Populate_Task_Fields_Using_Master_Record_Id-1</fullName>
+        </flows>
+        <fullName>CC_Populate_Task_Fields_Using_Master_Record_Id</fullName>
+    </flowDefinitions>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewContact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewEvent --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewNote --></label>
+        <name>NewNote</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewOpportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewTask --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <reportTypes>
+        <description><!-- Contacts with Applications with Application Details --></description>
+        <label><!-- Contacts with Applications with Application Details --></label>
+        <name>Contacts_with_Applications_with_Application_Details</name>
+        <sections>
+            <label><!-- Application Details --></label>
+            <name>Application Details</name>
+        </sections>
+        <sections>
+            <label><!-- Applications --></label>
+            <name>Applications</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Contacts with Applications with Application Details with Enrolled Programs --></description>
+        <label><!-- Contacts with Applications with Application Details with Enrolled Programs --></label>
+        <name>Contacts_with_Applications_with_Application_Details_with_Enrolled_Programs</name>
+        <sections>
+            <label><!-- Application Details --></label>
+            <name>Application Details</name>
+        </sections>
+        <sections>
+            <label><!-- Applications --></label>
+            <name>Applications</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Contacts with Applications with Comments --></description>
+        <label><!-- Contacts with Applications with Comments --></label>
+        <name>Contacts_with_Applications_with_Comments</name>
+        <sections>
+            <label><!-- Applications --></label>
+            <name>Applications</name>
+        </sections>
+        <sections>
+            <label><!-- Comments --></label>
+            <name>Comments</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+</Translations>

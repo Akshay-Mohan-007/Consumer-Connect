@@ -1,0 +1,3 @@
+<aura:event type="COMPONENT" description="Event to control left navigation" >
+    <aura:attribute name="data" type="Object"/>
+</aura:event>

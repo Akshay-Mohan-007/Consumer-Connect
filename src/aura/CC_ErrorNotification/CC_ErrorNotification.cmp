@@ -1,0 +1,31 @@
+<aura:component >
+
+    <aura:attribute name="lstErrors" type="String[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <lightning:layout horizontalAlign="spread" multipleRows="true">
+         <lightning:layoutItem flexibility="grow" size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12" padding="around-small">
+              <div class="slds-accordion errorAccordianSection">
+                  <section class="slds-accordion__section slds-p-around_none" aura:id="errorAccordian">
+                            <div class="slds-accordion__summary slds-p-around_x-small slds-theme_error slds-theme--error">
+                                  <h3 class="slds-text-heading_small slds-accordion__summary-heading">
+                                     <lightning:icon iconName="utility:error" size="x-small" class="slds-m-horizontal_x-small slds-icon_container slds-icon-utility-error slds-no-flex slds-align-top"/>
+                                     <span class="slds-truncate" title="Accordion summary">Error</span>
+                                  </h3>
+                                  <button  aria-expanded="true" class="slds-button_destructive" onclick="{!c.toggleClass}">
+                                      <lightning:icon iconName="utility:down" size="x-small" alternativeText="Toggle Accordian" title="Toggle Accordian" class="slds-m-horizontal_x-small"/>
+                                  </button>
+                            </div>
+                            <div aria-hidden="false" class="slds-accordion__content ease-in-out" aura:id="errorAccordianContent">
+                                <ol class="slds-list_dotted">
+                                    <aura:iteration items="{!v.lstErrors}" var="obj">
+                                       <li>{!obj}</li>
+                                    </aura:iteration>
+                                </ol>
+                            </div>
+                  </section>
+               </div>
+         </lightning:layoutItem>
+    </lightning:layout>
+   
+</aura:component>

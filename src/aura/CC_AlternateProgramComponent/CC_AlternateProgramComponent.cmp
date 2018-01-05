@@ -1,0 +1,26 @@
+<aura:component extends="c:CC_BaseSuperComponent" controller="CC_AlternateProgramsController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+<aura:attribute name="lstHeaders" type="List"/>
+<aura:attribute name="lstAppDetails" type="List"/>
+<aura:attribute name="mapLabels" type="Map"/>
+<aura:attribute name="bLoaded" type="Boolean" default="false"  />
+<aura:attribute name="sAppDetailId" type="String"/>
+<aura:attribute name="lstErrors" type="List"/>
+<aura:attribute name="bHasError" type="Boolean" default="false"/>
+    
+    <aura:if isTrue="{!v.bLoaded}">
+    <lightning:layout horizontalAlign="left" multipleRows="true">
+        <lightning:layoutItem flexibility="grow" size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12" class="slds-p-around_xx-small slds-p-left_small">
+            <aura:if isTrue="{!!empty(v.lstAppDetails)}">
+                <c:CC_GenericTable thead="{!v.lstHeaders}" tbody="{!v.lstAppDetails}"/>
+                <!-- <aura:set attribute="else">
+                    <div class="slds-text-heading_small">
+                        {! v.mapLabels.CC_LBL_NO_RECORD_EXIST}
+                    </div>        
+                </aura:set> -->
+            </aura:if>
+
+        </lightning:layoutItem>
+    </lightning:layout>
+    </aura:if>
+</aura:component>

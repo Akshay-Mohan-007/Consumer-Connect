@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Rule Criterion</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Rule Criteria</value>
+    </caseValues>
+    <fields>
+        <label><!-- Operator --></label>
+        <name>DT_Operator__c</name>
+        <picklistValues>
+            <masterLabel>Equals To</masterLabel>
+            <translation><!-- Equals To --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Greater Than</masterLabel>
+            <translation><!-- Greater Than --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Greater Than Or Equals To</masterLabel>
+            <translation><!-- Greater Than Or Equals To --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less Than</masterLabel>
+            <translation><!-- Less Than --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less Than Or Equals To</masterLabel>
+            <translation><!-- Less Than Or Equals To --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Equals To</masterLabel>
+            <translation><!-- Not Equals To --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Rule Version --></label>
+        <name>DT_Rule_Version__c</name>
+        <relationshipLabel><!-- Rule Criteria --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Serial Number --></label>
+        <name>DT_Serial_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source SObject Field Type --></label>
+        <name>DT_Source_SObject_Field_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source SObject Field --></label>
+        <name>DT_Source_SObject_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target Task Field --></label>
+        <name>DT_Target_Task_Field__c</name>
+    </fields>
+    <fields>
+        <help><!-- Can have different formats
+Date Format: YYYY-MM-DD --></help>
+        <label><!-- Value To Compare --></label>
+        <name>DT_Value_To_Compare__c</name>
+    </fields>
+    <fields>
+        <help><!-- Can have different formats
+Date Format: YYYY-MM-DD --></help>
+        <label><!-- Value to Map --></label>
+        <name>DT_Value_to_Map__c</name>
+    </fields>
+    <fields>
+        <label><!-- Version ID + Source Field --></label>
+        <name>DT_Version_Source_Field_Comb__c</name>
+    </fields>
+    <layouts>
+        <layout>DT Rule Criterion Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Compare Field Value --></label>
+        <name>Compare_Field_Value</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Map Object Fields To Task --></label>
+        <name>Map_Object_Fields</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Map Static Values To Task --></label>
+        <name>Map_Static_Values</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Operator is mandatory for Compare Fields --></errorMessage>
+        <name>Operator_Can_Not_Be_Blank</name>
+    </validationRules>
+</CustomObjectTranslation>

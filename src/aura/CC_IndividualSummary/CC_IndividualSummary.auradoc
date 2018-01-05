@@ -1,0 +1,22 @@
+<aura:documentation>
+	<aura:description>
+<!--***************************************************************************************************************************************
+ * NAME   : CC_IndividualSummary
+ * DESCRIPTION  : Comment Textarea & Button for Comment Modal
+ *    
+ * @AUTHOR   : Sayari Mandal
+ * @DATE   : 11-23-2017
+ *
+ * MODIFICATION LOG:  
+ * ***************************************************************************************************************************************
+ * DEVELOPER        DATE        DESCRIPTION 
+ * ***************************************************************************************************************************************
+ * Sayari Mandal        11-23-2017      Initial Version
+ * Akshay Mohan         11-27-2017      JS and Apex Controller Integration
+ * Sayari Mandal        12-06-2017      UI changes
+ * Akshay Mohan         12-18-2017      TKT-000839 fix
+ ****************************************************************************************************************************************-->
+
+    </aura:description>
+	
+</aura:documentation>

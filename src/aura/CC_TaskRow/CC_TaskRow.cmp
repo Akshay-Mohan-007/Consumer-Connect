@@ -1,0 +1,66 @@
+<!--
+ ***************************************************************************************************************************************
+ * NAME   : CC_TaskRow
+ * DESCRIPTION  : rows for the CC_TasksComponent list
+ *    
+ * @AUTHOR   : Nidhin V K
+ * @DATE   : 12-06-2017
+ *
+ * MODIFICATION LOG:  
+ * ______________________________________________________________________________________________________________________________________
+ * DEVELOPER                DATE                DESCRIPTION 
+ * ______________________________________________________________________________________________________________________________________
+ * Nidhin V K               12-06-2017          Initial version         
+ ****************************************************************************************************************************************
+-->
+<aura:component extends="c:CC_BaseSuperComponent" access="global">
+    <aura:attribute type="Object" name="row"/>
+    <aura:attribute type="Map" name="mapLabels"/>
+    <aura:attribute type="String" name="sSiteName" default=""/>
+    <aura:attribute name="bIsOpen" type="Boolean" default="false" />
+    <aura:attribute type="String" name="sComment" default="" />
+	<tr class="{!v.row.bIsDueDatePassed == true ? 'highlight-row' : ''}">
+	    <td data-label="{!v.mapLabels.CC_TASK_NAME}">
+	        <div class="slds-truncate" title="">{!v.row.sName}</div>
+	    </td>
+	    <td data-label="{!v.mapLabels.CC_APP_CASE}">
+	        <div class="slds-truncate" title="">{!v.row.sAppCase}</div>
+	    </td>
+	    <td data-label="{!v.mapLabels.CC_INDIVIDUAL_NAME}">
+	        <div class="slds-truncate" title="">
+	        	<a class="highlight-cnt" onclick="{!c.launchPopOver}">
+	        		{!v.row.sIndividualName}
+	        	</a>
+	        </div>
+	    </td>
+	    <td data-label="{!v.mapLabels.CC_LBL_Comment}">
+	        <!-- <div class="slds-truncate" title="">{!v.row.sComment}</div> -->
+	        <span class="show">{!v.row.sShortComment}
+	        	<aura:if isTrue="{!v.row.sComment.length > 25}">
+	        		<a href="" onclick="{!c.showModal}" data-val="{!v.row.sComment}"> ...</a>
+	        	</aura:if>
+	        </span>
+	    </td>
+	    <td data-label="{!v.mapLabels.CC_Label_Status}">
+	        <div class="slds-truncate" title="">{!v.row.sStatus}</div>
+	    </td>
+	    <td data-label="{!v.mapLabels.CC_ACTION}">
+	        <div class="slds-truncate" title="">
+	            <a onclick="{!c.proceed}">
+	                <aura:if isTrue="{!v.row.sStatus == v.mapLabels.DT_TASK_STATUS_NEW}">
+	                    {!v.mapLabels.CC_START}
+	                    <aura:set attribute="else">
+	                        {!v.mapLabels.CC_CONTINUE}
+	                    </aura:set>
+	                </aura:if>
+	            </a>
+	        </div>
+	    </td>
+	    <td data-label="{!v.mapLabels.CC_RECEIVED_DATE}">
+	        <div class="slds-truncate" title="">{!v.row.sReceivedDate}</div>
+	    </td>
+	    <td data-label="{!v.mapLabels.CC_DUE_DATE}">
+	        <div class="slds-truncate" title="">{!v.row.sDueDate}</div>
+	    </td>
+	</tr>
+</aura:component>

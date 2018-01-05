@@ -1,0 +1,45 @@
+<!--
+ ***************************************************************************************************************************************
+ * NAME   : CC_WaitlistedApplicationRow
+ * DESCRIPTION  : rows for the CC_WaitlistedApplicationList
+ *    
+ * @AUTHOR   : Nidhin V K
+ * @DATE   : 15-Dec-2017
+ *
+ * MODIFICATION LOG:  
+ * ______________________________________________________________________________________________________________________________________
+ * DEVELOPER                DATE                DESCRIPTION 
+ * ______________________________________________________________________________________________________________________________________
+ * Nidhin V K               12-06-2017          Initial version         
+ ****************************************************************************************************************************************
+-->
+<aura:component extends="c:CC_BaseSuperComponent" access="global">
+    <aura:attribute type="Object" name="row"/>
+    <aura:attribute type="Map" name="mapLabels"/>
+    <aura:attribute type="String" name="sSiteName" default=""/>
+	<tr class="{!v.row.bIsDueDatePassed == true ? 'highlight-row' : ''}">
+	    <td data-label="abc">
+	        <div class="slds-truncate" title="">{!v.row.sInitiatedDate}</div>
+	    </td>
+	    <td data-label="abc">
+	        <div class="slds-truncate" title="">{!v.row.sAppNumber}</div>
+	    </td>
+	    <td data-label="abc">
+	        <div class="slds-truncate" title="">
+	        	<a class="highlight-cnt" onclick="{!c.launchPopOver}">
+	        		{!v.row.sIndividualName}
+	        	</a>
+	        </div>
+	    </td>
+	    <td data-label="abc">
+	        <div class="slds-truncate" title="">{!v.row.sStatus}</div>
+	    </td>
+	    <td data-label="abc">
+	        <div class="slds-truncate" title="">
+	            <a data-con-id="{!v.row.sIndividualId}" onclick="{!c.proceed}">
+	                {!v.mapLabels.CC_CONTINUE}
+	            </a>
+	        </div>
+	    </td>
+	</tr>
+</aura:component>

@@ -1,0 +1,58 @@
+<!-- 
+ * Page Name    : DT_ViewRuleCriteria
+ * Description  : Rule Criteria View Page.    
+ * Created By   : Nidhin V K
+ * Created On   : 07-27-2016
+
+ * Modification Log:  
+ * --------------------------------------------------------------------------------------------------------------------------------------
+ * Developer                Date        Modification ID      Description 
+ * --------------------------------------------------------------------------------------------------------------------------------------
+ * Nidhin V K            07-27-2016        1000            Initial version
+ *
+ *
+ -->
+ <apex:page standardController="DT_Rule_Criterion__c" extensions="DT_RuleCriteriaExtension">
+    <apex:sectionHeader title="Rule" subtitle="{!DT_Rule_Criterion__c.Name}"/>
+    <!-- Go Back Link -->
+    <div class="ptBreadcrumb">
+        &nbsp;«&nbsp;<apex:outputLink value="/{!DT_Rule_Criterion__c.DT_Rule_Version__c}">Back to List: Rule Versions</apex:outputLink>
+    </div>
+    <apex:form >
+        <apex:pageBlock tabStyle="DT_Rule_Criterion__c" title="Rule"  mode="maindetail" id="pageBlock">
+            <apex:pageMessages rendered="{!bShowError}"/>
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Edit" action="{!edit}" rendered="{!NOT(bShowError)}"/>
+                <apex:commandButton value="Delete" action="{!deleteCriteria}" rendered="{!NOT(bShowError)}"/>
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection title="Information" columns="2" collapsible="false">
+               
+                    <apex:outputField id="nameID" value="{!DT_Rule_Criterion__c.DT_Serial_Number__c}"/>
+                    
+                    <apex:outputField id="sobjID" value="{!DT_Rule_Criterion__c.DT_Rule_Version__c}"/>
+                    
+                    <apex:outputField id="descID" value="{!DT_Rule_Criterion__c.DT_Source_SObject_Field__c}" />
+                    
+                    <apex:outputField id="valToCmpID" value="{!DT_Rule_Criterion__c.DT_Value_to_Map__c}"/>
+                    
+                    <apex:outputField value="{!DT_Rule_Criterion__c.DT_Operator__c}"/>
+                    
+                    <apex:outputField value="{!DT_Rule_Criterion__c.DT_Target_Task_Field__c}"/>
+                    
+                    <apex:outputField value="{!DT_Rule_Criterion__c.DT_Value_To_Compare__c}"/>
+                    
+                    <apex:outputlabel />
+                    
+                    <apex:outputField id="CreatedById" value="{!DT_Rule_Criterion__c.CreatedById}"/>
+                    
+                    <apex:outputField id="CreatedDate" value="{!DT_Rule_Criterion__c.LastModifiedById}"/>
+                    
+                    <apex:outputField id="LastModifiedId" value="{!DT_Rule_Criterion__c.CreatedDate}"/>
+                    
+                    <apex:outputField id="LastModifiedDate" value="{!DT_Rule_Criterion__c.LastModifiedDate}"/>
+                    
+            </apex:pageBlockSection>    
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

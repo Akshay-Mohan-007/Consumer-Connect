@@ -1,0 +1,256 @@
+<aura:component >
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <aura:attribute name="value" type="String" description="Date displayed if exists already" />
+    <aura:attribute name="label" type="String" description="Label for the component" />
+    <aura:attribute name="placeholder" type="String" description="Placeholder for the component" />
+    <aura:attribute name="class" type="String" description="A CSS style to be attached to the component." />
+    <aura:attribute name="formatSpecifier" type="String" description="Java style format specifier for the date" />
+    <aura:attribute name="required" type="boolean" description="If the field is mandatory or not"/><!--added by Sayari-->
+    
+    <aura:attribute name="date" type="Integer" description="The currently highlighted date." />
+    <aura:attribute name="month" type="Integer" description="The currently rendered month." />
+    <aura:attribute name="monthName" type="String" description="The currently rendered month name." />
+    <aura:attribute name="year" type="Integer" description="The currently rendered year." />
+    <aura:attribute name="selectedDate" type="Date" description="The selected date." />
+    <aura:attribute name="setFocus" type="Boolean" default="true" description="Control if we should focus any date when we render the month." />
+    
+    <aura:attribute name="extendedYearRange" type="Boolean" default="false" 
+                    description="If true, you must set start and stop year values (1900 and 2100 for eg)" />
+    <aura:attribute name="startYear" type="Integer" description="if extendedYearRange is true, this will determine the first year in the list" />
+    <aura:attribute name="finishYear" type="Integer" description="if extendedYearRange is true, this will determine the last year in the list" />
+    <aura:attribute name="options" type="SelectOption[]" />
+    
+    <!-- private attributes -->
+    <aura:attribute name="_setFocus" type="Boolean" default="true" description="The internal state of setFocus." />
+    <aura:attribute name="_namesOfWeekdays" type="List" description="The names of the week days based on locale." />
+    <aura:attribute name="_today" type="String" description="The date string (yyyy-MM-dd) of today based on the Aura time zone." />
+    <aura:attribute name="_windowTimeout" type="Object" />
+    <aura:attribute name="_gridOver" type="Boolean" default="false" />
+    <aura:attribute name="datePickerClicked" type="Boolean" default="false"/>
+    <!-- events -->
+    <aura:registerevent name="dateChangeEvent" type="c:LRC_DateChange" description="The event fired when a calendar value is selected" />
+    
+    <aura:attribute name="isDatepickerOpen" type="Boolean" default="false"/>
+    <aura:attribute name="hideInputBox" type="Boolean" default="false" description="Boolean to hide the input box"/><!--Hariharan-14284 -->
+    <aura:attribute name="displayDatePicker" type="Boolean" default="false"/><!--Hariharan-14284 -->
+    <aura:handler name="change" value="{!v.displayDatePicker}" action="{!c.displayDatePicker}"/><!--Hariharan-14284 -->
+    
+    
+    <!--added by sayari for timepicker-->
+        
+        
+    
+        
+        
+        <aura:attribute name="timeZones" type="String[]" default="[]"/>
+        <aura:attribute name="isTimePicker" type="Boolean" default="false"/>
+        <aura:attribute name="isDatePicker" type="Boolean" default="false"/>
+        
+    
+        <aura:attribute name="isTimepickerOpen" type="Boolean" default="false"/>
+        <aura:attribute name="hour" type="String" description="Hour displayed if exists already" />
+        <aura:attribute name="min" type="String" description="Minutes displayed if exists already" />
+        <aura:attribute name="meridian" type="String" description="Meridian displayed if exists already" />
+        <aura:attribute name="timezone" type="String" description="Timezone displayed if exists already" />
+        <aura:attribute name="minArray" type="String[]"  description="Array listing the minutes in 1 hour"/>
+
+
+
+
+    
+    
+    <!--added by sayari for timepicker-->
+
+    
+    <aura:method name="reInit" action="{!c.doInit}" 
+                 description="Runs the init method again if an external value has been changed and we need to update the ui"> 
+    </aura:method>
+    <div class="datepicker-wrapper">
+        <aura:if isTrue="{!!v.hideInputBox}"><!--Hariharan added it for 14248-->
+            <div class="{!v.class}">
+                <label class="slds-form-element__label" >
+                   <aura:if isTrue="{!v.required}"><abbr class="slds-required" title="required">*</abbr></aura:if> <!--added by Sayari-->
+                   {!v.label}</label>
+                <div class="slds-form-element__control slds-grow slds-input-has-icon slds-input-has-icon--right " onmouseleave="{!c.onMouseLeaveInput}">
+                    <c:LRC_InputDate aura:id="dateInput" class="slds-input" value="{!v.value}" 
+                                     format="{!v.formatSpecifier}" required="{!v.required}" dataChangeEvent="{!c.handleManualInput}" hideOnBlur="{!c.toggleDatePicker}" placeholder="{!v.placeholder}" isDatepickerOpen="{!v.isDatepickerOpen}" isDatePicker="{!v.isDatePicker}" isTimePicker="{!v.isTimePicker}"/>
+                    
+                    <div class="slds-button-group" role="group">
+                           <aura:if isTrue="{!v.value}">
+                              <button aura:id="clear-button" onclick="{!c.handleClearDate}" class="slds-input__icon slds-button slds-button--icon" style="right:3.25rem">
+                                  <lightning:icon iconName="utility:clear" size="x-small" class="slds-button__icon" /> 
+                              </button>
+                          </aura:if>
+                        
+                          <aura:if isTrue="{!v.isDatePicker}">
+                               <button onclick="{!c.handleInputFocus}" class="slds-input__icon  slds-button slds-button--icon" style="right:2rem">
+                                 <lightning:icon iconName="utility:event" size="x-small" class="slds-button__icon" /><!-- added by Sayari-->
+                                 <span class="slds-assistive-text">{!$Label.c.HA_Clear}</span>
+                               </button>
+                          </aura:if>
+                        
+                        
+                         <aura:if isTrue="{!v.isTimePicker}">
+                          <button aura:id="clock-button" onclick="{!c.showTimePicker}" class="slds-input__icon slds-button slds-button--icon" disabled="{!and(not(v.value), and(v.isTimePicker,v.isDatePicker))?true:false}">
+                              <lightning:icon iconName="utility:clock" size="x-small" class="slds-button__icon" /> 
+                          </button>
+                        </aura:if>
+                     </div>
+                      
+                    
+                    
+                    
+                     
+                    
+                    
+                      
+                </div>
+            </div>
+        </aura:if>
+        
+         <!--added by sayari for timepicker-->
+        <div class="{!($Browser.isPhone == true) ? (v.isTimepickerOpen ? 'date-wrapper' : 'date-wrapper slds-hide') : ''}">
+           <div aura:id="grid2" id="timePicker" class="slds-datepicker slds-dropdown slds-hide">
+                <div class="slds-grid slds-grid--align-spread slds-grow">
+                    <lightning:select label="HH" name="hour" value="{!v.hour}" aura:id="selectedHour" class="slds-m-left_x-small">
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            
+                    </lightning:select>
+                    <lightning:select label="MM" name="min" value="{!v.min}" aura:id="selectedMin" class="slds-m-left_x-small">
+                        <aura:iteration items="{!v.minArray}" var="obj">
+                           <option value="{!obj}">{!obj}</option>
+                        </aura:iteration>
+                     </lightning:select>
+                    <lightning:select label="AM/PM" name="meridian" value="{!v.meridian}" aura:id="selectedMeridian" class="slds-m-left_x-small">
+                        <option value="AM">AM</option>
+                        <option value="PM">PM</option>
+                     </lightning:select>
+                    <lightning:select label="Timezone" name="timezone" value="{!v.timezone}" aura:id="selectedTimezone" class="slds-m-left_x-small slds-m-right_x-small">
+                        <aura:iteration items="{!v.timeZones}" var="obj">
+                           <option value="{!obj}">{!obj}</option>
+                        </aura:iteration>
+                    </lightning:select>
+                    </div>
+                    <div class="slds-grid slds-grid--align-spread slds-grow slds-m-around_x-small">
+                        <lightning:button variant="neutral" label="OK" onclick="{! c.changeTime }" class="slds-button_small"/>
+              </div>
+                
+                    
+
+                
+                 
+            </div>
+        </div>
+         <!--added by sayari for timepicker-->
+        
+        <div class="{!($Browser.isPhone == true) ? (v.isDatepickerOpen ? 'date-wrapper' : 'date-wrapper slds-hide') : ''}">
+            <div aura:id="grid" id="datepicker-dropdown" class="slds-datepicker slds-dropdown slds-dropdown--left slds-hide" onmouseenter="{!c.onMouseEnterGrid}" onmouseleave="{!c.onMouseLeaveGrid}" onblur="{!c.toggleDatePicker}">
+                
+                <div class="slds-datepicker__filter slds-grid">
+                    <div class="slds-datepicker__filter--month slds-grid slds-grid--align-spread slds-grow">
+                        <div class="slds-align-middle">
+                            <a onclick="{!c.goToPreviousMonth}" href="javascript:void(0);" class="slds-button slds-button--icon-container">
+                                <img class="arrow-icon" alt="Left Arrow" src="{!$Resource.LRC_DatepickerAssets +'/left-arrow.svg'}"/>
+                            </a>
+                        </div>
+                        <h2 id="month" class="slds-align-middle" aria-live="assertive" aria-atomic="true">{!v.monthName}</h2>
+                        <div class="slds-align-middle">
+                            <a onclick="{!c.goToNextMonth}" href="javascript:void(0);" class="slds-button slds-button--icon-container">
+                                <img class="arrow-icon" alt="Right Arrow" src="{!$Resource.LRC_DatepickerAssets +'/right-arrow.svg'}"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slds-shrink-none">
+                        <c:LRC_DateSelect aura:id="yearSelect" value="{!v.year}" options="{!v.options}"
+                                          selectChange="{!c.handleYearChange}" />
+                    </div>
+                </div>
+                
+                <table aura:id="maintable" class="datepicker__month" role="grid" aria-labelledby="month">
+                    <thead>
+                        <tr id="weekdays">
+                            <aura:iteration items="{!v._namesOfWeekdays}" var="day">
+                                <th scope="col" class="dayOfWeek" id="{!day.shortName}">
+                                    <p title="{!day.shortName}">{!day.shortName}</p>
+                                </th>
+                            </aura:iteration>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr aura:id="week1">
+                            <c:LRC_DateCell aura:id="0" headerID="{!v._namesOfWeekdays[0].shortName}"/>
+                            <c:LRC_DateCell aura:id="1" headerID="{!v._namesOfWeekdays[1].shortName}"/>
+                            <c:LRC_DateCell aura:id="2" headerID="{!v._namesOfWeekdays[2].shortName}" />
+                            <c:LRC_DateCell aura:id="3" headerID="{!v._namesOfWeekdays[3].shortName}" />
+                            <c:LRC_DateCell aura:id="4" headerID="{!v._namesOfWeekdays[4].shortName}" />
+                            <c:LRC_DateCell aura:id="5" headerID="{!v._namesOfWeekdays[5].shortName}" />
+                            <c:LRC_DateCell aura:id="6" headerID="{!v._namesOfWeekdays[6].shortName}" />
+                        </tr>
+                        <tr aura:id="week2">
+                            <c:LRC_DateCell aura:id="7" headerID="{!v._namesOfWeekdays[0].shortName}" />
+                            <c:LRC_DateCell aura:id="8" headerID="{!v._namesOfWeekdays[1].shortName}" />
+                            <c:LRC_DateCell aura:id="9" headerID="{!v._namesOfWeekdays[2].shortName}" />
+                            <c:LRC_DateCell aura:id="10" headerID="{!v._namesOfWeekdays[3].shortName}" />
+                            <c:LRC_DateCell aura:id="11" headerID="{!v._namesOfWeekdays[4].shortName}" />
+                            <c:LRC_DateCell aura:id="12" headerID="{!v._namesOfWeekdays[5].shortName}" />
+                            <c:LRC_DateCell aura:id="13" headerID="{!v._namesOfWeekdays[6].shortName}" />
+                        </tr>
+                        <tr aura:id="week3">
+                            <c:LRC_DateCell aura:id="14" headerID="{!v._namesOfWeekdays[0].shortName}" />
+                            <c:LRC_DateCell aura:id="15" headerID="{!v._namesOfWeekdays[1].shortName}" />
+                            <c:LRC_DateCell aura:id="16" headerID="{!v._namesOfWeekdays[2].shortName}" />
+                            <c:LRC_DateCell aura:id="17" headerID="{!v._namesOfWeekdays[3].shortName}" />
+                            <c:LRC_DateCell aura:id="18" headerID="{!v._namesOfWeekdays[4].shortName}" />
+                            <c:LRC_DateCell aura:id="19" headerID="{!v._namesOfWeekdays[5].shortName}" />
+                            <c:LRC_DateCell aura:id="20" headerID="{!v._namesOfWeekdays[6].shortName}" />
+                        </tr>
+                        <tr aura:id="week4">
+                            <c:LRC_DateCell aura:id="21" headerID="{!v._namesOfWeekdays[0].shortName}" />
+                            <c:LRC_DateCell aura:id="22" headerID="{!v._namesOfWeekdays[1].shortName}" />
+                            <c:LRC_DateCell aura:id="23" headerID="{!v._namesOfWeekdays[2].shortName}" />
+                            <c:LRC_DateCell aura:id="24" headerID="{!v._namesOfWeekdays[3].shortName}" />
+                            <c:LRC_DateCell aura:id="25" headerID="{!v._namesOfWeekdays[4].shortName}" />
+                            <c:LRC_DateCell aura:id="26" headerID="{!v._namesOfWeekdays[5].shortName}" />
+                            <c:LRC_DateCell aura:id="27" headerID="{!v._namesOfWeekdays[6].shortName}" />
+                        </tr>
+                        <tr aura:id="week5">
+                            <c:LRC_DateCell aura:id="28" headerID="{!v._namesOfWeekdays[0].shortName}" />
+                            <c:LRC_DateCell aura:id="29" headerID="{!v._namesOfWeekdays[1].shortName}" />
+                            <c:LRC_DateCell aura:id="30" headerID="{!v._namesOfWeekdays[2].shortName}" />
+                            <c:LRC_DateCell aura:id="31" headerID="{!v._namesOfWeekdays[3].shortName}" />
+                            <c:LRC_DateCell aura:id="32" headerID="{!v._namesOfWeekdays[4].shortName}" />
+                            <c:LRC_DateCell aura:id="33" headerID="{!v._namesOfWeekdays[5].shortName}" />
+                            <c:LRC_DateCell aura:id="34" headerID="{!v._namesOfWeekdays[6].shortName}" />
+                        </tr>
+                        
+                        <tr aura:id="week6">
+                            <c:LRC_DateCell aura:id="35" headerID="{!v._namesOfWeekdays[0].shortName}" />
+                            <c:LRC_DateCell aura:id="36" headerID="{!v._namesOfWeekdays[1].shortName}" />
+                            <c:LRC_DateCell aura:id="37" headerID="{!v._namesOfWeekdays[2].shortName}" />
+                            <c:LRC_DateCell aura:id="38" headerID="{!v._namesOfWeekdays[3].shortName}" />
+                            <c:LRC_DateCell aura:id="39" headerID="{!v._namesOfWeekdays[4].shortName}" />
+                            <c:LRC_DateCell aura:id="40" headerID="{!v._namesOfWeekdays[5].shortName}" />
+                            <c:LRC_DateCell aura:id="41" headerID="{!v._namesOfWeekdays[6].shortName}" />
+                        </tr>
+                        <tr id="todayDate">
+                            <td colspan="7" role="gridcell" headers="todayDate"><a onclick="{!c.goToToday}" href="javascript:void(0);" class="slds-show--inline-block slds-p-bottom--x-small">Today</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</aura:component>

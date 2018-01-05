@@ -1,0 +1,15 @@
+<aura:component >
+      <aura:attribute name="docRequired" type="Object"/>
+      <aura:attribute name="mapLabels" type="Map"/>
+
+            <tr>
+                <td data-label="{!v.mapLabels.CC_Label_What_Is_Needed}">
+                    <div title="">{!v.docRequired.docNeeded}</div>
+                </td>
+                <td data-label="{!v.mapLabels.CC_Label_Type_of_Document_Accepted}">
+                    <div title="">{!v.docRequired.docAccepted}</div>
+                </td>
+                
+                
+            </tr>
+</aura:component>

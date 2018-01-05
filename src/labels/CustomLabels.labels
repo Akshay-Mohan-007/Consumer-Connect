@@ -1,0 +1,3757 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Application_Date</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Application Date</shortDescription>
+        <value>Application Date</value>
+    </labels>
+    <labels>
+        <fullName>CC_ACTION</fullName>
+        <categories>All Modules,Dashboard</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_ACTION</shortDescription>
+        <value>ACTION</value>
+    </labels>
+    <labels>
+        <fullName>CC_ADDRESS_LINE_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_ADDRESS_LINE_1</shortDescription>
+        <value>Address Line 1</value>
+    </labels>
+    <labels>
+        <fullName>CC_ADDRESS_LINE_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_ADDRESS_LINE_2</shortDescription>
+        <value>Address Line 2</value>
+    </labels>
+    <labels>
+        <fullName>CC_APPSUMMARY_HEADING</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_APPSUMMARY_HEADING</shortDescription>
+        <value>Please review all the information you have entered in the application on this page. If you see any mistakes, please click the pencil icon to return to your application and make changes.</value>
+    </labels>
+    <labels>
+        <fullName>CC_APP_CASE</fullName>
+        <categories>All Modules,Dashboard</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_APP_CASE</shortDescription>
+        <value>APP/CASE #</value>
+    </labels>
+    <labels>
+        <fullName>CC_APP_INITIATOR_QUEUE</fullName>
+        <categories>All Modules,Dashboard</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_APP_INITIATOR_QUEUE</shortDescription>
+        <value>Application_Initiator</value>
+    </labels>
+    <labels>
+        <fullName>CC_APP_NUMBER</fullName>
+        <categories>All Modules,Dashboard</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_APP_NUMBER</shortDescription>
+        <value>APP #</value>
+    </labels>
+    <labels>
+        <fullName>CC_APP_STATUS_IN_PROGRESS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_APP_STATUS_IN_PROGRESS</shortDescription>
+        <value>In-Progress</value>
+    </labels>
+    <labels>
+        <fullName>CC_APP_STATUS_REVIEWED</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_APP_STATUS_REVIEWED</shortDescription>
+        <value>Reviewed</value>
+    </labels>
+    <labels>
+        <fullName>CC_Account_RecType</fullName>
+        <categories>CC CC_Test_ServiceController</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Account_RecType</shortDescription>
+        <value>Agency</value>
+    </labels>
+    <labels>
+        <fullName>CC_Age</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Age</shortDescription>
+        <value>Age</value>
+    </labels>
+    <labels>
+        <fullName>CC_AppStatus_Complete</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_AppStatus_Complete</shortDescription>
+        <value>Complete</value>
+    </labels>
+    <labels>
+        <fullName>CC_AppStatus_InProgress</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_AppStatus_InProgress</shortDescription>
+        <value>In-Progress</value>
+    </labels>
+    <labels>
+        <fullName>CC_AppStatus_Terminated</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_AppStatus_Terminated</shortDescription>
+        <value>Terminated</value>
+    </labels>
+    <labels>
+        <fullName>CC_App_Intake_Profile</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_App_Intake_Profile</shortDescription>
+        <value>Application Intake Profile</value>
+    </labels>
+    <labels>
+        <fullName>CC_ApplicationIdForTesting</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_ApplicationIdForTesting</shortDescription>
+        <value>a0B18000002aSJj</value>
+    </labels>
+    <labels>
+        <fullName>CC_ApplicationIntake</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_ApplicationIntake</shortDescription>
+        <value>Application_Intake</value>
+    </labels>
+    <labels>
+        <fullName>CC_ApplicationReview</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_ApplicationReview</shortDescription>
+        <value>Application_Review</value>
+    </labels>
+    <labels>
+        <fullName>CC_Application_Date</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Application_Date</shortDescription>
+        <value>Application Date</value>
+    </labels>
+    <labels>
+        <fullName>CC_Application_Intake_Page</fullName>
+        <categories>All Modules</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Application Intake Page</shortDescription>
+        <value>Intake Application</value>
+    </labels>
+    <labels>
+        <fullName>CC_Application_Living_Currently_ICF</fullName>
+        <categories>Application, Document Upload</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Application Living Currently ICF</shortDescription>
+        <value>ICF/IDD (Intermediate Care Facility)</value>
+    </labels>
+    <labels>
+        <fullName>CC_Application_Living_Currently_NH</fullName>
+        <categories>Application, Document Upload</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Application Living Currently NH</shortDescription>
+        <value>Nursing home</value>
+    </labels>
+    <labels>
+        <fullName>CC_Application_Living_Currently_PF</fullName>
+        <categories>Application, Document Upload</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Application Living Currently PF</shortDescription>
+        <value>Psychiatric Facility</value>
+    </labels>
+    <labels>
+        <fullName>CC_Application_Review</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Application_Review</shortDescription>
+        <value>Application Review</value>
+    </labels>
+    <labels>
+        <fullName>CC_Application_Status</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Application_Status</shortDescription>
+        <value>Application Status</value>
+    </labels>
+    <labels>
+        <fullName>CC_Application_Submitted</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Application Submitted</shortDescription>
+        <value>Application submitted successfully. Application number is:</value>
+    </labels>
+    <labels>
+        <fullName>CC_Are_you_currently_on_waiting_list</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Are_you_currently_on_waiting_list</shortDescription>
+        <value>Are you currently on a waiting list for any of these Medicaid waivers?</value>
+    </labels>
+    <labels>
+        <fullName>CC_Auth_Rep_Some1_Whom_Ind_Can_Name_To_Help</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Auth_Rep_Some1_Whom_Ind_Can_Name_To_Help</shortDescription>
+        <value>An Authorized Representative is someone whom the individual can name to provide help</value>
+    </labels>
+    <labels>
+        <fullName>CC_Authorized_Representative_Information</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Authorized_Representative_Information</shortDescription>
+        <value>Authorized Representative Information</value>
+    </labels>
+    <labels>
+        <fullName>CC_Back_Button</fullName>
+        <categories>All Modules</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Back Button</shortDescription>
+        <value>Back</value>
+    </labels>
+    <labels>
+        <fullName>CC_CAPACITY_REVIEWER_QUEUE</fullName>
+        <categories>Capacity Review, Dashboard</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_CAPACITY_REVIEWER_QUEUE</shortDescription>
+        <value>Capacity_Reviewer</value>
+    </labels>
+    <labels>
+        <fullName>CC_CITY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_CITY</shortDescription>
+        <value>City</value>
+    </labels>
+    <labels>
+        <fullName>CC_CONTACT_INFO_EMAIL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_CONTACT_INFO_EMAIL</shortDescription>
+        <value>Email Address</value>
+    </labels>
+    <labels>
+        <fullName>CC_CONTACT_INFO_MAIN_PHN</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_CONTACT_INFO_MAIN_PHN</shortDescription>
+        <value>Main Phone Number</value>
+    </labels>
+    <labels>
+        <fullName>CC_CONTACT_INFO_MAIN_PHN_DUP</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_CONTACT_INFO_MAIN_PHN_DUP</shortDescription>
+        <value>Please re-enter the individual’s main phone number</value>
+    </labels>
+    <labels>
+        <fullName>CC_CONTACT_INFO_MAIN_PHN_TYPE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_CONTACT_INFO_MAIN_PHN_TYPE</shortDescription>
+        <value>Main Phone Type</value>
+    </labels>
+    <labels>
+        <fullName>CC_CONTACT_INFO_OTHER_PHN</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_CONTACT_INFO_OTHER_PHN</shortDescription>
+        <value>Other Phone Number</value>
+    </labels>
+    <labels>
+        <fullName>CC_CONTACT_INFO_OTHER_PHN_DUP</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_CONTACT_INFO_OTHER_PHN_DUP</shortDescription>
+        <value>Please re-enter the individual’s other phone number</value>
+    </labels>
+    <labels>
+        <fullName>CC_CONTACT_INFO_OTHER_PHN_TYPE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_CONTACT_INFO_OTHER_PHN_TYPE</shortDescription>
+        <value>Other Phone Type</value>
+    </labels>
+    <labels>
+        <fullName>CC_CONTACT_INFO_PREFERRED_LANG</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_CONTACT_INFO_PREFERRED_LANG</shortDescription>
+        <value>Preferred Language</value>
+    </labels>
+    <labels>
+        <fullName>CC_CONTACT_INFO_SPOKEN_LANG</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_CONTACT_INFO_SPOKEN_LANG</shortDescription>
+        <value>Preferred Spoken Language</value>
+    </labels>
+    <labels>
+        <fullName>CC_CONTACT_INFO_WRITTEN_LANG</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_CONTACT_INFO_WRITTEN_LANG</shortDescription>
+        <value>Preferred Written Language</value>
+    </labels>
+    <labels>
+        <fullName>CC_CONTINUE</fullName>
+        <categories>All Modules,Dashboard</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_CONTINUE</shortDescription>
+        <value>Continue</value>
+    </labels>
+    <labels>
+        <fullName>CC_COUNTY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_COUNTY</shortDescription>
+        <value>County</value>
+    </labels>
+    <labels>
+        <fullName>CC_CRITERIA_NOT_MEETING_REASON</fullName>
+        <categories>Application Review, Waiver Confirmation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_CRITERIA_NOT_MEETING_REASON</shortDescription>
+        <value>Why does this person not meet any targeting criteria for a waiver?</value>
+    </labels>
+    <labels>
+        <fullName>CC_Capacity_Review</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Capacity_Review</shortDescription>
+        <value>Capacity Review</value>
+    </labels>
+    <labels>
+        <fullName>CC_Capacity_Review_Action_Freed</fullName>
+        <categories>Capacity Review, Manage Allotment</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Capacity Review Action Freed</shortDescription>
+        <value>Free Capacity</value>
+    </labels>
+    <labels>
+        <fullName>CC_Capacity_Review_Status_Disenrolled</fullName>
+        <categories>Cap</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Capacity Review Status Disenrolled</shortDescription>
+        <value>Closed-Disenrolled</value>
+    </labels>
+    <labels>
+        <fullName>CC_Capacity_Reviewer_Profile</fullName>
+        <categories>Capacity Review,Targeting</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Capacity_Reviewer_Profile</shortDescription>
+        <value>Capacity Reviewer Profile</value>
+    </labels>
+    <labels>
+        <fullName>CC_CaseMangementInformation</fullName>
+        <categories>IndividualInformation_CC_PopoverContent</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_CaseMangementInformation</shortDescription>
+        <value>Case Management Information</value>
+    </labels>
+    <labels>
+        <fullName>CC_Case_Manager_Profile</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Case_Manager_Profile</shortDescription>
+        <value>Case Manager Profile</value>
+    </labels>
+    <labels>
+        <fullName>CC_Case_Number</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Case_Number</shortDescription>
+        <value>Case Number</value>
+    </labels>
+    <labels>
+        <fullName>CC_Case_Status</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Case_Status</shortDescription>
+        <value>Case Status</value>
+    </labels>
+    <labels>
+        <fullName>CC_Case_Status_Active</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Case_Status_Active</shortDescription>
+        <value>Active</value>
+    </labels>
+    <labels>
+        <fullName>CC_Case_Status_Closed</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Case_Status_Closed</shortDescription>
+        <value>Closed</value>
+    </labels>
+    <labels>
+        <fullName>CC_Case_Status_Closed_Not_Meet_Criteria</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Case_Status_Closed_Not_Meet_Criteria</shortDescription>
+        <value>Closed Doesn&apos;t Meet Targeting Criteria</value>
+    </labels>
+    <labels>
+        <fullName>CC_Community_Dummy_Account</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Community_Dummy_Account</shortDescription>
+        <value>0011800000VTd3m</value>
+    </labels>
+    <labels>
+        <fullName>CC_Community_License</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Community_License</shortDescription>
+        <value>Customer Community</value>
+    </labels>
+    <labels>
+        <fullName>CC_Community_Plus_License</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Community_Plus_License</shortDescription>
+        <value>Customer Community Plus</value>
+    </labels>
+    <labels>
+        <fullName>CC_Confirm_Delete</fullName>
+        <categories>All Modules, Pop Up</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Confirm Delete</shortDescription>
+        <value>Delete</value>
+    </labels>
+    <labels>
+        <fullName>CC_Confirm_Header</fullName>
+        <categories>All Modules, Pop Up</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Confirm Header</shortDescription>
+        <value>Confirmation</value>
+    </labels>
+    <labels>
+        <fullName>CC_Confirm_No</fullName>
+        <categories>All Modules, Pop Up</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Confirm No</shortDescription>
+        <value>Stay</value>
+    </labels>
+    <labels>
+        <fullName>CC_Confirm_Yes</fullName>
+        <categories>All Modules, Pop Up</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Confirm Yes</shortDescription>
+        <value>Proceed</value>
+    </labels>
+    <labels>
+        <fullName>CC_Console_Logger</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Console Logger</shortDescription>
+        <value>Yes|Yes</value>
+    </labels>
+    <labels>
+        <fullName>CC_ContactIdForTesting</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_ContactIdForTesting</shortDescription>
+        <value>0031800000QjKMjAAN</value>
+    </labels>
+    <labels>
+        <fullName>CC_Contact_Information</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Contact_Information</shortDescription>
+        <value>Contact Information</value>
+    </labels>
+    <labels>
+        <fullName>CC_Contact_OtherInformation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Contact_OtherInformation</shortDescription>
+        <value>Other Information</value>
+    </labels>
+    <labels>
+        <fullName>CC_Contact_PhoneInformation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Contact_PhoneInformation</shortDescription>
+        <value>Phone Information</value>
+    </labels>
+    <labels>
+        <fullName>CC_Contact_SaveButton</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Contact_SaveButton</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>CC_Contact_SubmitButton</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Contact_SubmitButton</shortDescription>
+        <value>Submit</value>
+    </labels>
+    <labels>
+        <fullName>CC_Contact_Type_Legal_Guardian</fullName>
+        <categories>Application, Representative Information</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Contact Type Legal Guardian</shortDescription>
+        <value>Legal Guardian</value>
+    </labels>
+    <labels>
+        <fullName>CC_Contact_Type_Representative</fullName>
+        <categories>Application, Representative Information</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Contact Type Representative</shortDescription>
+        <value>Representative</value>
+    </labels>
+    <labels>
+        <fullName>CC_DATE_INITIATED</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_DATE_INITIATED</shortDescription>
+        <value>Date Initiated</value>
+    </labels>
+    <labels>
+        <fullName>CC_DOC_DETAIL_STATUS_INVALID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_DOC_DETAIL_STATUS_INVALID</shortDescription>
+        <value>Invalid</value>
+    </labels>
+    <labels>
+        <fullName>CC_DUE_DATE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_DUE_DATE</shortDescription>
+        <value>DUE DATE</value>
+    </labels>
+    <labels>
+        <fullName>CC_Date_Format</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Date Format</shortDescription>
+        <value>MM/dd/yyyy</value>
+    </labels>
+    <labels>
+        <fullName>CC_Document_Delete_Warning</fullName>
+        <categories>Document Upload</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Document Delete Warning</shortDescription>
+        <value>Are you sure you want to delete this document?</value>
+    </labels>
+    <labels>
+        <fullName>CC_Document_Not_Uploaded</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Document Not Uploaded</shortDescription>
+        <value>No documents are uploaded.</value>
+    </labels>
+    <labels>
+        <fullName>CC_Document_Not_Uploaded_Warning</fullName>
+        <categories>Document Upload</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Document Not Uploaded Warning</shortDescription>
+        <value>Document is not uploaded. If you continue this document type will be discarded.</value>
+    </labels>
+    <labels>
+        <fullName>CC_Document_Review_Header</fullName>
+        <categories>Document Review, Page Header</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Document Review Header</shortDescription>
+        <value>Document Review</value>
+    </labels>
+    <labels>
+        <fullName>CC_Document_Upload_Header</fullName>
+        <categories>Application Intake, Document Upload</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Document Upload Header</shortDescription>
+        <value>Document Upload</value>
+    </labels>
+    <labels>
+        <fullName>CC_Documents</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Documents</shortDescription>
+        <value>Documents</value>
+    </labels>
+    <labels>
+        <fullName>CC_Documents_Not_Required</fullName>
+        <categories>Document Upload</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Documents Not Required</shortDescription>
+        <value>No documents are required to be uploaded.</value>
+    </labels>
+    <labels>
+        <fullName>CC_Documents_Tab</fullName>
+        <categories>Application, Document Upload</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Documents Tab</shortDescription>
+        <value>Documents</value>
+    </labels>
+    <labels>
+        <fullName>CC_Does_Individual_have_Auth_Rep</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Does_Individual_have_Auth_Rep</shortDescription>
+        <value>Does the individual have an Authorized Representative?</value>
+    </labels>
+    <labels>
+        <fullName>CC_DummyApp</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_DummyApp</shortDescription>
+        <value>a0B18000002aT55</value>
+    </labels>
+    <labels>
+        <fullName>CC_ERR_GIVE_COMMENTS</fullName>
+        <categories>Waiver Confirmation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_ERR_GIVE_COMMENTS</shortDescription>
+        <value>Give comments.</value>
+    </labels>
+    <labels>
+        <fullName>CC_ERR_RESERVE_CATEGORY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_ERR_RESERVE_CATEGORY</shortDescription>
+        <value>Please select a Reserve Category</value>
+    </labels>
+    <labels>
+        <fullName>CC_ERR_SELECT_A_PROGRAM</fullName>
+        <categories>Waiver Confirmation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_ERR_SELECT_A_PROGRAM</shortDescription>
+        <value>Select a Program.</value>
+    </labels>
+    <labels>
+        <fullName>CC_ERR_WAIVER_CAPACITY_ACTION</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_ERR_WAIVER_CAPACITY_ACTION</shortDescription>
+        <value>Please select Waiver Capacity Action</value>
+    </labels>
+    <labels>
+        <fullName>CC_Email</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Email</shortDescription>
+        <value>Email</value>
+    </labels>
+    <labels>
+        <fullName>CC_Email_Address</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Email_Address</shortDescription>
+        <value>Email address</value>
+    </labels>
+    <labels>
+        <fullName>CC_Enrolled_Program_Status_Freed</fullName>
+        <categories>Capacity Review, Manage Allotment,Enrolled Program</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Enrolled Program Status Freed</shortDescription>
+        <value>Freed</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Address_Format</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Address_Format</shortDescription>
+        <value>Please Enter a Valid Address</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_All_pages_are_not_saved</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_All_pages_are_not_saved</shortDescription>
+        <value>Please save all tabs data before submit</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Cannot_Be_Blank</fullName>
+        <categories>CC_BasicInfo_Child,Reusable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Cannot_Be_Blank</shortDescription>
+        <value>Can not be blank.</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Cannot_Be_Future</fullName>
+        <categories>Capacity Review,CC_UrgencyComponent</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Cannot_Be_Future</shortDescription>
+        <value>can not be Future Date</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_City_Format</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_City_Format</shortDescription>
+        <value>Please Enter Valid City</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Confirm_Date_Cannot_Future_Date</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Confirm_Date_Cannot_Future_Date</shortDescription>
+        <value>Confirm date cannot be future date.</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_CurrentLiving</fullName>
+        <categories>Intake &amp; CC_LivingSituation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_CurrentLiving</shortDescription>
+        <value>Please select &apos;What is the individual&apos;s current living situation?&apos;</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_DOB_Format</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_DOB_Format</shortDescription>
+        <value>Please Enter Valid Date of Birth</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_DOB_Future_Date</fullName>
+        <categories>CC_BasicInfo_Child,Reusable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_DOB_Future_Date</shortDescription>
+        <value>Date of Birth Cannot be Present or Future date</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_DOB_Required</fullName>
+        <categories>CC_BasicInfo_Child,Reusable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_DOB_Required</shortDescription>
+        <value>Please Enter Date Of Birth.</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_EmailFormatIsNotCorrect</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_EmailFormatIsNotCorrect</shortDescription>
+        <value>Please check the Email format</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_EmailShdNotBlank</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_EmailShdNotBlank</shortDescription>
+        <value>Email field should not be blank</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Enter_Confirm_SSN</fullName>
+        <categories>CC_BasicInfo_Child,Reusable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Enter_Confirm_SSN</shortDescription>
+        <value>Please enter Confirm SSN.</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Enter_Valid_Date</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Enter_Valid_Date</shortDescription>
+        <value>Please enter valid date.</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Explain_CurrentLiving</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Explain_CurrentLiving</shortDescription>
+        <value>&apos;Explain the individual’s current living situation&apos; can not be blank when current living situation is &apos;Other&apos;.</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Explain_PreferToLive</fullName>
+        <categories>Intake &amp; CC_LivingSituation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Explain_PreferToLive</shortDescription>
+        <value>&apos;Explain where the individual would prefer to live&apos; can not be left blank If preferred living is &apos;Other&apos;.</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_First_Name_Mandatory</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_First_Name_Mandatory</shortDescription>
+        <value>First Name is Mandatory</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_First_Name_Not_Matching</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_First_Name_Not_Matching</shortDescription>
+        <value>First Name is not matching with Contact&apos;s First Name</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Individual_Created</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Individual_Created</shortDescription>
+        <value>Individual Created Successfully!</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Individual_Exists</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Individual_Exists</shortDescription>
+        <value>Individual already exists in the System with an active Application/Case!</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Individual_Exists_App_Created</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Individual_Exists_App_Created</shortDescription>
+        <value>Individual already exists in the System. A New Application Created for Individual!</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Is_Waitlisted</fullName>
+        <categories>Service CC_Service_Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Is_Waitlisted</shortDescription>
+        <value>Please select whether service is waitlisted</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Last_Name_Mandatory</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Last_Name_Mandatory</shortDescription>
+        <value>Last Name is Mandatory</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Last_Name_Not_Matching</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Last_Name_Not_Matching</shortDescription>
+        <value>Last Name is not matching with Contact&apos;s Last Name</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_MainPhnDupMandatory</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_MainPhnDupMandatory</shortDescription>
+        <value>Please re-enter Main Phone No</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_MainPhnFormat</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_MainPhnFormat</shortDescription>
+        <value>Main Phone format should be in (XXX)XXX-XXXX format</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_MainPhnMandatory</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_MainPhnMandatory</shortDescription>
+        <value>Main Phone no is Mandatory</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_MainPhnNotMatching</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_MainPhnNotMatching</shortDescription>
+        <value>Main Phone no is not matching</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_MainPhnTypeMandatory</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_MainPhnTypeMandatory</shortDescription>
+        <value>Main Phone Type is mandatory</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Mandatory</fullName>
+        <categories>Intake &amp; CC_LivingSituation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Mandatory</shortDescription>
+        <value>Please Complete All Mandatory Fields.</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Middle_Name_Not_Matching</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Middle_Name_Not_Matching</shortDescription>
+        <value>Middle Initial is not matching with Contact&apos;s Middle Initial</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Midle_Initial</fullName>
+        <categories>CC_BasicInfo_Child,Reusable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Midle_Initial</shortDescription>
+        <value>Enter Valid Middle Initial</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Name_Contains_Numbers</fullName>
+        <categories>CC_BasicInfo_Child,Reusable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Name_Contains_Numbers</shortDescription>
+        <value>Please Enter Valid Name.</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_No_Current_Future_Service</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_No_Current_Future_Service</shortDescription>
+        <value>Please Select If Individual availing the Service Or Needed in Future</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_OtherCounty_Format</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_OtherCounty_Format</shortDescription>
+        <value>Other County is not Valid</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_OtherPhnDupMandatory</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_OtherPhnDupMandatory</shortDescription>
+        <value>Please re-enter Other Phone No</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_OtherPhnDupShdBlank</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_OtherPhnDupShdBlank</shortDescription>
+        <value>Please fill Other Phone No</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_OtherPhnFormat</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_OtherPhnFormat</shortDescription>
+        <value>Other Phone value should be in (XXX)XXX-XXXX format</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_OtherPhnNotMatching</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_OtherPhnNotMatching</shortDescription>
+        <value>Other Phone no is not matching</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_OtherPhnTypeBlank</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_OtherPhnTypeBlank</shortDescription>
+        <value>Please select Other Phone Type</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Other_Program_Name</fullName>
+        <categories>Services Component, Application Intake</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Other_Program_Name</shortDescription>
+        <value>Please Enter Other Program Name</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Past_Date</fullName>
+        <categories>Capacity Review,CC_UrgencyComponent</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Past_Date</shortDescription>
+        <value>Can not be Past Date</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Please_Enter_Comments</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Please_Enter_Comments</shortDescription>
+        <value>Please Enter Comments.</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Please_Enter_Confirm_Date</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Please_Enter_Confirm_Date</shortDescription>
+        <value>Please enter confirm date.</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Please_Enter_Confirm_Time</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Please_Enter_Confirm_Time</shortDescription>
+        <value>Please enter confirm time.</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_PreferredLangShdNotBlank</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_PreferredLangShdNotBlank</shortDescription>
+        <value>Preferred Language field should not be blank</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_PreferredToLive</fullName>
+        <categories>Intake &amp; CC_LivingSituation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_PreferredToLive</shortDescription>
+        <value>Please Select &apos;Where would the individual prefer to live?&apos;</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_SSN_Len_Less_Than_9</fullName>
+        <categories>CC_BasicInfo_Child,Reusable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_SSN_Len_Less_Than_9</shortDescription>
+        <value>Must be of 9 characters.</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_SSN_Mismatch</fullName>
+        <categories>CC_BasicInfo_Child,Reusable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_SSN_Mismatch</shortDescription>
+        <value>SSN does not match.</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Select_Time_Zone</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Select_Time_Zone</shortDescription>
+        <value>Please select Time Zone</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Service_Needed_Exists</fullName>
+        <categories>Services Component, Application Intake</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Service_Needed_Exists</shortDescription>
+        <value>Service Needed In Future already exists</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Service_Needed_Required</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Service_Needed_Required</shortDescription>
+        <value>Add at least one Service that will be needed in future.</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Service_Period_Mandatory</fullName>
+        <categories>Service CC_Service_Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Service_Period_Mandatory</shortDescription>
+        <value>Please select When Services are needed</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Service_Prog_already_exist</fullName>
+        <categories>CC CC_ServiceModal</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Service_Prog_already_exist</shortDescription>
+        <value>Service and Program combination is already present</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_SpokenLangShdNotBlank</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_SpokenLangShdNotBlank</shortDescription>
+        <value>Spoken Language field should not be blank</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Suffix_Not_Matching</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Suffix_Not_Matching</shortDescription>
+        <value>Suffix is not matching with Contact&apos;s Suffix</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Urgency_Date_Format</fullName>
+        <categories>Capacity Review,CC_UrgencyComponent</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Urgency_Date_Format</shortDescription>
+        <value>Please Enter Valid Urgency Request Date</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Waitlist_Services</fullName>
+        <categories>Service CC_Service_Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Waitlist_Services</shortDescription>
+        <value>Please select waitlisted services</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_Why_Service_Needed</fullName>
+        <categories>Service CC_Service_Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_Why_Service_Needed</shortDescription>
+        <value>Please add why service is needed in the chosen timeframe</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_WrittenLangShdNotBlank</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_WrittenLangShdNotBlank</shortDescription>
+        <value>Written Language field should not be blank</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_ZipCode_Format</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_ZipCode_Format</shortDescription>
+        <value>Please Enter a Valid Zip Code</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_ZipExt_Format</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_ZipExt_Format</shortDescription>
+        <value>Please Enter a Valid Extension</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_confirm_Applying_onBehalf_Applicant</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_confirm_Applying_onBehalf_Applicant</shortDescription>
+        <value>Please confirm &apos; I (Intake Worker) am applying this on behalf of the applicant.&apos;</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_confirm_Signature_received</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>.CC_Err_confirm_Signature_received</shortDescription>
+        <value>Please confirm &apos; I certify the information contained above is accurate and correct to the best of my knowledge.&apos;</value>
+    </labels>
+    <labels>
+        <fullName>CC_Err_confirm_correct_information</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Err_confirm_correct_information</shortDescription>
+        <value>Please confirm &apos;Hard copy signature received&apos;</value>
+    </labels>
+    <labels>
+        <fullName>CC_Error_DocName_missing</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Error_DocName_missing</shortDescription>
+        <value>Please Select a Document Type</value>
+    </labels>
+    <labels>
+        <fullName>CC_Error_Document_Missing</fullName>
+        <categories>Document Upload</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Document Missing</shortDescription>
+        <value>Please upload a document for the required type:</value>
+    </labels>
+    <labels>
+        <fullName>CC_Error_Person_Related_To_Ind_Cannot_Blank</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Error_Person_Related_To_Ind_Cannot_Blank</shortDescription>
+        <value>Person related to individual field cannot be blank</value>
+    </labels>
+    <labels>
+        <fullName>CC_Error_Phone_Confirm_Missing</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Phone Confirm Missing</shortDescription>
+        <value>Please re-enter phone confirmation for</value>
+    </labels>
+    <labels>
+        <fullName>CC_Error_Phone_Ext_Format</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Error_Phone_Ext_Format</shortDescription>
+        <value>Invalid Phone Ext format for</value>
+    </labels>
+    <labels>
+        <fullName>CC_Error_Phone_Ext_Missing</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Error_Phone_Ext_Missing</shortDescription>
+        <value>Please enter Phone Ext for</value>
+    </labels>
+    <labels>
+        <fullName>CC_Error_Phone_Format</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Phone Format</shortDescription>
+        <value>Invalid Phone Number format for</value>
+    </labels>
+    <labels>
+        <fullName>CC_Error_Phone_No_Missing</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Phone No Missing</shortDescription>
+        <value>Please enter Phone Number for</value>
+    </labels>
+    <labels>
+        <fullName>CC_Error_Phone_Not_Matching</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Phone Not Matching</shortDescription>
+        <value>Please enter matching phone numbers for Phone</value>
+    </labels>
+    <labels>
+        <fullName>CC_Error_Phone_Type_Missing</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Phone Type Missing</shortDescription>
+        <value>Please enter the Phone Type for</value>
+    </labels>
+    <labels>
+        <fullName>CC_Error_Please_Select_Ind_Have_Auth_Rep</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Error_Please_Select_Ind_Have_Auth_Rep</shortDescription>
+        <value>Please select whether Individual have authorized  representative or not.</value>
+    </labels>
+    <labels>
+        <fullName>CC_Error_ReviewComments_missing</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Error_ReviewComments_missing</shortDescription>
+        <value>Please enter the review Comments</value>
+    </labels>
+    <labels>
+        <fullName>CC_Error_Status_missing</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Error_Status_missing</shortDescription>
+        <value>Please select a value for Status for Document Type:</value>
+    </labels>
+    <labels>
+        <fullName>CC_Error_Task_Already_Assigned</fullName>
+        <categories>Individual Summary</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Task Already Assigned</shortDescription>
+        <value>Task is already started by</value>
+    </labels>
+    <labels>
+        <fullName>CC_Guardian_Appointed_By_State</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Guardian_Appointed_By_State</shortDescription>
+        <value>A Guardian appointed by the State would be considered a Legal Guardian.</value>
+    </labels>
+    <labels>
+        <fullName>CC_Guardian_Contact_Information</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Guardian_Contact_Information</shortDescription>
+        <value>Legal Guardian Contact Information</value>
+    </labels>
+    <labels>
+        <fullName>CC_How_Auth_Rep_Related_To_Individual</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_How_Auth_Rep_Related_To_Individual</shortDescription>
+        <value>How is this person related to the individual?</value>
+    </labels>
+    <labels>
+        <fullName>CC_How_soon_are_the_services_needed</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_How_soon_are_the_services_needed</shortDescription>
+        <value>How soon are the services needed?</value>
+    </labels>
+    <labels>
+        <fullName>CC_INDIVIDUAL_INFORMATION</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_INDIVIDUAL_INFORMATION</shortDescription>
+        <value>Individual Information</value>
+    </labels>
+    <labels>
+        <fullName>CC_INDIVIDUAL_NAME</fullName>
+        <categories>All Modules,Dashboard</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_INDIVIDUAL_NAME</shortDescription>
+        <value>INDIVIDUAL NAME</value>
+    </labels>
+    <labels>
+        <fullName>CC_IND_SEL_FOR_ALL_OPTNS</fullName>
+        <categories>Waiver Confirmation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_IND_SEL_FOR_ALL_OPTNS</shortDescription>
+        <value>None. This individual has been forwarded to all options.</value>
+    </labels>
+    <labels>
+        <fullName>CC_I_Don_t_Know</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_I_Don_t_Know</shortDescription>
+        <value>I don&apos;t know</value>
+    </labels>
+    <labels>
+        <fullName>CC_InProgress</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_InProgress</shortDescription>
+        <value>In-Progress</value>
+    </labels>
+    <labels>
+        <fullName>CC_IndividualInformation</fullName>
+        <categories>IndividualInformation_CC_PopoverContent</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_IndividualInformation</shortDescription>
+        <value>Individual Information</value>
+    </labels>
+    <labels>
+        <fullName>CC_IndividualName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_IndividualName</shortDescription>
+        <value>Individual Name</value>
+    </labels>
+    <labels>
+        <fullName>CC_Individual_Summary</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Individual_Summary</shortDescription>
+        <value>Individual Summary</value>
+    </labels>
+    <labels>
+        <fullName>CC_Is_This_Waiver_Application_Complete</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Is_This_Waiver_Application_Complete</shortDescription>
+        <value>Is this Waiver application complete?</value>
+    </labels>
+    <labels>
+        <fullName>CC_LABEL_ADD_TO_WAITLIST</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LABEL_ADD_TO_WAITLIST</shortDescription>
+        <value>Add to Waitlist</value>
+    </labels>
+    <labels>
+        <fullName>CC_LABEL_CAPACITY_RESERVED</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LABEL_CAPACITY_RESERVED</shortDescription>
+        <value>Capacity Reserved</value>
+    </labels>
+    <labels>
+        <fullName>CC_LABEL_CAPACITY_REVIEW</fullName>
+        <categories>Capacity Review,Manage Allotment</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LABEL_CAPACITY_REVIEW</shortDescription>
+        <value>Select Waiver Capacity Actions</value>
+    </labels>
+    <labels>
+        <fullName>CC_LABEL_CURRENTLY_ENROLLED</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LABEL_CURRENTLY_ENROLLED</shortDescription>
+        <value>Currently Enrolled</value>
+    </labels>
+    <labels>
+        <fullName>CC_LABEL_MANAGE_ALLOTMENT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LABEL_MANAGE_ALLOTMENT</shortDescription>
+        <value>Manage Allotment</value>
+    </labels>
+    <labels>
+        <fullName>CC_LABEL_NOT_ENOUGH_SEATS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LABEL_NOT_ENOUGH_SEATS</shortDescription>
+        <value>Not enough available seats</value>
+    </labels>
+    <labels>
+        <fullName>CC_LABEL_OTHERCOUNTY</fullName>
+        <categories>Intake Module,AddressComponent</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LABEL_OTHERCOUNTY</shortDescription>
+        <value>--Others Please Specify--</value>
+    </labels>
+    <labels>
+        <fullName>CC_LABEL_RESERVED</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LABEL_RESERVED</shortDescription>
+        <value>Reserved</value>
+    </labels>
+    <labels>
+        <fullName>CC_LABEL_RESERVED_CAPACITY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LABEL_RESERVED_CAPACITY</shortDescription>
+        <value>Reserve Capacity</value>
+    </labels>
+    <labels>
+        <fullName>CC_LABEL_RESERVE_CATEGORY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LABEL_RESERVE_CATEGORY</shortDescription>
+        <value>Reserve Category</value>
+    </labels>
+    <labels>
+        <fullName>CC_LABEL_SELECT_COUNTY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LABEL_SELECT_COUNTY</shortDescription>
+        <value>Select County</value>
+    </labels>
+    <labels>
+        <fullName>CC_LABEL_TOTAL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LABEL_TOTAL</shortDescription>
+        <value>Total</value>
+    </labels>
+    <labels>
+        <fullName>CC_LABEL_TOTAL_WAIVER_CAPACITY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LABEL_TOTAL_WAIVER_CAPACITY</shortDescription>
+        <value>Total Available Waiver Capacity</value>
+    </labels>
+    <labels>
+        <fullName>CC_LABEL_WAIVER_CAPACITY_ACTIONS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LABEL_WAIVER_CAPACITY_ACTIONS</shortDescription>
+        <value>Waiver Capacity Actions</value>
+    </labels>
+    <labels>
+        <fullName>CC_LABEL_WHICH_WAIVER</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LABEL_WHICH_WAIVER</shortDescription>
+        <value>Which Waiver</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_AGE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_AGE</shortDescription>
+        <value>AGE</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_APPLICATIONS</fullName>
+        <categories>All Modules,Dashboard</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_APPLICATIONS</shortDescription>
+        <value>Applications</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_APP_REJECTED</fullName>
+        <categories>Waiver Confirmation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_APP_REJECTED</shortDescription>
+        <value>Application Rejected</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_Allocation_Status</fullName>
+        <categories>Capacity Review,CC_AlternateProgram</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_Allocation_Status</shortDescription>
+        <value>INDIVIDUAL CURRENT ALLOCATION STATUS</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_Application</fullName>
+        <categories>Individual Info Popover,Intake</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_Application</shortDescription>
+        <value>Application</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_COMMENTS_TO_APP_INITIATOR</fullName>
+        <categories>Application Review, Waiver Confirmation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_COMMENTS_TO_APP_INITIATOR</shortDescription>
+        <value>Comments to Application Initiator</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_COMMENTS_TO_CAP_REVIEWER</fullName>
+        <categories>Application Review, Waiver Confirmation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_COMMENTS_TO_CAP_REVIEWER</shortDescription>
+        <value>Comments to Capacity Reviewer</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_Category</fullName>
+        <categories>Capacity Review,CC_AlternateProgram</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_Category</shortDescription>
+        <value>CATEGORY</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_Comment</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_Comment</shortDescription>
+        <value>Comment</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_CommentBy</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_CommentBy</shortDescription>
+        <value>COMMENT BY</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_CommentDate</fullName>
+        <categories>CC_Comment,Intake,Review and Capacity review</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_CommentDate</shortDescription>
+        <value>COMMENT DATE</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_Comment_History</fullName>
+        <categories>CC_Comment,Intake,Review and Capacity review</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_Comment_History</shortDescription>
+        <value>Comments History</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_Confirm_SSN</fullName>
+        <categories>CC_BasicInfo_Child,Reusable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_Confirm_SSN</shortDescription>
+        <value>Confirm Social Security Number</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_DASHBOARD</fullName>
+        <categories>All Modules,Dashboard</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_DASHBOARD</shortDescription>
+        <value>Dashboard</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_DOB</fullName>
+        <categories>CC_BasicInfo_Child,Reusable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_DOB</shortDescription>
+        <value>Date of Birth</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_FirstName</fullName>
+        <categories>CC_BasicInfo_Child,Reusable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_FirstName</shortDescription>
+        <value>First Name</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_Gender</fullName>
+        <categories>CC_BasicInfo_Child,Reusable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_Gender</shortDescription>
+        <value>Gender</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_LastName</fullName>
+        <categories>CC_BasicInfo_Child,Reusable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_LastName</shortDescription>
+        <value>Last Name</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_Middle_Initial</fullName>
+        <categories>CC_BasicInfo_Child,Reusable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_Middle_Initial</shortDescription>
+        <value>Middle Initial</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_NO</fullName>
+        <categories>Services Component, Application Intake</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_NO</shortDescription>
+        <value>NO</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_NO_RECORD_EXIST</fullName>
+        <categories>CC_Comment,Intake,Review and Capacity review</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_NO_RECORD_EXIST</shortDescription>
+        <value>NO RECORDS EXIST</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_OTHER</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_OTHER</shortDescription>
+        <value>Other</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_Program_Name</fullName>
+        <categories>Services Component, Application Intake</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_Program_Name</shortDescription>
+        <value>Program Name</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_REPRESENTATIVE_INFORMATION</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_REPRESENTATIVE_INFORMATION</shortDescription>
+        <value>Representative Information</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_Reason</fullName>
+        <categories>Capacity Review,CC_UrgencyComponent</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_Reason</shortDescription>
+        <value>Reason</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_RevisionNeeded</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_RevisionNeeded</shortDescription>
+        <value>Revision Needed</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_SELECT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_SELECT</shortDescription>
+        <value>--SELECT--</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_SELECT_RELATION</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_SELECT_RELATION</shortDescription>
+        <value>--Select Relation--</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_SSN</fullName>
+        <categories>CC_BasicInfo_Child,Reusable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_SSN</shortDescription>
+        <value>Social Security Number(SSN)</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_Status</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_Status</shortDescription>
+        <value>Status</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_Suffix</fullName>
+        <categories>CC_BasicInfo_Child,Reusable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_Suffix</shortDescription>
+        <value>Suffix</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_TASKS</fullName>
+        <categories>All Modules,Dashboard</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_TASKS</shortDescription>
+        <value>Tasks</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_UrgencyHeader</fullName>
+        <categories>Capacity Review,CC_UrgencyComponent</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_UrgencyHeader</shortDescription>
+        <value>Urgency of Need Determination</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_UrgencyRequestDate</fullName>
+        <categories>Capacity Review,CC_UrgencyComponent</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_UrgencyRequestDate</shortDescription>
+        <value>Urgency Request Date</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_WAIVER_CONFIRMATION</fullName>
+        <categories>Waiver Confirmation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_WAIVER_CONFIRMATION</shortDescription>
+        <value>Waiver Confirmation</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_WAIVER_PROGRAM</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_WAIVER_PROGRAM</shortDescription>
+        <value>Waiver Program</value>
+    </labels>
+    <labels>
+        <fullName>CC_LBL_YES</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LBL_YES</shortDescription>
+        <value>YES</value>
+    </labels>
+    <labels>
+        <fullName>CC_LS_Is_the_living_situation_working</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LS_Is_the_living_situation_working</shortDescription>
+        <value>Is the living situation working?</value>
+    </labels>
+    <labels>
+        <fullName>CC_LS_Where_do_you_live</fullName>
+        <categories>Intake module,Application Summary Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_LS_Where_do_you_live</shortDescription>
+        <value>Where do you live?</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Add_New_Services</fullName>
+        <categories>Service_CC_AddService</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Add_New_Services</shortDescription>
+        <value>Add New Services</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Add_Service</fullName>
+        <categories>Service_ServiceModal</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Add_Service</shortDescription>
+        <value>Add Services</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_AnotherTargetingCriteria</fullName>
+        <categories>TargetingCriteria_CC_TargetingCriteria</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_AnotherTargetingCriteria</shortDescription>
+        <value>Does the Individual meet the target criteria for another waiver?</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_AppReviewerComments</fullName>
+        <categories>TargetingCriteria_CC_TargetingCriteria</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_AppReviewerComments</shortDescription>
+        <value>Comments to Application Reviewer</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Attachments</fullName>
+        <categories>CC_FeedItemList_Feed</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Attachments</shortDescription>
+        <value>Attachments</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Authorized_Rep</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Authorized_Rep</shortDescription>
+        <value>Authorized Representative</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Behalf_of_Applicant</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Behalf_of_Applicant</shortDescription>
+        <value>I (Intake Worker) am applying this on behalf of the applicant.</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Cancel</fullName>
+        <categories>Service_ServiceModal</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Cancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Case</fullName>
+        <categories>IndividualInformation_CC_PopoverContent</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Case</shortDescription>
+        <value>Case#</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_CaseManagementAgency</fullName>
+        <categories>IndividualInformation_CC_PopoverContent</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_CaseManagementAgency</shortDescription>
+        <value>Case Management Agency</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_CaseManager</fullName>
+        <categories>IndividualInformation_CC_PopoverContent</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_CaseManager</shortDescription>
+        <value>Case Manager</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_CaseManagerContact</fullName>
+        <categories>IndividualInformation_CC_PopoverContent</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_CaseManagerContact</shortDescription>
+        <value>Case Manager Contact</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_CaseSupervisor</fullName>
+        <categories>IndividualInformation_CC_PopoverContent</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_CaseSupervisor</shortDescription>
+        <value>Case Supervisor</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Close</fullName>
+        <categories>Service_ServiceModal</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Close</shortDescription>
+        <value>Close</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Comments</fullName>
+        <categories>DocumentUpload,CC_DocumentUpload_DetailTable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Comments</shortDescription>
+        <value>COMMENTS</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_ConfirmDate</fullName>
+        <categories>TargetingCriteria_CC_TargetingCriteria</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_ConfirmDate</shortDescription>
+        <value>Confirm date to consider for application processing</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_ConfirmTime</fullName>
+        <categories>TargetingCriteria_CC_TargetingCriteria</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_ConfirmTime</shortDescription>
+        <value>Confirm time to consider for application processing</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Contact_Info</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Contact_Info</shortDescription>
+        <value>Contact Information</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Correct_Information</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Correct_Information</shortDescription>
+        <value>I certify the information contained above is accurate and correct to the best of my knowledge.</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_CurrentLiving</fullName>
+        <categories>LivingSituation_CC_LivingSituation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_CurrentLiving</shortDescription>
+        <value>What is the individual&apos;s current living situation?</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_CurrentLivingDescription</fullName>
+        <categories>LivingSituation_CC_LivingSituation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_CurrentLivingDescription</shortDescription>
+        <value>Explain the individual’s current living situation</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Date</fullName>
+        <categories>DocumentUpload,CC_DocumentUpload_DetailTable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Date</shortDescription>
+        <value>DATE</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_DateOfBirth</fullName>
+        <categories>IndividualInformation_CC_PopoverContent</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_DateOfBirth</shortDescription>
+        <value>Date of Birth</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Document_Type</fullName>
+        <categories>DocumentUpload,CC_DocumentUpload_DetailTable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Document_Type</shortDescription>
+        <value>DOCUMENT TYPE</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_E_Sign</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_E_Sign</shortDescription>
+        <value>E-Signature</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_EnrolledProgram</fullName>
+        <categories>IndividualInformation_CC_PopoverContent</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_EnrolledProgram</shortDescription>
+        <value>Enrolled Program</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Enter_Prog</fullName>
+        <categories>Service_ServiceModal</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Enter_Prog</shortDescription>
+        <value>Enter Program Name</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Enter_Service_Name</fullName>
+        <categories>Service_ServiceModal</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Enter_Service_Name</shortDescription>
+        <value>Enter Service Name</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Feed</fullName>
+        <categories>CC_FeedItemList_Feed</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Feed</shortDescription>
+        <value>Notification Center</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Feed_History</fullName>
+        <categories>CC_FeedItemList_Feed</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Feed_History</shortDescription>
+        <value>Notification List</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Getting_Service</fullName>
+        <categories>Service_CC_AddService</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Getting_Service</shortDescription>
+        <value>GETTING THE SERVICE</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Hard_Signature_Received</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Hard_Signature_Received</shortDescription>
+        <value>Hard copy signature received.</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Header_Other_Question</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Header_Other_Question</shortDescription>
+        <value>OTHER INFORMATION</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Individual_Req_Service</fullName>
+        <categories>Service_ServiceModal</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Individual_Req_Service</shortDescription>
+        <value>Does the individual require the service in future?</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Individual_availing_service</fullName>
+        <categories>Service_ServiceModal</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Individual_availing_service</shortDescription>
+        <value>Is individual availing the service currently?</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_IsCurrentLivingWorking</fullName>
+        <categories>LivingSituation_CC_LivingSituation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_IsCurrentLivingWorking</shortDescription>
+        <value>Is current living situation working?</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Legal_Gurdian</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Legal_Gurdian</shortDescription>
+        <value>Legal Gurdian</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_LivingSituation</fullName>
+        <categories>LivingSituation_CC_SubPageHeader</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_LivingSituation</shortDescription>
+        <value>Living Situation</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_LocEndDate</fullName>
+        <categories>IndividualInformation_CC_PopoverContent</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_LocEndDate</shortDescription>
+        <value>LOC End Date</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Name</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_No_Feed_To_Display</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_No_Feed_To_Display</shortDescription>
+        <value>No Feed to Display</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Phone_no</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Phone_no</shortDescription>
+        <value>Phone Number</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Physical_Address</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Physical_Address</shortDescription>
+        <value>Physical Address</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Please</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Please</shortDescription>
+        <value>Please</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Posted_On</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Posted_On</shortDescription>
+        <value>posted on</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_PreferredLiving</fullName>
+        <categories>LivingSituation_CC_LivingSituation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_PreferredLiving</shortDescription>
+        <value>Where would the individual prefer to live?</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_PreferredLivingDescription</fullName>
+        <categories>LivingSituation_CC_LivingSituation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_PreferredLivingDescription</shortDescription>
+        <value>Explain where the individual would prefer to live</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_ProgramSelected</fullName>
+        <categories>IndividualInformation_CC_PopoverContent</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_ProgramSelected</shortDescription>
+        <value>PROGRAM SELECTED</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Program_Name</fullName>
+        <categories>Service_CC_AddService</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Program_Name</shortDescription>
+        <value>PROGRAM NAME</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Representative_Info</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Representative_Info</shortDescription>
+        <value>Representative Information</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Resident_Address</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Resident_Address</shortDescription>
+        <value>Resident Address</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Review_Comments</fullName>
+        <categories>DocumentUpload,CC_DocumentUpload_DetailTable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Review_Comments</shortDescription>
+        <value>REVIEW COMMENTS</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Same_as_above</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Same_as_above</shortDescription>
+        <value>Same as Above</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Save</fullName>
+        <categories>Service_ServiceModal</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_SelectWaiver</fullName>
+        <categories>TargetingCriteria_CC_TargetingCriteria</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_SelectWaiver</shortDescription>
+        <value>Select a Waiver</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Select_Prog</fullName>
+        <categories>Service_ServiceModal</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Select_Prog</shortDescription>
+        <value>Select a Program</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Select_Service</fullName>
+        <categories>Service_ServiceModal</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Select_Service</shortDescription>
+        <value>Select a Service</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Selected_Notification</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Selected_Notification</shortDescription>
+        <value>Selected Notification</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Service</fullName>
+        <categories>Service_CC_AddService</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Service</shortDescription>
+        <value>SERVICE</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Service_Needed</fullName>
+        <categories>Service_CC_AddService</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Service_Needed</shortDescription>
+        <value>SERVICE NEEDED</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Services</fullName>
+        <categories>Service_CC_SubPageHeader</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Services</shortDescription>
+        <value>Services</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Status</fullName>
+        <categories>All Modules, Dashboard, DocumentUpload, CC_DocumentUpload_DetailTable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Status</shortDescription>
+        <value>STATUS</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_TargetingCrit_Comment</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_TargetingCrit_Comment</shortDescription>
+        <value>Overall Comments related to Targeting Criteria</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_TargetingCriteria</fullName>
+        <categories>TargetingCriteria_CC_TargetingCriteria</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_TargetingCriteria</shortDescription>
+        <value>Targeting Criteria</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Type_of_Document_Accepted</fullName>
+        <categories>DocumentUpload,CC_DocumentUpload_DocumentsRequiredTable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Type_of_Document_Accepted</shortDescription>
+        <value>TYPE OF DOCUMENT ACCEPTED</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_Uploaded_Docs</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_Uploaded_Docs</shortDescription>
+        <value>Uploaded Documents</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_View_Attachment</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_View_Attachment</shortDescription>
+        <value>View Attachment</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_View_Attacments</fullName>
+        <categories>CC_FeedItemList_Feed</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_View_Attacments</shortDescription>
+        <value>View Attachments</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_WaiverTargetingCriteria</fullName>
+        <categories>TargetingCriteria_CC_TargetingCriteria</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_WaiverTargetingCriteria</shortDescription>
+        <value>Does the Individual meet the waiver criteria?</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_What_Is_Needed</fullName>
+        <categories>DocumentUpload,CC_DocumentUpload_DocumentsRequiredTable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_What_Is_Needed</shortDescription>
+        <value>WHAT IS NEEDED</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_at</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_at</shortDescription>
+        <value>at</value>
+    </labels>
+    <labels>
+        <fullName>CC_Label_on</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_on</shortDescription>
+        <value>on</value>
+    </labels>
+    <labels>
+        <fullName>CC_Last_Action_Date</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Last_Action_Date</shortDescription>
+        <value>Last Action Date</value>
+    </labels>
+    <labels>
+        <fullName>CC_Last_Case_Action_Date</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Last_Case_Action_Date</shortDescription>
+        <value>Last Case Action Date</value>
+    </labels>
+    <labels>
+        <fullName>CC_Legal_Guardian_Contact_Information</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Legal_Guardian_Contact_Information</shortDescription>
+        <value>Legal Guardian Contact Information</value>
+    </labels>
+    <labels>
+        <fullName>CC_Legal_Guardian_Court_Appointed_Adult</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Legal_Guardian_Court_Appointed_Adult</shortDescription>
+        <value>A Legal Guardian is a court-appointed adult who assumes the responsibility for decisions for the individual who would be provided services under the waiver programs</value>
+    </labels>
+    <labels>
+        <fullName>CC_Legal_Guardian_Information</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Legal_Guardian_Information</shortDescription>
+        <value>Legal Guardian Information</value>
+    </labels>
+    <labels>
+        <fullName>CC_Living_Situation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Living_Situation</shortDescription>
+        <value>Living Situation</value>
+    </labels>
+    <labels>
+        <fullName>CC_MSG_APP_REJECTED</fullName>
+        <categories>Waiver Confirmation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_MSG_APP_REJECTED</shortDescription>
+        <value>Application Rejected!</value>
+    </labels>
+    <labels>
+        <fullName>CC_MSG_APP_SAVED_SUCCESS</fullName>
+        <categories>All Modules</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_MSG_APP_SAVED_SUCCESS</shortDescription>
+        <value>Application saved successfully!</value>
+    </labels>
+    <labels>
+        <fullName>CC_MSG_APP_SUBMISSION_SUCCESS</fullName>
+        <categories>All Modules</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_MSG_APP_SUBMISSION_SUCCESS</shortDescription>
+        <value>Application has been submitted successfully. The individual is associated to Case #</value>
+    </labels>
+    <labels>
+        <fullName>CC_MSG_APP_TERMINATION_SUCCESS</fullName>
+        <categories>Waiver Confirmation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_MSG_APP_TERMINATION_SUCCESS</shortDescription>
+        <value>Application Terminated!</value>
+    </labels>
+    <labels>
+        <fullName>CC_MY_TASKS</fullName>
+        <categories>All Modules,Dashboard</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_MY_TASKS</shortDescription>
+        <value>My Tasks</value>
+    </labels>
+    <labels>
+        <fullName>CC_Mailing_Address</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Mailing_Address</shortDescription>
+        <value>Mailing Address</value>
+    </labels>
+    <labels>
+        <fullName>CC_Manage_Allotment</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Manage_Allotment</shortDescription>
+        <value>Manage Allotment</value>
+    </labels>
+    <labels>
+        <fullName>CC_NETWORK_NAME_SELF_SERVICE</fullName>
+        <categories>Waiver Confirmation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_NETWORK_NAME_SELF_SERVICE</shortDescription>
+        <value>Self Service</value>
+    </labels>
+    <labels>
+        <fullName>CC_NONE</fullName>
+        <categories>All Modules</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_NONE</shortDescription>
+        <value>None</value>
+    </labels>
+    <labels>
+        <fullName>CC_NO_APPLICATION</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_NO_APPLICATION</shortDescription>
+        <value>No Application</value>
+    </labels>
+    <labels>
+        <fullName>CC_NO_TASKS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_NO_TASKS</shortDescription>
+        <value>No Tasks.</value>
+    </labels>
+    <labels>
+        <fullName>CC_Next_Button</fullName>
+        <categories>All Modules</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Next Button</shortDescription>
+        <value>Next</value>
+    </labels>
+    <labels>
+        <fullName>CC_No</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_No</shortDescription>
+        <value>No</value>
+    </labels>
+    <labels>
+        <fullName>CC_OTHER_COUNTY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_OTHER_COUNTY</shortDescription>
+        <value>Other County</value>
+    </labels>
+    <labels>
+        <fullName>CC_OTHER_QUESTIONS</fullName>
+        <categories>Intake module,Application Summary Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_OTHER_QUESTIONS</shortDescription>
+        <value>Other Questions</value>
+    </labels>
+    <labels>
+        <fullName>CC_Other_Preferred_Language</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Other_Preferred_Language</shortDescription>
+        <value>Other Preferred Language</value>
+    </labels>
+    <labels>
+        <fullName>CC_Other_Written_Language</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Other_Written_Language</shortDescription>
+        <value>Other Written Language</value>
+    </labels>
+    <labels>
+        <fullName>CC_PERSON_ALSO_LEGAL_GUARDIAN_OF_INDIVIDUAL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_PERSON_ALSO_LEGAL_GUARDIAN_OF_INDIVIDUAL</shortDescription>
+        <value>Is this person also the Legal Guardian of the individual?</value>
+    </labels>
+    <labels>
+        <fullName>CC_PGM_STATUS_WAITLISTED</fullName>
+        <categories>Application Detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_PGM_STATUS_WAITLISTED</shortDescription>
+        <value>Waitlisted</value>
+    </labels>
+    <labels>
+        <fullName>CC_Page_Targeting</fullName>
+        <categories>Capacity Review,Targeting</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Page_Targeting</shortDescription>
+        <value>Targeting Criteria</value>
+    </labels>
+    <labels>
+        <fullName>CC_Page_UrgencyNeed</fullName>
+        <categories>Capacity Review,CC_UrgencyComponent</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Page_UrgencyNeed</shortDescription>
+        <value>Urgency of Need</value>
+    </labels>
+    <labels>
+        <fullName>CC_Phone_Confirmation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Phone Confirmation</shortDescription>
+        <value>Please re-enter the individual’s</value>
+    </labels>
+    <labels>
+        <fullName>CC_Phone_Extension</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Phone_Extension</shortDescription>
+        <value>Phone Extension</value>
+    </labels>
+    <labels>
+        <fullName>CC_Phone_Number</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Phone Number</shortDescription>
+        <value>Phone Number</value>
+    </labels>
+    <labels>
+        <fullName>CC_Phone_Type</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Phone Type</shortDescription>
+        <value>Phone Type</value>
+    </labels>
+    <labels>
+        <fullName>CC_Physical_Address</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Physical_Address</shortDescription>
+        <value>Physical Address</value>
+    </labels>
+    <labels>
+        <fullName>CC_Physical_Address_Line1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Physical_Address_Line1</shortDescription>
+        <value>Physical Address Line 1</value>
+    </labels>
+    <labels>
+        <fullName>CC_Physical_Address_Line2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Physical_Address_Line2</shortDescription>
+        <value>Physical Address Line 2</value>
+    </labels>
+    <labels>
+        <fullName>CC_Portal_Master_ID</fullName>
+        <categories>Portal Creation, Basic Information, CC_BasicInformation_Controller</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Portal Master ID</shortDescription>
+        <value>00518000001gTx1</value>
+    </labels>
+    <labels>
+        <fullName>CC_Preferred_Language</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Preferred_Language</shortDescription>
+        <value>Preferred Language</value>
+    </labels>
+    <labels>
+        <fullName>CC_Primary_Phone</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Primary_Phone</shortDescription>
+        <value>Primary Phone#</value>
+    </labels>
+    <labels>
+        <fullName>CC_Primary_Phone_Ext</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Primary_Phone_Ext</shortDescription>
+        <value>Primary Phone Ext</value>
+    </labels>
+    <labels>
+        <fullName>CC_ProgramName</fullName>
+        <categories>IndividualInformation_CC_PopoverContent</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_ProgramName</shortDescription>
+        <value>Program Name</value>
+    </labels>
+    <labels>
+        <fullName>CC_Program_Status</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Program_Status</shortDescription>
+        <value>Program Status</value>
+    </labels>
+    <labels>
+        <fullName>CC_RECEIVED_DATE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_RECEIVED_DATE</shortDescription>
+        <value>RECEIVED DATE</value>
+    </labels>
+    <labels>
+        <fullName>CC_RT_Individual</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_RT_Individual</shortDescription>
+        <value>Individual</value>
+    </labels>
+    <labels>
+        <fullName>CC_RT_Individual_Account</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_RT_Individual_Account</shortDescription>
+        <value>Individual Account</value>
+    </labels>
+    <labels>
+        <fullName>CC_RT_Legal_Guardian</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_RT_Legal_Guardian</shortDescription>
+        <value>Legal Guardian</value>
+    </labels>
+    <labels>
+        <fullName>CC_RT_Program</fullName>
+        <categories>Services Component, Application Intake</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_RT_Program</shortDescription>
+        <value>Program</value>
+    </labels>
+    <labels>
+        <fullName>CC_RT_ProgramDetail</fullName>
+        <categories>Capacity Review,CC_UrgencyComponent</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_RT_ProgramDetail</shortDescription>
+        <value>Program Detail</value>
+    </labels>
+    <labels>
+        <fullName>CC_RT_RepLeg_Info</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_RT_RepLeg_Info</shortDescription>
+        <value>Representative;Legal Guardian</value>
+    </labels>
+    <labels>
+        <fullName>CC_RT_Representative</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_RT_Representative</shortDescription>
+        <value>Representative</value>
+    </labels>
+    <labels>
+        <fullName>CC_RT_Service</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_RT_Service</shortDescription>
+        <value>Service</value>
+    </labels>
+    <labels>
+        <fullName>CC_RT_Service_Type</fullName>
+        <categories>Services Component, Application Intake</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_RT_Service_Type</shortDescription>
+        <value>Service Type</value>
+    </labels>
+    <labels>
+        <fullName>CC_RT_Waitlist_Type</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_RT_Waitlist_Type</shortDescription>
+        <value>Waitlist Type</value>
+    </labels>
+    <labels>
+        <fullName>CC_RT_Waiver_AppDetail</fullName>
+        <categories>Capacity Review,CC_UrgencyComponent</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_RT_Waiver_AppDetail</shortDescription>
+        <value>Waiver Programs</value>
+    </labels>
+    <labels>
+        <fullName>CC_Representative_Contact_Information</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Representative_Contact_Information</shortDescription>
+        <value>Representative Contact Information</value>
+    </labels>
+    <labels>
+        <fullName>CC_Representative_Information</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Representative_Information</shortDescription>
+        <value>Representative Information</value>
+    </labels>
+    <labels>
+        <fullName>CC_Residence_Address</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Residence_Address</shortDescription>
+        <value>Residence Address</value>
+    </labels>
+    <labels>
+        <fullName>CC_SAME_AS_PHYSICAL_ADDRESS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_SAME_AS_PHYSICAL_ADDRESS</shortDescription>
+        <value>Same as Physical Address</value>
+    </labels>
+    <labels>
+        <fullName>CC_SEARCH</fullName>
+        <categories>All Modules,Dashboard</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_SEARCH</shortDescription>
+        <value>Search</value>
+    </labels>
+    <labels>
+        <fullName>CC_SEC_BasicInfo</fullName>
+        <categories>CC_BasicInfo_Child,Reusable</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_SEC_BasicInfo</shortDescription>
+        <value>Basic Information</value>
+    </labels>
+    <labels>
+        <fullName>CC_SELECT_QUEUE</fullName>
+        <categories>All Modules,Dashboard</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_SELECT_QUEUE</shortDescription>
+        <value>Select Queue</value>
+    </labels>
+    <labels>
+        <fullName>CC_SITE_NAME_SELF_SERVICE</fullName>
+        <categories>All Modules,Dashboard, Site Name</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_SITE_NAME_SELF_SERVICE</shortDescription>
+        <value>Self_Service1</value>
+    </labels>
+    <labels>
+        <fullName>CC_SITE_NAME_SERVICE_PROVIDER</fullName>
+        <categories>All Modules,Dashboard, Site Name</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_SITE_NAME_SERVICE_PROVIDER</shortDescription>
+        <value>Service_Provider1</value>
+    </labels>
+    <labels>
+        <fullName>CC_START</fullName>
+        <categories>All Modules,Dashboard</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_START</shortDescription>
+        <value>Start</value>
+    </labels>
+    <labels>
+        <fullName>CC_STATE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_STATE</shortDescription>
+        <value>State</value>
+    </labels>
+    <labels>
+        <fullName>CC_SameAsPhyAddress</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_SameAsPhyAddress</shortDescription>
+        <value>Same as Physical Address</value>
+    </labels>
+    <labels>
+        <fullName>CC_Save_Exit</fullName>
+        <categories>All Modules</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Save &amp; Exit</shortDescription>
+        <value>Save &amp; Exit</value>
+    </labels>
+    <labels>
+        <fullName>CC_Secoandry_Phone</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Secoandry_Phone</shortDescription>
+        <value>Secondary Phone#</value>
+    </labels>
+    <labels>
+        <fullName>CC_Secondary_Phone_Ext</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Secondary_Phone_Ext</shortDescription>
+        <value>Secondary Phone Ext</value>
+    </labels>
+    <labels>
+        <fullName>CC_Select_County</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Select_County</shortDescription>
+        <value>Select County</value>
+    </labels>
+    <labels>
+        <fullName>CC_Select_Date</fullName>
+        <categories>LRC_DatePicker</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Select_Date</shortDescription>
+        <value>Select a Date</value>
+    </labels>
+    <labels>
+        <fullName>CC_Select_Document_Type</fullName>
+        <categories>Document Upload</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Select Document Type</shortDescription>
+        <value>Select Document Type</value>
+    </labels>
+    <labels>
+        <fullName>CC_Select_Main_Phone_Type</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Select Main Phone Type</shortDescription>
+        <value>Select Main Phone Type</value>
+    </labels>
+    <labels>
+        <fullName>CC_Select_Other_Phone_Type</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Select Other Phone Type</shortDescription>
+        <value>Select Other Phone Type</value>
+    </labels>
+    <labels>
+        <fullName>CC_Select_Relationship</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Select_Relationship</shortDescription>
+        <value>Select Relationship</value>
+    </labels>
+    <labels>
+        <fullName>CC_Select_Spoken_Language</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Select_Spoken_Language</shortDescription>
+        <value>Select Spoken Language</value>
+    </labels>
+    <labels>
+        <fullName>CC_Select_State</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Select_State</shortDescription>
+        <value>Select State</value>
+    </labels>
+    <labels>
+        <fullName>CC_Select_Status</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Select_Status</shortDescription>
+        <value>Select Status</value>
+    </labels>
+    <labels>
+        <fullName>CC_Select_Suffix</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Select_Suffix</shortDescription>
+        <value>Select Suffix</value>
+    </labels>
+    <labels>
+        <fullName>CC_Select_Time_Zone</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Select_Time_Zone</shortDescription>
+        <value>Select Timezone</value>
+    </labels>
+    <labels>
+        <fullName>CC_Select_Written_Language</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Select_Written_Language</shortDescription>
+        <value>Select Written Language</value>
+    </labels>
+    <labels>
+        <fullName>CC_Select_preferred_Language</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Select_preferred_Language</shortDescription>
+        <value>Select Preferred Language</value>
+    </labels>
+    <labels>
+        <fullName>CC_SelectedPrograms</fullName>
+        <categories>IndividualInformation_CC_PopoverContent</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_SelectedPrograms</shortDescription>
+        <value>Selected Programs</value>
+    </labels>
+    <labels>
+        <fullName>CC_Self_Service_Intake_Profile</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Self_Service_Intake_Profile</shortDescription>
+        <value>Self Service Intake Profile</value>
+    </labels>
+    <labels>
+        <fullName>CC_Service_Add_New_Service</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Service_Add_New_Service</shortDescription>
+        <value>Add New Service</value>
+    </labels>
+    <labels>
+        <fullName>CC_Service_IsOnWaitingList</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Service_IsOnWaitingList</shortDescription>
+        <value>Is the individual currently on a waiting list for these services?</value>
+    </labels>
+    <labels>
+        <fullName>CC_Service_ServicePeriod</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Service_ServicePeriod</shortDescription>
+        <value>How soon are the services needed?</value>
+    </labels>
+    <labels>
+        <fullName>CC_Service_WaitingList</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Service_WaitingList</shortDescription>
+        <value>What list is the individual on?</value>
+    </labels>
+    <labels>
+        <fullName>CC_Service_WhyServiceNeeded</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Service_WhyServiceNeeded</shortDescription>
+        <value>Describe why the services are needed in the timeframe chosen.</value>
+    </labels>
+    <labels>
+        <fullName>CC_Services</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Services</shortDescription>
+        <value>Services</value>
+    </labels>
+    <labels>
+        <fullName>CC_Spoken_Language</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Spoken_Language</shortDescription>
+        <value>Spoken Language</value>
+    </labels>
+    <labels>
+        <fullName>CC_Status_Capacity_Reserved</fullName>
+        <categories>Capacity Review,Targeting</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Status_Capacity_Reserved</shortDescription>
+        <value>Capacity Reserved</value>
+    </labels>
+    <labels>
+        <fullName>CC_Status_Targeting_Criteria_Not_Met</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Status_Targeting_Criteria_Not_Met</shortDescription>
+        <value>Closed-Doesn&apos;t Meet Targeting Criteria</value>
+    </labels>
+    <labels>
+        <fullName>CC_Status_Waitlisted</fullName>
+        <categories>Capacity Review,Targeting</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Status_Waitlisted</shortDescription>
+        <value>Waitlisted</value>
+    </labels>
+    <labels>
+        <fullName>CC_Summary</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Summary</shortDescription>
+        <value>Summary</value>
+    </labels>
+    <labels>
+        <fullName>CC_TASK_NAME</fullName>
+        <categories>All Modules,Dashboard</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_TASK_NAME</shortDescription>
+        <value>TASK NAME</value>
+    </labels>
+    <labels>
+        <fullName>CC_Tab_Complete_Icon</fullName>
+        <categories>All Modules</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Tab Complete Icon</shortDescription>
+        <value>action:approval</value>
+    </labels>
+    <labels>
+        <fullName>CC_Tab_Incomplete_Icon</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Tab Incomplete Icon</shortDescription>
+        <value>action:close</value>
+    </labels>
+    <labels>
+        <fullName>CC_Targeting_Criteria</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Targeting_Criteria</shortDescription>
+        <value>Targeting Criteria</value>
+    </labels>
+    <labels>
+        <fullName>CC_Urgency</fullName>
+        <categories>Capacity Review,CC_AlternateProgram</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Urgency</shortDescription>
+        <value>URGENCY</value>
+    </labels>
+    <labels>
+        <fullName>CC_Urgency_of_Need</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Urgency_of_Need</shortDescription>
+        <value>Urgency of Need</value>
+    </labels>
+    <labels>
+        <fullName>CC_WAITLISTED_APPLICATIONS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_WAITLISTED_APPLICATIONS</shortDescription>
+        <value>Waitlisted Applications</value>
+    </labels>
+    <labels>
+        <fullName>CC_Waitlisted_Popover_Filter_Section</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Waitlisted Popover Filter Section</shortDescription>
+        <value>Filter</value>
+    </labels>
+    <labels>
+        <fullName>CC_Waitlisted_Popover_Header</fullName>
+        <categories>Page Header, Waitlisted popover</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Waitlisted Popover Header</shortDescription>
+        <value>Waitlisted Individuals</value>
+    </labels>
+    <labels>
+        <fullName>CC_Waitlisted_Popover_No_Individuals</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Waitlisted Popover No Individuals</shortDescription>
+        <value>No individuals exist.</value>
+    </labels>
+    <labels>
+        <fullName>CC_Waitlisted_Popover_Results_Section</fullName>
+        <categories>Waitlist Popover</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Waitlisted Popover Results Section</shortDescription>
+        <value>Results</value>
+    </labels>
+    <labels>
+        <fullName>CC_Waitlisted_Popover_Select</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Waitlisted Popover Select</shortDescription>
+        <value>Select Category</value>
+    </labels>
+    <labels>
+        <fullName>CC_Waiver_Confirmation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Waiver_Confirmation</shortDescription>
+        <value>Waiver Confirmation</value>
+    </labels>
+    <labels>
+        <fullName>CC_Waiver_Prog_Information</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Waiver_Prog_Information</shortDescription>
+        <value>Waiver Program Information</value>
+    </labels>
+    <labels>
+        <fullName>CC_Waiver_Prog_Referred_To_Indiviual</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Waiver_Prog_Referred_To_Indiviual</shortDescription>
+        <value>Which Waiver Program should this individual be referred to?</value>
+    </labels>
+    <labels>
+        <fullName>CC_Written_Language</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Written_Language</shortDescription>
+        <value>Written Language</value>
+    </labels>
+    <labels>
+        <fullName>CC_Yes</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Yes</shortDescription>
+        <value>Yes</value>
+    </labels>
+    <labels>
+        <fullName>CC_You_Your_Guardian_LiveAt_Same_Place</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_You_Your_Guardian_LiveAt_Same_Place</shortDescription>
+        <value>Does the Legal Guardian have the same address as the individual ?</value>
+    </labels>
+    <labels>
+        <fullName>CC_You_Your_Rep_LiveAt_Same_Place</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_You_Your_Rep_LiveAt_Same_Place</shortDescription>
+        <value>Does the Representative have the same address as the individual?</value>
+    </labels>
+    <labels>
+        <fullName>CC_ZIP_4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_ZIP_4</shortDescription>
+        <value>Zip +4</value>
+    </labels>
+    <labels>
+        <fullName>CC_ZIP_CODE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_ZIP_CODE</shortDescription>
+        <value>Zip Code</value>
+    </labels>
+    <labels>
+        <fullName>CC_individual_have_LegalGuardian</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_individual_have_LegalGuardian</shortDescription>
+        <value>Does the individual have a Legal Guardian?</value>
+    </labels>
+    <labels>
+        <fullName>CC_why_the_services_are_needed</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_why_the_services_are_needed</shortDescription>
+        <value>Describe why the services are needed in the timeframe chosen</value>
+    </labels>
+    <labels>
+        <fullName>Comments_To_Application_Reviewer</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Comments_To_Application_Reviewer</shortDescription>
+        <value>Comments to Application Reviewer</value>
+    </labels>
+    <labels>
+        <fullName>Comments_To_Capacity_Reviewer</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Comments_To_Capacity_Reviewer</shortDescription>
+        <value>Comments to Capacity Reviewer</value>
+    </labels>
+    <labels>
+        <fullName>Confirm_Date</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Confirm_Date</shortDescription>
+        <value>Confirm date to consider for application processing:</value>
+    </labels>
+    <labels>
+        <fullName>Confirm_Time</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Confirm_Time</shortDescription>
+        <value>Confirm time to consider for application processing:</value>
+    </labels>
+    <labels>
+        <fullName>DT_ADD_DAYS_WITH_TODAY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_ADD_DAYS_WITH_TODAY</shortDescription>
+        <value>Add No. of days with Todays Date</value>
+    </labels>
+    <labels>
+        <fullName>DT_ASSIGNEE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_ASSIGNEE</shortDescription>
+        <value>Assignee</value>
+    </labels>
+    <labels>
+        <fullName>DT_ASSIGNEE_CASEMANAGER</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_ASSIGNEE_CASEMANAGER</shortDescription>
+        <value>Case Manager</value>
+    </labels>
+    <labels>
+        <fullName>DT_ASSIGNEE_SUPERVISOR</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_ASSIGNEE_SUPERVISOR</shortDescription>
+        <value>Supervisor</value>
+    </labels>
+    <labels>
+        <fullName>DT_ASSIGNEE_USER</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_ASSIGNEE_USER</shortDescription>
+        <value>User</value>
+    </labels>
+    <labels>
+        <fullName>DT_ASSIGNMENT_TYPE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_ASSIGNMENT_TYPE</shortDescription>
+        <value>Assignment Type</value>
+    </labels>
+    <labels>
+        <fullName>DT_BACK_TO_LIST</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_BACK_TO_LIST</shortDescription>
+        <value>Back to List</value>
+    </labels>
+    <labels>
+        <fullName>DT_CLASS_RULE_EXTENSION</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DT_CLASS_RULE_EXTENSION</shortDescription>
+        <value>DT_RuleExtension</value>
+    </labels>
+    <labels>
+        <fullName>DT_CLASS_RULE_VERSION_EXTENSION</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DT_CLASS_RULE_VERSION_EXTENSION</shortDescription>
+        <value>DT_RuleVersionExtension</value>
+    </labels>
+    <labels>
+        <fullName>DT_CLASS_RULE_VERSION_TRIGGER_HANDLER</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DT_CLASS_RULE_VERSION_TRIGGER_HANDLER</shortDescription>
+        <value>DT_RuleVersionTriggerHandler</value>
+    </labels>
+    <labels>
+        <fullName>DT_CREATE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_CREATE</shortDescription>
+        <value>Create</value>
+    </labels>
+    <labels>
+        <fullName>DT_CRITERIA_LOGIC</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_CRITERIA_LOGIC</shortDescription>
+        <value>Criteria Logic</value>
+    </labels>
+    <labels>
+        <fullName>DT_ERROR_TYPE_APEX_TRIGGER</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DT_ERROR_TYPE_APEX_TRIGGER</shortDescription>
+        <value>Apex Trigger</value>
+    </labels>
+    <labels>
+        <fullName>DT_ERROR_TYPE_BUSINESS_VALIDATION</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DT_ERROR_TYPE_BUSINESS_VALIDATION</shortDescription>
+        <value>Business Validation</value>
+    </labels>
+    <labels>
+        <fullName>DT_ERROR_TYPE_VF_CONTROLLER</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DT_ERROR_TYPE_VF_CONTROLLER</shortDescription>
+        <value>Apex Controller</value>
+    </labels>
+    <labels>
+        <fullName>DT_FIELD_DESCRIPTION</fullName>
+        <categories>Field Names</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_FIELD_DESCRIPTION</shortDescription>
+        <value>Description</value>
+    </labels>
+    <labels>
+        <fullName>DT_FIELD_IS_ACTIVE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_FIELD_IS_ACTIVE</shortDescription>
+        <value>DT_IsActive__c</value>
+    </labels>
+    <labels>
+        <fullName>DT_FIELD_MODULE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_FIELD_MODULE</shortDescription>
+        <value>Module</value>
+    </labels>
+    <labels>
+        <fullName>DT_FIELD_RULE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DT_FIELD_RULE</shortDescription>
+        <value>DT_Rule__c</value>
+    </labels>
+    <labels>
+        <fullName>DT_FIELD_RULE_PRIORITY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_FIELD_RULE_PRIORITY</shortDescription>
+        <value>Priority</value>
+    </labels>
+    <labels>
+        <fullName>DT_FIELD_RULE_TYPE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_FIELD_RULE_TYPE</shortDescription>
+        <value>Rule Type</value>
+    </labels>
+    <labels>
+        <fullName>DT_FIELD_TASK_CODE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_FIELD_TASK_CODE</shortDescription>
+        <value>Task Code</value>
+    </labels>
+    <labels>
+        <fullName>DT_FIELD_TASK_DESCRIPTION</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_FIELD_TASK_DESCRIPTION</shortDescription>
+        <value>Task Description</value>
+    </labels>
+    <labels>
+        <fullName>DT_FIELD_TASK_NAME</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_FIELD_TASK_NAME</shortDescription>
+        <value>Task Name</value>
+    </labels>
+    <labels>
+        <fullName>DT_INFORMATION</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_INFORMATION</shortDescription>
+        <value>Information</value>
+    </labels>
+    <labels>
+        <fullName>DT_LABEL_BACK_TO</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_LABEL_BACK_TO</shortDescription>
+        <value>Back to</value>
+    </labels>
+    <labels>
+        <fullName>DT_LABEL_CONTACT_ADMIN</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Unknown Error</shortDescription>
+        <value>Something went wrong. Please Contact your Administrator.</value>
+    </labels>
+    <labels>
+        <fullName>DT_LABEL_DEACTIVATE_RULE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Deactivate Rule</shortDescription>
+        <value>Please Deactivate the Rule to proceed.</value>
+    </labels>
+    <labels>
+        <fullName>DT_LABEL_DEACTIVATE_RULE_EDIT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Deactivate Rule</shortDescription>
+        <value>Please deactivate the Rule to modify.</value>
+    </labels>
+    <labels>
+        <fullName>DT_LABEL_DEACTIVATE_RULE_VERSION</fullName>
+        <categories>DT Framework</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Deactivate Rule Version</shortDescription>
+        <value>Please Deactivate the Version to proceed</value>
+    </labels>
+    <labels>
+        <fullName>DT_LABEL_EDIT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_LABEL_EDIT</shortDescription>
+        <value>Edit</value>
+    </labels>
+    <labels>
+        <fullName>DT_LABEL_EMPTY_RECORD</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Empty Record</shortDescription>
+        <value>SObject record is empty</value>
+    </labels>
+    <labels>
+        <fullName>DT_LABEL_NO_ACTIVE_RULE_VERSION</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No Active Rule Versions found</shortDescription>
+        <value>No active Rule Versions found. Please activate a version before activating the Rule.</value>
+    </labels>
+    <labels>
+        <fullName>DT_LABEL_NO_CASE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Case associated to Application</shortDescription>
+        <value>Task cannot be assigned to Case Manager as Application not associated to a Case</value>
+    </labels>
+    <labels>
+        <fullName>DT_LABEL_NO_CRITERIA_FOUND</fullName>
+        <categories>DT Framework</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No Criterias found</shortDescription>
+        <value>No Criterias found. Please add a Criteria before activating the Rule Version</value>
+    </labels>
+    <labels>
+        <fullName>DT_LABEL_NO_FIELDS_SELECTED</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No Fields selected</shortDescription>
+        <value>No target object fields selected for comparison.</value>
+    </labels>
+    <labels>
+        <fullName>DT_LABEL_NO_SUPERVISOR</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>User does not have a Manager assigned</shortDescription>
+        <value>Task cannot be assigned to Supervisor as user doesnot have Supervisor</value>
+    </labels>
+    <labels>
+        <fullName>DT_LABEL_RULE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_LABEL_RULE</shortDescription>
+        <value>Rule</value>
+    </labels>
+    <labels>
+        <fullName>DT_LABEL_RULE_CRITERIA</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_LABEL_RULE_CRITERIA</shortDescription>
+        <value>Rule Criteria</value>
+    </labels>
+    <labels>
+        <fullName>DT_LABEL_RULE_VERSION</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_LABEL_RULE_VERSION</shortDescription>
+        <value>Rule Version</value>
+    </labels>
+    <labels>
+        <fullName>DT_LBL_EMPTY_RECORD</fullName>
+        <categories>Task Framework</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_LBL_EMPTY_RECORD</shortDescription>
+        <value>Empty Record</value>
+    </labels>
+    <labels>
+        <fullName>DT_LBL_MASTER_RECORD_ID_MISSING</fullName>
+        <categories>Task Framework</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_LBL_MASTER_RECORD_ID_MISSING</shortDescription>
+        <value>Master Record Id Missing</value>
+    </labels>
+    <labels>
+        <fullName>DT_LBL_NO_ACTIVE_RULES</fullName>
+        <categories>Task Framework</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_LBL_NO_ACTIVE_RULES</shortDescription>
+        <value>No Active Rules</value>
+    </labels>
+    <labels>
+        <fullName>DT_LBL_NO_ELIGIBLE_RULES</fullName>
+        <categories>Task Framework</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_LBL_NO_ELIGIBLE_RULES</shortDescription>
+        <value>No Eligible Rules</value>
+    </labels>
+    <labels>
+        <fullName>DT_MAP_THE_FIELDS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_MAP_THE_FIELDS</shortDescription>
+        <value>Map the Fields</value>
+    </labels>
+    <labels>
+        <fullName>DT_METHOD_CHECK_VALIDATIONS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DT_METHOD_CHECK_VALIDATIONS</shortDescription>
+        <value>checkValidations</value>
+    </labels>
+    <labels>
+        <fullName>DT_METHOD_DELETE_RULE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DT_METHOD_DELETE_RULE</shortDescription>
+        <value>deleteRule</value>
+    </labels>
+    <labels>
+        <fullName>DT_METHOD_DELETE_VERSION</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DT_METHOD_DELETE_VERSION</shortDescription>
+        <value>deleteVersion</value>
+    </labels>
+    <labels>
+        <fullName>DT_METHOD_TOGGLE_ACTIVATE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DT_METHOD_TOGGLE_ACTIVATE</shortDescription>
+        <value>toggleActivate</value>
+    </labels>
+    <labels>
+        <fullName>DT_NAME</fullName>
+        <categories>Field Names</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_NAME</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>DT_OPERATOR</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_OPERATOR</shortDescription>
+        <value>Operator</value>
+    </labels>
+    <labels>
+        <fullName>DT_RECORD_TYPE_COMPARE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_RECORD_TYPE_COMPARE</shortDescription>
+        <value>Compare_Field_Value</value>
+    </labels>
+    <labels>
+        <fullName>DT_RULE_TYPE_EMAIL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DT_RULE_TYPE_EMAIL</shortDescription>
+        <value>Email</value>
+    </labels>
+    <labels>
+        <fullName>DT_RULE_TYPE_QUEUE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DT_RULE_TYPE_QUEUE</shortDescription>
+        <value>Queue</value>
+    </labels>
+    <labels>
+        <fullName>DT_RULE_VER_TYPE_MANUAL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_RULE_VER_TYPE_MANUAL</shortDescription>
+        <value>Manual</value>
+    </labels>
+    <labels>
+        <fullName>DT_SOURCE_SOBJECT_FIELD</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_SOURCE_SOBJECT_FIELD</shortDescription>
+        <value>Source SObject Field</value>
+    </labels>
+    <labels>
+        <fullName>DT_Select_Type</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Select Type</shortDescription>
+        <value>Select Type</value>
+    </labels>
+    <labels>
+        <fullName>DT_TARGET_OBJECT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_TARGET_OBJECT</shortDescription>
+        <value>Target Object</value>
+    </labels>
+    <labels>
+        <fullName>DT_TARGET_TASK_FIELD</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_TARGET_TASK_FIELD</shortDescription>
+        <value>Target Task Field</value>
+    </labels>
+    <labels>
+        <fullName>DT_Task_Status_In_Progress</fullName>
+        <categories>Task Framework, Individual Summary</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Task Status In Progress</shortDescription>
+        <value>In Progress</value>
+    </labels>
+    <labels>
+        <fullName>DT_URL_VIEW_RULE_LIST</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DT_URL_VIEW_RULE_LIST</shortDescription>
+        <value>/apex/DT_ViewRuleList</value>
+    </labels>
+    <labels>
+        <fullName>DT_VALUE_TO_COMPARE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_VALUE_TO_COMPARE</shortDescription>
+        <value>Value To Compare</value>
+    </labels>
+    <labels>
+        <fullName>DT_VALUE_TO_MAP</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_VALUE_TO_MAP</shortDescription>
+        <value>Value to Map</value>
+    </labels>
+    <labels>
+        <fullName>DT_VERSION_NUMBER</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DT_VERSION_NUMBER</shortDescription>
+        <value>Version Number</value>
+    </labels>
+    <labels>
+        <fullName>GMI_BackTo</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Back To used in Google Maps</shortDescription>
+        <value>Back to</value>
+    </labels>
+    <labels>
+        <fullName>GMI_GenerateKey</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please generate a Google maps API key used in Google Maps</shortDescription>
+        <value>Please generate a Google maps API key</value>
+    </labels>
+    <labels>
+        <fullName>GMI_GoogleLanguageCode</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Google Maps Language Code</shortDescription>
+        <value>en</value>
+    </labels>
+    <labels>
+        <fullName>GMI_LocalAddressFound</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Location displayed using address used in Google Maps</shortDescription>
+        <value>Location displayed using address</value>
+    </labels>
+    <labels>
+        <fullName>GMI_LocalAddressNotFound</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Address not found by Google used in Google Maps</shortDescription>
+        <value>Address not found by Google</value>
+    </labels>
+    <labels>
+        <fullName>GMI_LocalShowMap</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Show in Google used in Google Maps</shortDescription>
+        <value>Show in Google</value>
+    </labels>
+    <labels>
+        <fullName>GMI_UpdateComponent</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please update the GoogleMapsInternational component used in Google Maps</shortDescription>
+        <value>Please update the GoogleMapsInternational component with a new key which can be generated from</value>
+    </labels>
+    <labels>
+        <fullName>GMI_WebsiteNeeded</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>The website URL needed is used in Google Maps</shortDescription>
+        <value>The website URL needed is</value>
+    </labels>
+    <labels>
+        <fullName>GMI_googleMapURL</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Google Maps URL</shortDescription>
+        <value>http://maps.google.com</value>
+    </labels>
+    <labels>
+        <fullName>IndividualInformation_CC_PopoverContent</fullName>
+        <categories>IndividualInformation_CC_PopoverContent</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Label_CaseManager</shortDescription>
+        <value>Case Manager</value>
+    </labels>
+    <labels>
+        <fullName>Individual_Meet_For_Another_Waiver</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Individual_Meet_For_Another_Waiver</shortDescription>
+        <value>Does the Individual meet the target criteria for another waiver?</value>
+    </labels>
+    <labels>
+        <fullName>Individual_Meet_Waiver_Criteria</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Individual_Meet_Waiver_Criteria</shortDescription>
+        <value>Does the Individual meet the waiver criteria?</value>
+    </labels>
+    <labels>
+        <fullName>Select_Waiver_Targeting_Cretria</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Select_Waiver_Targeting_Cretria</shortDescription>
+        <value>Which Waiver?</value>
+    </labels>
+</CustomLabels>

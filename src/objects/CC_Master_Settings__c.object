@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>App_Dashboard_Page_Size__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Values from 3 to 10</inlineHelpText>
+        <label>App Dashboard Records Per Page</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>App_Dashboard_Pages_Per_Screen__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Values from 3 to 10</inlineHelpText>
+        <label>App Dashboard Pages Per Screen</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CC_Customer_Support_Phone_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Support Phone Number</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Comment_Pages_Per_Screen__c</fullName>
+        <externalId>false</externalId>
+        <label>Comment Pages Per Screen</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Comment_Records_Per_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Comment Records Per Page</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Feed_Pages_Per_Screen__c</fullName>
+        <externalId>false</externalId>
+        <label>Feed Pages Per Screen</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Feed_Records_Per_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Feed Records Per Page</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Task_Dashboard_Page_Size__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Values ranging from 3 to 10</inlineHelpText>
+        <label>Task Dashboard Records Per Page</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Task_Dashboard_Pages_Per_Screen__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Values ranging from 3 to 10</inlineHelpText>
+        <label>Task Dashboard Pages Per Screen</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WL_App_List_Page_Size__c</fullName>
+        <externalId>false</externalId>
+        <label>Waitlisted Apps Records Per Page</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WL_App_List_Pages_Per_Screen__c</fullName>
+        <externalId>false</externalId>
+        <label>Waitlisted Apps Pages Per Screen</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Master Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

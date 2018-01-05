@@ -1,0 +1,109 @@
+<!--************************************************************************************************
+*NAME: CC_ContactInformation
+*DESCRIPTION: To capture contact information data from UI
+*AUTHOR: Sourav Ghosh
+*DATE: 10/27/2017 
+*
+*************************************************************************************************-->
+ 
+<aura:component controller="CC_ContactInfoController" extends="c:CC_BaseSuperComponent" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+	
+	<aura:attribute name="contactInfo" type="Contact" />
+	<aura:attribute name="sContactId" type="String"/>
+	<aura:attribute name="sAppId" type="String"/>
+    <aura:attribute name="lstMainPhnType" type="List"/>
+    <aura:attribute name="lstOtherPhnType" type="List"/>
+    <aura:attribute name="lstSpokenLang" type="List"/>
+    <aura:attribute name="lstWrittenLang" type="List"/>
+    <aura:attribute name="lstPhyState" type="List"/>
+    <aura:attribute name="mapStatePicklist" type="Map"/>
+    <aura:attribute name="bBothAddressSame" type="Boolean" default="false"/>
+    <aura:attribute name="bIsValidatedFrmChild" type="Boolean" default="false"/> 
+    <aura:attribute name="bIsDataLoaded" type="Boolean" default="false"/> 
+    <aura:attribute name="bIsError" type="Boolean" default="false"/>
+    <aura:attribute name="lstAllError" type="List"/>
+    <aura:attribute name="mapLabels" type="Map"/>
+
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	<aura:method name="save" action="{!c.save}" access="PUBLIC">
+        <aura:attribute name="callback" type="Function"/>
+	</aura:method>
+
+	<c:CC_SubPageHeader iconName="standard:call" pageName="{!v.mapLabels.CC_Label_Contact_Info}" errorListShow="{! !empty(v.lstAllError)}" lstErrors='{!v.lstAllError}'></c:CC_SubPageHeader>
+
+	<!-- passing values in child component -->
+	<aura:if isTrue="{!v.bIsDataLoaded}">
+	            <c:CC_HeaderComponent Header1="{!v.mapLabels.CC_Contact_PhoneInformation}"/>        
+
+        <div class="slds-box slds-box_x-small slds-m-around_small">
+			<c:CC_Phone_Component sPhoneType="{!v.contactInfo.CC_Main_Phone_Type__c}"
+								  sPhoneConcat="{!v.contactInfo.Phone}"
+								  bRequired="true"
+								  sPrefix="Main"
+								  bConfirm="true"
+								  mapLabels="{!v.mapLabels}"
+								  lstPhoneTypes="{!v.lstMainPhnType}"
+								  aura:id="cCompMainPhn"/>	
+
+								   
+		
+
+		
+			<c:CC_Phone_Component sPhoneType="{!v.contactInfo.CC_Other_Phone_Type__c}"
+									  sPhoneConcat="{!v.contactInfo.OtherPhone}"
+									  bRequired="false"
+									  sPrefix="Other"
+									  bConfirm="true"
+									  mapLabels="{!v.mapLabels}"
+									  lstPhoneTypes="{!v.lstOtherPhnType}"
+									  aura:id="cCompOtherPhn"/>
+        </div>	
+        
+        
+
+		<c:CC_AddressInformation ConcatAddress="{!v.contactInfo.OtherStreet}"
+								 City="{!v.contactInfo.OtherCity}"
+								 PhyStrState="{!v.contactInfo.CC_Physical_Address_State__c}"
+                                 PhyStrCounty="{!v.contactInfo.CC_Contact_County__c}"
+                                 dependentPicklist="{!v.mapStatePicklist}"
+                                 PhyState="{!v.lstPhyState}"
+								 ZipCode="{!v.contactInfo.OtherPostalCode}"
+								 ZipExt="{!v.contactInfo.CC_Zip4__c}"
+                                 mapLabels="{!v.mapLabels}"
+                                 OtherCounty="{!v.contactInfo.CC_Other_Physical_Address_County__c}"
+								 AddressType="{!v.mapLabels.CC_PHYSICAL_ADDRESS}"
+								 aura:id="cCompPhyAdd"
+                                 lAddressLine1="{!v.mapLabels.CC_ADDRESS_LINE_1}"
+                                 lAddressLine2="{!v.mapLabels.CC_ADDRESS_LINE_2}"/>       	
+        
+				<c:CC_AddressInformation ConcatAddress="{!v.contactInfo.MailingStreet}"
+									 City="{!v.contactInfo.MailingCity}"
+									 PhyStrState="{!v.contactInfo.CC_Mailing_Address_State__c}"
+                                     PhyStrCounty="{!v.contactInfo.CC_Mailing_Address_County__c}"
+                                     dependentPicklist="{!v.mapStatePicklist}"   
+                                     PhyState="{!v.lstPhyState}"      
+                                     Prefixf="Mailing"
+									 ZipCode="{!v.contactInfo.MailingPostalCode}"
+									 ZipExt="{!v.contactInfo.CC_Zip4mailing__c}"
+                                     mapLabels="{!v.mapLabels}"
+                                     AddressType="{!v.mapLabels.CC_MAILING_ADDRESS}"
+									 bCheckboxVisibility="true"
+                                     OtherCounty="{!v.contactInfo.CC_Other_Mailing_Address_County__c}"
+									 cHideAddress="{!v.contactInfo.CC_Same_as_physical_address__c}"
+									 aura:id="cCompMailAdd"
+                                     lAddressLine1="{!v.mapLabels.CC_ADDRESS_LINE_1}"
+                                     lAddressLine2="{!v.mapLabels.CC_ADDRESS_LINE_2}"/>		
+           
+			<c:CC_ContactInformation_LangInfo sEmail="{!v.contactInfo.Email}"
+											   sWrittenLang="{!v.contactInfo.CC_Written_Language__c}"
+											   sSpokenLang="{!v.contactInfo.CC_Spoken_Language__c}" 
+                                              sOtherWrittenLang="{!v.contactInfo.CC_Other_Written_Language__c}"
+											   lstSpokenLang="{!v.lstSpokenLang}"
+											   lstWrittenLang="{!v.lstWrittenLang}"
+											   mapLabels="{!v.mapLabels}"
+											   aura:id="cCompLang"/>
+        
+	  </aura:if>
+
+</aura:component>

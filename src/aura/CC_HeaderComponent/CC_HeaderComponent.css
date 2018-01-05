@@ -1,0 +1,8 @@
+.THIS .sub-section-divider{
+    margin:0.5rem 0;
+}
+
+.THIS .slds-text-color_weak, .THIS .slds-text-color--weak{
+    font-weight: 600;
+    color: rgb(0, 112, 210);
+}

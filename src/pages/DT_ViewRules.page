@@ -1,0 +1,72 @@
+<!-- 
+ * Page Name    : DT_ViewRules
+ * Description  : Rule View Page.    
+ * Created By   : Nidhin V K
+ * Created On   : 07-28-2016
+
+ * Modification Log:  
+ * --------------------------------------------------------------------------------------------------------------------------------------
+ * Developer                Date        Modification ID      Description 
+ * --------------------------------------------------------------------------------------------------------------------------------------
+ * Nidhin V K            07-28-2016        1000            Initial version
+ *
+ *
+ -->
+ <apex:page standardController="DT_Rule__c" extensions="DT_RuleExtension">
+    
+    <apex:sectionHeader title="Rule" subtitle="{!DT_Rule__c.Name}"/>
+    <!-- Go Back Link -->
+    <div class="ptBreadcrumb">
+        &nbsp;«&nbsp;<apex:outputLink value="/apex/DT_ViewRuleList">Back to List: Rules</apex:outputLink>
+    </div>
+    <apex:form >
+        <apex:pageBlock tabStyle="DT_Rule__c" title="Rule"  mode="maindetail" id="pageBlock">
+            <apex:pageMessages rendered="{!bShowError}"/>
+            
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Edit" action="{!edit}" rendered="{!NOT(DT_Rule__c.DT_IsActive__c)}"/>
+                <apex:commandButton value="Activate" action="{!toggleActivate}" rendered="{!NOT(DT_Rule__c.DT_IsActive__c)}" rerender="pageBlock"/>
+                <!-- Show Deactivate Button only if it is active -->
+                <apex:commandButton value="Deactivate" action="{!toggleActivate}" rendered="{!DT_Rule__c.DT_IsActive__c}" rerender="pageBlock"/>
+                <apex:commandButton value="Delete" action="{!deleteRule}" rendered="{!NOT(DT_Rule__c.DT_IsActive__c)}"/>
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection title="Information" columns="2" collapsible="false">
+               
+                    <apex:outputField id="nameID" value="{!DT_Rule__c.Name}"/>
+                    
+                    <apex:outputField id="sobjID" value="{!DT_Rule__c.DT_Target_SObject_API_Name__c}"/>
+                    
+                    <apex:outputField id="descID" value="{!DT_Rule__c.DT_Rule_Description__c}" />
+                    
+                    <apex:outputField id="ruleTypeID" value="{!DT_Rule__c.DT_Rule_Type__c}"/>
+                    
+                    <apex:outputField id="priorityID" value="{!DT_Rule__c.DT_Priority__c}"/>
+                    
+                    <apex:outputField id="activeID" value="{!DT_Rule__c.DT_IsActive__c}"/>
+                    
+                    <apex:outputField id="QueueID" value="{!DT_Rule__c.DT_Active_Queue__c}" rendered="{!IF(DT_Rule__c.DT_Rule_Type__c = 'Task', true, false)}"/>
+                    
+                    <apex:outputLabel rendered="{!IF(DT_Rule__c.DT_Rule_Type__c != 'Task', true, false)}"/>
+                    
+                    <apex:outputField id="CreatedById" value="{!DT_Rule__c.CreatedById}"/>
+                    
+                    <apex:outputField id="CreatedDate" value="{!DT_Rule__c.LastModifiedById}"/>
+                    
+                    <apex:outputField id="LastModifiedId" value="{!DT_Rule__c.CreatedDate}"/>
+                    
+                    <apex:outputField id="LastModifiedDate" value="{!DT_Rule__c.LastModifiedDate}"/>
+
+                    <apex:outputField id="taskNameId" value="{!DT_Rule__c.DT_Task_Name__c}"/>
+
+                    <apex:outputField id="taskCodeId" value="{!DT_Rule__c.DT_Task_Code__c}"/>
+
+                    <apex:outputField id="descriptionId" value="{!DT_Rule__c.DT_Description__c}"/>
+
+                    <apex:outputField label="Target Module" id="moduleId" value="{!DT_Rule__c.DT_Module__c}"/>
+                    
+            </apex:pageBlockSection>    
+        </apex:pageBlock>
+    </apex:form>
+    <apex:relatedList list="DT_Rule_Versions__r"/>
+</apex:page>

@@ -1,0 +1,61 @@
+<!-- 
+ * Page Name    : DT_CreateRuleCriteria
+ * Description  : Rule Criteria Create/Edit Page.    
+ * Created By   : Nidhin V K
+ * Created On   : 07-26-2016
+
+ * Modification Log:  
+ * --------------------------------------------------------------------------------------------------------------------------------------
+ * Developer                Date        Modification ID      Description 
+ * --------------------------------------------------------------------------------------------------------------------------------------
+ * Nidhin V K            07-26-2016        1000            Initial version
+ * Debalina
+ *
+ -->
+ <apex:page standardcontroller="DT_Rule_Criterion__c" extensions="DT_RuleCriteriaExtension">
+
+    <apex:sectionHeader title="Rule Criteria {!$Label.DT_LABEL_EDIT}" subtitle="{!DT_Rule_Criterion__c.Name}"/>
+    <!-- Go Back Link -->
+    <div class="ptBreadcrumb">
+        &nbsp;«&nbsp;<apex:outputLink value="/{!DT_Rule_Criterion__c.DT_Rule_Version__c}">{!$Label.DT_BACK_TO_LIST}: Rule Versions</apex:outputLink>
+    </div>
+    <apex:form >
+        <apex:pageMessages rendered="{!bShowError}"/>
+        <apex:pageBlock tabStyle="DT_Rule_Criterion__c" title="{!$Label.DT_CREATE} Rule Criteria"  mode="edit" id="theBlock">
+
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!save}"/>
+                <apex:commandButton action="{!cancel}" value="Cancel"/>
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection title="{!$Label.DT_MAP_THE_FIELDS}" columns="3" collapsible="false">
+                    <!--apex:outputField id="serialID" value="{!DT_Rule_Criterion__c.DT_Serial_Number__c}"/-->
+                    
+                    <!-- Show only if Rule Type is Task have to change
+                    <apex:selectList id="recordTypeId" value="{!selectedVal}" label="{!JSENCODE($Label.DT_Select_Type)}" size="1" rendered="{!bTaskType}">
+                        <apex:selectOptions value="{!recordTypeSelectOptions}"/>
+                        <apex:actionSupport action="{!enableDisableTaskField}" event="onchange" rerender="theBlock"/>
+                    </apex:selectList>-->
+                    
+                    <apex:selectList label="{!$Label.DT_TARGET_TASK_FIELD}" id="taskFieldID" value="{!DT_Rule_Criterion__c.DT_Target_Task_Field__c}" size="1" rendered="{!bShowTask}">
+                        <apex:selectOptions value="{!lstTaskFields}"/>
+                        <apex:actionSupport action="{!enableDisableTaskField}" event="onchange" rerender="theBlock"/>
+                    </apex:selectList>
+
+                    <apex:selectList label="{!$Label.DT_SOURCE_SOBJECT_FIELD}" id="sObjFieldID" value="{!DT_Rule_Criterion__c.DT_Source_SObject_Field__c}" size="1" rendered="{!bShowSourceField}">
+                        <apex:selectOptions value="{!lstTargetObjectFields}"/>
+                    </apex:selectList>
+
+                    <apex:inputField label="{!$Label.DT_VALUE_TO_MAP}" id="mapValueID" value="{!DT_Rule_Criterion__c.DT_Value_to_Map__c}"  rendered="{!bShowMapValue}"/>
+
+                    <apex:inputText id="dueDateValId" label="{!JSENCODE($Label.DT_ADD_DAYS_WITH_TODAY)}" value="{!sDaysToAdd}" rendered="{!bShowDueDate}"/>
+
+                    <apex:inputField label="{!$Label.DT_OPERATOR}" id="operatorID" value="{!DT_Rule_Criterion__c.DT_Operator__c}"  rendered="{!bShowValueCompare}"/>
+
+                    <apex:inputField label="{!$Label.DT_VALUE_TO_COMPARE}" id="valueID" value="{!DT_Rule_Criterion__c.DT_Value_To_Compare__c}" rendered="{!bShowValueCompare}"/>
+
+            </apex:pageBlockSection>    
+        </apex:pageBlock>
+    </apex:form>
+    
+</apex:page>

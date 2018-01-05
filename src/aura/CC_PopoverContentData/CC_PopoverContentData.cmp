@@ -1,0 +1,13 @@
+<aura:component >
+    <aura:attribute name="label" type="String"/>
+    <aura:attribute name="text" type="String"/>
+    
+    <label class="slds-form-element__label slds-no-flex" >
+                   <span>{!v.label}</span>
+                </label>
+                <div class="slds-form-element__control slds-grow">
+                    <p>{!v.text}</p>
+                </div>
+    
+	
+</aura:component>

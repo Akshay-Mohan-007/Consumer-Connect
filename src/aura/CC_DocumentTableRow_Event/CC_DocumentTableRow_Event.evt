@@ -1,0 +1,4 @@
+<aura:event type="COMPONENT" description="Event for document detail table action" >
+    <aura:attribute name="action" type="String"/>
+    <aura:attribute name="wrapDoc" type="Object"/>
+</aura:event>

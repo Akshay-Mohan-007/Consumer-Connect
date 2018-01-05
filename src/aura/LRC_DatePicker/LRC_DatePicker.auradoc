@@ -1,0 +1,38 @@
+<aura:documentation>
+    <aura:description>
+        <h2>Component is used to display an easy to use datepickers</h2>
+        <!-- User Notes -->
+        <p>Attribute 1: value : the value displayed in the date picker input box </p>
+        <p>Attribute 2: label : label for the datepicker, will be shown at the top of input box</p>
+        <p>Attribute 3: placeholder : placeholder incase the value is not populated</p>
+        <p>Attribute 4: class: customized class for datepicker, can be used to add style</p>
+        <p>Attribute 5: formatSpeficier : eg, MM/DD/YY or YY/DD/MM etc</p>
+        <p>Attribute 6: date : the currently highlighted date</p>
+        <p>Attribute 6: month : the currently rendered month</p>
+        <p>Attribute 6: year : the currently rendered year</p>
+        
+        <p>IMPORTANT: datepicker supports bundle version 39.0. Because of locker services,
+            the datepicker is expected to be unstable at higher version</p>
+        
+        <!-- Developer Notes -->
+        <p>Component and Events Dependancy</p>
+        <pre>
+            LRC_DatePicker
+            > e:LRC_DateChange
+            > LRC_DateInput
+            -----> LRC_DateTimeLib
+            -----> e:LRC_DataChange
+            > LRC_DateSelect (The select box for years)
+            -----> e:LRC_DataChange
+            > LRC_DateCell (The dates)       
+            -----> LRC_DateCellClick
+        </pre>       
+        
+        <p>@Author: Casper Harmer.</p>
+        <p>@Modified by: Radhika Dumbre.</p>
+    </aura:description>
+    
+    <aura:example name="Example" ref="LRC_DatePickerTest.app" label="Using the LRC_DatePicker component">
+        <p>Shows a custom made date picker</p>
+    </aura:example>
+</aura:documentation>

@@ -1,0 +1,128 @@
+<aura:component extends="c:CC_BaseSuperComponent" controller="CC_ManageAllotmentController" access="global"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction">               
+
+    
+    <aura:attribute name="AppDetObj" type="CC_Application_Detail__c"/>
+    <aura:attribute name="sAppDetId" type="String"/>
+    <aura:attribute name="sTaskIdToClose" type="String"/>
+    <aura:attribute name="ProgramName" type="String"/>
+    <aura:attribute name="sWaiverPrg" type="String"/>
+    <aura:attribute name="bHasError" type="Boolean"/>
+    <aura:attribute name="bSubmitted" type="Boolean"/>
+    <aura:attribute name="bMeetCriteria" type="Boolean"/>
+    <aura:attribute name="TotalAvailableWaiverCapacity" type="Integer"/>
+    <aura:attribute name="CurrentlyEnrolled" type="Integer"/>
+    <aura:attribute name="lstPrgDetail" type="List"/>
+    <aura:attribute name="mapLabels" type="Map"/>
+    <aura:attribute name="bIsReadOnly" type="Boolean" default="true"/>
+    <aura:attribute name="bIsDataLoaded" type="Boolean"/>
+    <aura:attribute name="lstErrors" type="List"/>
+    <aura:attribute name="objHeader" type="List"/>
+    <aura:attribute name="lWaiverCapacityAct" type="List"/>
+    <aura:attribute name="lWaiverProg" type="List"/>
+    <aura:attribute name="lProgDetail" type="List"/>
+    <aura:attribute name="objBody" type="List"/>
+    <aura:attribute name="sProgramId" type="String"/>
+    
+    <aura:method name="save" action="{!c.save}" access="PUBLIC">
+        <aura:attribute name="callback" type="Function"/>
+    </aura:method>
+    
+     <aura:method name="submit" action="{!c.submit}" access="PUBLIC">
+        <aura:attribute name="callback" type="Function"/>
+    </aura:method>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="rowAction" event="c:GenericTableRowEvent" action="{!c.rowAction}" />
+    
+    <aura:if isTrue="{!v.bIsDataLoaded}">
+        
+        <c:CC_SubPageHeader iconName="standard:resource_skill" pageName="{!v.mapLabels.CC_LABEL_MANAGE_ALLOTMENT}" errorListShow="{! !empty(v.lstErrors)}" lstErrors='{!v.lstErrors}'></c:CC_SubPageHeader>
+        
+        
+        <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">
+            <c:CC_StaticContent label="{!v.mapLabels.CC_RT_Program}" text="{!v.ProgramName}"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">	
+            <c:CC_StaticContent label="{!v.mapLabels.CC_LABEL_TOTAL_WAIVER_CAPACITY}" text="{!v.TotalAvailableWaiverCapacity}"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">	
+            <c:CC_StaticContent label="{!v.mapLabels.CC_LABEL_CURRENTLY_ENROLLED}" text="{!v.CurrentlyEnrolled}"/>
+        </lightning:layoutItem>
+        
+        <aura:if isTrue="{! !empty(v.objBody)}">
+            <c:CC_GenericTable thead="{!v.objHeader}"
+                               tbody="{!v.objBody}"/>
+        </aura:if>
+        
+        <lightning:layout horizontalAlign="left" multipleRows="true">
+            <lightning:layoutItem flexibility="grow" padding="around-small" size="12" largeDeviceSize="" mediumDeviceSize="8" smallDeviceSize="12">
+                <lightning:select name="waiverCapActions" 
+                                  label="{!v.mapLabels.CC_LABEL_WAIVER_CAPACITY_ACTIONS}"
+                                  value="{!v.AppDetObj.Capacity_Review_Action__c}"
+                                  class="{! and(v.bHasError,empty(v.AppDetObj.Capacity_Review_Action__c)) ? 'slds-has-error required-asterisk' : 'required-asterisk'}"
+                                  >
+                    <aura:iteration items="{!v.lWaiverCapacityAct}" var="val">
+                        <option text="{!val.sValue}" value="{!val.sKey}" />
+                    </aura:iteration>
+                </lightning:select>
+            </lightning:layoutItem>
+        </lightning:layout>
+        
+        <aura:if isTrue="{!or(v.AppDetObj.Capacity_Review_Action__c=='Add to Waitlist',v.AppDetObj.Capacity_Review_Action__c=='Reserve Capacity')}">
+            <lightning:layout horizontalAlign="left" multipleRows="true">
+                <lightning:layoutItem flexibility="grow" padding="around-small" size="12" largeDeviceSize="" mediumDeviceSize="8" smallDeviceSize="12">
+                    <lightning:select name="waiverCapActions" 
+                                      label="{!v.mapLabels.CC_LABEL_RESERVE_CATEGORY}"
+                                      value="{!v.AppDetObj.Program_Detail__c}"
+                                      class="{! and(v.bHasError,empty(v.AppDetObj.Program_Detail__c)) ? 'slds-has-error required-asterisk' : 'required-asterisk'}"
+                                      >
+                        <aura:iteration items="{!v.lProgDetail}" var="val">
+                            <option text="{!val.sValue}" value="{!val.sKey}" />
+                        </aura:iteration>
+                    </lightning:select>
+                </lightning:layoutItem>
+            </lightning:layout>
+        </aura:if>
+        
+        <aura:if isTrue="{!v.AppDetObj.Capacity_Review_Action__c=='Add to Waitlist'}">
+            
+            <lightning:layoutItem flexibility="grow" padding="around-small" size="12" largeDeviceSize="8" mediumDeviceSize="6" smallDeviceSize="7">
+                <div class="slds-text-body_small slds-m-bottom_x-small">{!v.mapLabels.CC_Label_AnotherTargetingCriteria}</div>
+                <lightning:input type="radio" 
+                                 label="{!v.mapLabels.CC_Yes}" 
+                                 name="MeetCriteria" 
+                                 checked="{!v.AppDetObj.Meet_For_Another_Waiver_Program__c}" 
+                                 value="true" 
+                                 onchange="{!c.handleMeetCriteria}" />
+                <lightning:input type="radio" 
+                                 label="{!v.mapLabels.CC_I_Don_t_Know}" 
+                                 name="MeetCriteria" 
+                                 checked="{!not(v.AppDetObj.Meet_For_Another_Waiver_Program__c)}" 
+                                 value="false" 
+                                 onchange="{!c.handleMeetCriteria}"/> 
+            </lightning:layoutItem> 
+        </aura:if>
+        
+        
+        
+        <aura:if isTrue="{!and(v.AppDetObj.Capacity_Review_Action__c== 'Add to Waitlist',v.AppDetObj.Meet_For_Another_Waiver_Program__c == true)}">
+            <lightning:layout horizontalAlign="left" multipleRows="true">
+                <lightning:layoutItem flexibility="grow" padding="around-small" size="12" largeDeviceSize="" mediumDeviceSize="8" smallDeviceSize="12">
+                    <lightning:select name="waiverCapActions" 
+                                      label="{!v.mapLabels.CC_LABEL_WHICH_WAIVER}"
+                                      value="{!v.sWaiverPrg}"
+                                      class="{! and(v.bHasError,empty(v.sWaiverPrg)) ? 'slds-has-error required-asterisk' : 'required-asterisk'}"
+                                      >
+                        <aura:iteration items="{!v.lWaiverProg}" var="val">
+                            <option text="{!val.sValue}" value="{!val.sKey}"  selected ="{!val.sKey == v.sWaiverPrg}"/>
+                        </aura:iteration>
+                    </lightning:select>
+                </lightning:layoutItem>
+            </lightning:layout>
+        </aura:if>
+        
+        
+     </aura:if>
+    
+</aura:component>

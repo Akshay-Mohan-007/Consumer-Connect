@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Comment</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Comments</value>
+    </caseValues>
+    <fields>
+        <label><!-- Application Detail --></label>
+        <name>Application_Detail__c</name>
+        <relationshipLabel><!-- Comments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Body --></label>
+        <name>Body__c</name>
+    </fields>
+    <fields>
+        <label><!-- Display Mode --></label>
+        <name>Display_Mode__c</name>
+        <picklistValues>
+            <masterLabel>DRAFT</masterLabel>
+            <translation><!-- DRAFT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUBMITTED</masterLabel>
+            <translation><!-- SUBMITTED --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Page Name --></label>
+        <name>Page_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Application --></label>
+        <name>Related_Application__c</name>
+        <relationshipLabel><!-- Comments --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

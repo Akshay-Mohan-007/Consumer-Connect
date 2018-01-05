@@ -1,0 +1,31 @@
+<aura:component access="GLOBAL" extensible="true">
+
+    <aura:attribute name="class" type="String" description="A CSS style to be attached to the component." />
+    <aura:attribute name="placeholder" type="String" description="The hint for the date input format. The placeholder is set during init based on the custom or locale format."/>
+    <aura:attribute name="format" type="String" description="Java style format specifier for the date" />
+    <aura:attribute name="timezone" type="String" description="value for this component" />
+    <aura:attribute name="value" type="String" description="value for this component" />
+    <aura:attribute name="hideOnBlur" type="Object"/>
+    <aura:attribute name="isDatepickerOpen" type="Boolean"/>
+    <aura:attribute name="required" type="boolean" description="If the field is mandatory or not"/> <!--added by Sayari-->
+    <aura:attribute name="isTimePicker" type="Boolean" default="false"/><!--added by Sayari-->
+    <aura:attribute name="isDatePicker" type="Boolean" default="false"/><!--added by Sayari-->
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:registerEvent name="dataChangeEvent" type="c:LRC_DataChange" description="The event fired when a valid date is set" />
+    <aura:registerEvent name="onFocus" type="c:LRC_DataChange" description="The event fired when the user focuses on the component."/>
+
+
+    <!--<div class="form-element">-->
+      <!--<label class="slds-assistive-text" for="datepicker-input">Date Picker Input</label>-->
+        <input type="text"
+               aura:id="inputText"
+               placeholder="{!v.placeholder}"
+               class="slds-input"
+               onchange="{!c.handleDateChange}"
+               onfocus="{!c.handleFocus}" onblur="{!!$Browser.isPhone?v.hideOnBlur:''}" id="datepicker-input" readonly="false" disabled="{!$Browser.isIPhone ? v.isDatepickerOpen : false }"/>
+
+    <!--</div> class="{!v.class + ' input'+ 'slds-input'}" -->
+
+    <c:LRC_DateTimeLib aura:id="dateTimeLib" isDatePicker="{!v.isDatePicker}" isTimePicker="{!v.isTimePicker}"/>
+</aura:component>

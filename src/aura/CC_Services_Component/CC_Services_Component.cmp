@@ -1,0 +1,205 @@
+<!--***************************************************************************************************************************************
+ * NAME   : CC_Services_Component
+ * DESCRIPTION  :Services Page
+ *    
+ * @AUTHOR   : Sayari Mandal
+ * @DATE   : 11-15-2017
+ *
+ * MODIFICATION LOG:  
+ * ***************************************************************************************************************************************
+ * DEVELOPER               DATE               DESCRIPTION 
+ * ***************************************************************************************************************************************
+ * Sayari Mandal           11-15-2017         Initial Version
+ * Debalina                11-15-2017         JS and Backend Integration
+ * Debalina                11-28-2017         bIsReadOnly added
+ ****************************************************************************************************************************************-->
+
+<aura:component access="global" controller="CC_ServicesController" extends="c:CC_BaseSuperComponent" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"> 
+ 
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	<aura:handler name="addEvent" event="c:CC_ServiceRowRetrievalEvent" action="{!c.save}"/>
+    <aura:handler name="editEvent" event="c:CC_ServiceRowRetrievalEvent" action="{!c.edit}"/>
+    <aura:handler name="deleteEvent" event="c:CC_ServiceRowRetrievalEvent" action="{!c.delete}"/>
+    <aura:method name="save" action="{!c.save}" access="PUBLIC">
+        <aura:attribute name="callback" type="Function"/>
+	</aura:method>
+
+	<aura:attribute name="sAppId" type="String"/>
+	<aura:attribute name="objApp" type="CC_Application__c"/>
+	<aura:attribute name="sServicePeriod" type="String"/>
+	<aura:attribute name="lstServicePeriod" type="List"/>
+	<aura:attribute name="sWhyServiceNeeded" type="String"/>
+	<aura:attribute name="bIsOnWatingList" type="Boolean" default="false"/>
+	<aura:attribute name="lstIsWaitingOptions" type="List"/>
+	<aura:attribute name="lstIsWaitingValues" type="List"/>
+	<aura:attribute name="lstErrors" type="List" default="[]"/>
+
+	<aura:attribute name="lstWaitingOptions" type="List"/>
+	<aura:attribute name="lstWaitingValue" type="List"/>
+
+	<aura:attribute name="lstIsWaitlistRadioOptions" type="List"/>
+	<aura:attribute name="sIsWaitRadioValue" type="String" />
+
+	<aura:attribute name="sOtherWaitProgName" type="String"/>
+	<aura:attribute name="bIsWaitingListAvailable" type="boolean" default="false"/>
+	<aura:attribute name="bIsOtherWaitingSelected" type="boolean" default="false"/>
+	<aura:attribute name="mapLabels" type="Map"/>
+	<aura:attribute name="mapProgramService" type="Map"/>
+
+	<aura:attribute name="lstAppDetailService" type="List"/>
+	<aura:attribute name="lstAppDetailWaitingProg" type="List"/>
+	<aura:attribute name="bIsError" type="boolean" default="false"/>
+	<aura:attribute name="bErrIsOnWait" type="boolean" default="false"/>
+	<aura:attribute name="bErrNoWaitItem" type="boolean" default="false"/>
+
+	<aura:attribute name="bErrOtherProgram" type="boolean" default="false"/>
+	<aura:attribute name="mapProgNameId" type="map"/>
+	
+	
+	<!-- add services attributes -->
+	<aura:attribute name="isOpen" type="boolean" default="false"/>
+	<aura:attribute name="showModal" type="boolean" default="false"/>
+	<aura:attribute name="serviceDetail" type="Object"/>
+	<aura:attribute name="bIsReadOnly" type="boolean" default="false"/>
+
+	<!-- Placeholder for child component -->
+    
+    <c:CC_SubPageHeader iconName="standard:resource_skill" pageName="{!v.mapLabels.CC_Label_Services}" errorListShow="{!v.lstErrors.length> 0}" lstErrors='{!v.lstErrors}'></c:CC_SubPageHeader>
+       
+         
+
+    <lightning:layout horizontalAlign="left" multipleRows="true">	
+		<lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12" padding="around-small">
+
+		<lightning:button variant="brand" 
+						  label="{!v.mapLabels.CC_Label_Add_New_Services}" 
+						  disabled="{!v.bIsReadOnly}"
+						  onclick="{! c.openModel }" />
+			<aura:if isTrue="{!v.isOpen}">
+				<c:CC_ServicesModal aura:id="serviceModal" 
+									showModal="{!v.isOpen}" 
+									mapLabels="{!v.mapLabels}"
+									lstPrograms="{!v.lstWaitingOptions}"
+									lstSelectedService="{!v.lstAppDetailService}"
+									mapProgramService="{!v.mapProgramService}"></c:CC_ServicesModal> 
+			</aura:if>
+		</lightning:layoutItem>
+     
+    </lightning:layout>
+        
+        <lightning:layout horizontalAlign="left" multipleRows="true">
+
+     
+		    <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12" padding="around-small">
+		            <table class="slds-table slds-table_bordered slds-max-medium-table_stacked-horizontal">
+		              <thead>
+		                <tr class="slds-text-title_caps">
+		                  <th scope="col">
+		                    <div class="slds-truncate">{!v.mapLabels.CC_Label_Service}</div>
+		                  </th>
+		                  <th scope="col" class="slds-text-align_center">
+		                    <div class="slds-truncate">{!v.mapLabels.CC_Label_Getting_Service}</div>
+		                  </th>
+		                  <th scope="col" class="slds-text-align_center">
+		                    <div class="slds-truncate">{!v.mapLabels.CC_Label_Service_Needed}</div>
+		                  </th>
+		                  
+		                  <th scope="col">
+		                     {!v.mapLabels.CC_LBL_Program_Name}
+		                  </th>
+		                   <th  class="slds-text-align_center">
+		                     {!v.mapLabels.CC_ACTION}
+		                    </th>
+		                                   
+		                </tr>
+		              </thead>
+		            <tbody>
+		              <aura:iteration items="{!v.lstAppDetailService}" var="serviceRec" indexVar="index">
+		                 <c:CC_ServiceTableRow bIsReadOnly="{!v.bIsReadOnly}" serviceDetail="{!serviceRec}"/>
+		              </aura:iteration>
+		            </tbody>
+		            </table>
+		    </lightning:layoutItem>
+		</lightning:layout>
+
+
+
+    <lightning:layout horizontalAlign="left" multipleRows="true">
+
+
+	    <lightning:layoutItem flexibility="grow" size="12" largeDeviceSize="9" 
+	                mediumDeviceSize="12" smallDeviceSize="12" padding="around-small">
+			<lightning:select name="ServicePeriod" 
+							  label="{!v.mapLabels.CC_Service_ServicePeriod}" 
+							  class="{!and(v.bIsError,empty(v.sServicePeriod))? 'slds-has-error required-asterisk':'required-asterisk'}"
+							  value="{!v.sServicePeriod}"
+							  disabled="{!v.bIsReadOnly}" >
+				<option text="{!$Label.c.CC_LBL_SELECT}" value=""/>
+				<aura:iteration items="{!v.lstServicePeriod}" var="item">
+					<option text="{!item.val}" value="{!item.val}" selected="{!item.selected}"/>
+				</aura:iteration>
+			</lightning:select>
+		</lightning:layoutItem>	
+    </lightning:layout>
+    <lightning:layout horizontalAlign="left" multipleRows="true">
+		<lightning:layoutItem flexibility="grow" size="12" largeDeviceSize="9" 
+	                mediumDeviceSize="12" smallDeviceSize="12" padding="around-small">
+			<lightning:textarea name="WhyServiceNeeded" 
+								label="{!v.mapLabels.CC_Service_WhyServiceNeeded}" 
+								value="{!v.sWhyServiceNeeded}"
+								class="{!and(v.bIsError,empty(v.sWhyServiceNeeded))? 'slds-has-error required-asterisk':'required-asterisk'}"
+								maxlength="500"  
+								disabled="{!v.bIsReadOnly}"
+								/>
+		</lightning:layoutItem>
+    </lightning:layout>
+    <lightning:layout horizontalAlign="left" multipleRows="true">
+		<lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="9" 
+	                mediumDeviceSize="12" smallDeviceSize="12" padding="around-small">
+			<lightning:radioGroup name="onWaitingList"
+								  aura:id="onWaitingList"
+								  label="{!v.mapLabels.CC_Service_IsOnWaitingList}"
+								  options="{!v.lstIsWaitlistRadioOptions}"
+								  value="{!v.sIsWaitRadioValue}"
+								  onchange="{!c.showWaitList}" 
+								  class="{! v.bErrIsOnWait ? 'slds-has-error required-asterisk-legend':'required-asterisk-legend'}"
+								  disabled="{!v.bIsReadOnly}"
+								  />
+		</lightning:layoutItem>	
+    </lightning:layout>
+    
+    
+
+	<aura:if isTrue="{!v.bIsWaitingListAvailable}">
+        <lightning:layout horizontalAlign="left" multipleRows="true">
+		<lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="9" 
+                mediumDeviceSize="12" smallDeviceSize="12" padding="around-small">		
+			<lightning:checkboxGroup name="waitingServiceList"
+									 label="{!v.mapLabels.CC_Service_WaitingList}"
+									 options="{!v.lstWaitingOptions}"
+									 value="{!v.lstWaitingValue}"
+									 onchange="{!c.showHideOther}"
+									 class="{! v.bErrNoWaitItem ? 'slds-has-error required-asterisk-legend':'required-asterisk-legend'}"
+									 disabled="{!v.bIsReadOnly}"
+									 />
+                <aura:if isTrue="{!v.bIsOtherWaitingSelected}">
+					<lightning:input type="text"
+									 name="sOtherWaitProgram"
+									 value="{!v.sOtherWaitProgName}" 
+                                     class="{!and(v.bIsError,empty(v.sOtherWaitProgName))? 'slds-has-error slds-p-left_large required-asterisk':'slds-p-left_large required-asterisk'}"
+                                     aura:id="inputForOther"
+                                     disabled="{!v.bIsReadOnly}"/>
+				</aura:if>
+		</lightning:layoutItem>
+        </lightning:layout>
+	</aura:if>
+    
+               
+<!--     <lightning:layout horizontalAlign="left" multipleRows="true">
+		<lightning:layoutItem flexibility="grow" padding="around-small" size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12">
+	       <lightning:button variant="brand" label="Back" onclick="{}"/>
+	       <lightning:button variant="brand" label="Next" onclick="{!c.save}"/>
+    	</lightning:layoutItem>
+	</lightning:layout> -->
+
+</aura:component>
