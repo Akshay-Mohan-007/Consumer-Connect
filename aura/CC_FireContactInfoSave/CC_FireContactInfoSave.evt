@@ -1,4 +1,0 @@
-<aura:event type="APPLICATION" description="Event template">
-		<aura:attribute name="bIsLangDataValidated" type="Boolean"/>
-		<aura:attribute name="bIsPhnDataValidated" type="Boolean"/>
-</aura:event>

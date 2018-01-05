@@ -1,4 +1,0 @@
-<design:component >
-	<design:attribute name="pageName" label="Page Name" Description="Type the name of Page" />
-	<design:attribute name="iconName" label="Icon Name" Description="Type the name of Icon" />
-</design:component>
