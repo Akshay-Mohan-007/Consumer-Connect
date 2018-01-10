@@ -1,7 +1,0 @@
-.THIS .slds-checkbox--toggle [type=checkbox]+.slds-checkbox--faux_container .slds-checkbox--off {
-    display: none;
-}
-
-.THIS .slds-checkbox--toggle [type=checkbox]:checked+.slds-checkbox--faux_container .slds-checkbox--on {
-    display: none;
-}

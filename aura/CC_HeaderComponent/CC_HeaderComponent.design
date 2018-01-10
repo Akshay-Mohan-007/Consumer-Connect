@@ -1,3 +1,0 @@
-<design:component >
-	<design:attribute name="Header1" label="Header1" Description="Type the name of header" />
-</design:component>

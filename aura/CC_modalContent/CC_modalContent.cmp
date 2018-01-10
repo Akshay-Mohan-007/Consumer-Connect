@@ -1,5 +1,0 @@
-<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
-    <aura:attribute name="sAppId" type="String"/> 
-    <lightning:icon size="medium" iconName="action:approval" alternativeText="Approved" />
-    Your application has been approved. {!v.sAppId}
-</aura:component>
