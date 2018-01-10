@@ -1,0 +1,25 @@
+<aura:component >
+    
+    <aura:attribute name="iconName" type="String"/>
+    <aura:attribute name="pageName" type="String"/>
+    <aura:attribute name="errorListShow" type="Boolean" default="false"/>
+    <aura:attribute name="lstErrors" type="String[]" />
+     <!--<aura:handler name="init" value="{!this}" action="{!c.doInit}" />-->
+    
+    
+            <div class="slds-page-header">
+                <div class="slds-media">
+                   
+                    <lightning:icon iconName="{!v.iconName}" size="medium" class="slds-icon_container slds-icon-standard-opportunity"/>
+                  
+                  <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="" style="margin-left:1rem">{!v.pageName}</h1>
+               </div>
+            </div>
+    
+            <aura:if isTrue="{!v.errorListShow}">
+                <c:CC_ErrorNotification lstErrors="{!lstErrors}"></c:CC_ErrorNotification>
+            </aura:if>
+    
+             
+	
+</aura:component>

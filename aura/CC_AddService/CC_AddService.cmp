@@ -1,0 +1,63 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:appHostable" access="global">
+    
+     <aura:attribute name="isOpen" type="boolean" default="false"/>
+     <aura:attribute name="showModal" type="boolean" default="false"/>
+     <aura:attribute name="serviceDetail" type="Object"/>
+      
+    <!--  <aura:registerEvent name="editEvent" type="c:CC_ServiceRowRetrievalEvent"/>
+     <aura:registerEvent name="deleteEvent" type="c:CC_ServiceRowRetrievalEvent"/> -->
+     <aura:handler name="addEvent" event="c:CC_ServiceRowRetrievalEvent" action="{!c.saveRow}"/>
+     <aura:handler name="editEvent" event="c:CC_ServiceRowRetrievalEvent" action="{!c.editRow}"/>
+     <aura:handler name="deleteEvent" event="c:CC_ServiceRowRetrievalEvent" action="{!c.deleteRow}"/>
+    
+     <aura:attribute name="serviceList" type="List"/>
+     <aura:attribute name="lstAppDetailService" type="List"/>
+     <aura:attribute name="mapLabels" type="Map"/>
+     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+<lightning:layout horizontalAlign="left" multipleRows="true">
+    <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="8" mediumDeviceSize="6" smallDeviceSize="12" padding="around-small">
+              
+     <lightning:button variant="brand" label="{!v.mapLabels.CC_Label_Add_New_Services}" onclick="{! c.openModel }" />
+     <aura:if isTrue="{!v.isOpen}">
+        <c:CC_ServicesModal aura:id="serviceModal" showModal="{!v.isOpen}" mapLabels="{!v.mapLabels}"></c:CC_ServicesModal> 
+     </aura:if>
+    </lightning:layoutItem>
+     
+     
+     
+    <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="8" mediumDeviceSize="6" smallDeviceSize="12" padding="around-small">
+            <table class="slds-table slds-table_bordered slds-max-medium-table_stacked-horizontal">
+              <thead>
+                <tr class="slds-text-title_caps">
+                  <th scope="col">
+                    <div class="slds-truncate" title="type">{!v.mapLabels.CC_Label_Service}</div>
+                  </th>
+                  <th scope="col" class="slds-text-align_center">
+                    <div class="slds-truncate" title="comments">{!v.mapLabels.CC_Label_Getting_Service}</div>
+                  </th>
+                  <th scope="col" class="slds-text-align_center">
+                    <div class="slds-truncate" title="Date">{!v.mapLabels.CC_Label_Service_Needed}</div>
+                  </th>
+                  
+                  <th scope="col" class="slds-text-align_center">
+                     
+                  </th>
+                   <th>
+                    
+                    
+                    </th>
+                                   
+                </tr>
+              </thead>
+            <tbody>
+              <aura:iteration items="{!v.lstAppDetailService}" var="serviceRec" indexVar="index">
+                 <c:CC_ServiceTableRow serviceDetail="{!serviceRec}"></c:CC_ServiceTableRow>
+              </aura:iteration>
+            </tbody>
+            </table>
+    </lightning:layoutItem>
+</lightning:layout>
+
+	
+</aura:component>

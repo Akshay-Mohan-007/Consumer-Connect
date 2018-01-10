@@ -1,0 +1,4 @@
+<design:component >
+	<design:attribute name="sQueueDevName" label="Queue DeveloperName" />
+	<design:attribute name="bIsSF1" label="DeviceType" />
+</design:component>

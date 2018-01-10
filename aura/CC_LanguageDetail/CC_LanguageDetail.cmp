@@ -1,0 +1,58 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+
+	<aura:attribute name="sWrittenLang" type="String"/>
+    <aura:attribute name="sSpokenLang" type="String"/>	
+    <aura:attribute name="sEmail" type="String"/>
+    <aura:attribute name="lstSpokenLang" type="List"/>
+    <aura:attribute name="lstWrittenLang" type="List"/>
+    <aura:attribute name="bIsError" type="boolean" default="false"/>
+    <aura:attribute name="lstOfPageErrors" type="String[]"/>
+
+    <aura:method name="validateLangData" action="{!c.validateLangData}" access="PUBLIC">
+    	<aura:attribute name="callback" type="Function"/>
+    </aura:method>
+   <!--  <aura:registerEvent name="callSave" type="c:CC_FireContactInfoSave"/> -->
+
+	<c:CC_HeaderComponent Header1="Other Information"/>
+    <lightning:layout horizontalAlign="space" multipleRows="true" class="slds-p-around_medium">
+			
+        
+				<lightning:layoutItem flexibility="grow" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+
+					<lightning:input type="email" 
+								 label="{!$Label.c.CC_CONTACT_INFO_EMAIL}" 
+								 name="email" 
+								 value="{!v.sEmail}" 
+								 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+								 messageWhenPatternMismatch="Please enter a valid email address"/>
+				</lightning:layoutItem>
+        
+        		<lightning:layoutItem flexibility="grow" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+					<lightning:select name="spokenLang" 
+							  label="{!$Label.c.CC_CONTACT_INFO_SPOKEN_LANG}" 
+							  required="true" 
+							  value="{!v.sSpokenLang}">
+						<option text="" value="">--Select--</option>
+						<aura:iteration items="{!v.lstSpokenLang}" var="val">
+								<option text="{!val.label}" value="{!val.value}"/>
+						</aura:iteration>
+					</lightning:select>
+             </lightning:layoutItem>
+			<lightning:layoutItem flexibility="grow" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+			<lightning:select name="writtenLang" 
+							  label="{!$Label.c.CC_CONTACT_INFO_WRITTEN_LANG}" 
+							  required="true" 
+							  value="{!v.sWrittenLang}">
+				<option text="" value="">--Select--</option>
+				<aura:iteration items="{!v.lstWrittenLang}" var="val">
+					<option text="{!val.label}" value="{!val.value}"/>
+				</aura:iteration>
+			</lightning:select>
+
+			</lightning:layoutItem>
+			
+
+		</lightning:layout>
+
+
+</aura:component>

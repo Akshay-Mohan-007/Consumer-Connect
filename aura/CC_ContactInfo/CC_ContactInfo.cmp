@@ -1,0 +1,68 @@
+<!--******************************************************************************************************************
+*NAME: CC_ContactInformation
+*DESCRIPTION: To capture contact information data from UI
+*AUTHOR: 
+*DATE: 10/27/2017
+*
+*
+*
+*
+*
+***************************************************************************************************************  -->
+
+<aura:component >
+	<aura:attribute name="contactInfo" type="Contact" />
+    <aura:attribute name="mainPhoneDup" type="String" />
+    <aura:attribute name="otherPhoneDup" type="String" />
+   <!-- <aura:attribute name="headerP" type="String" default="Phone Information"/>-->
+	  
+
+	<div>
+		<lightning:layout horizontalAlign="space" multipleRows="true" class="slds-p-around_medium">
+		
+            
+            <!--	<div class="slds-page-header">
+			    <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="Phone Information">Phone Information</h1>
+			</div> -->
+			<lightning:layoutItem flexibility="grow" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+				<div class="slds-size_1-of-2">
+					<!-- <force:inputField value="{!v.contactInfo.CC_Main_Phone_Type__c}" required="true"/>  -->
+				</div>
+				<div class="slds-size_1-of-2">
+                    <c:CC_HeaderComponent Header1="Phone Information"/>
+					<lightning:input type="tel" label="{!$Label.c.CC_CONTACT_INFO_MAIN_PHN}" name="tel" value="{!v.contactInfo.HomePhone}" pattern="([0-9]{3})[0-9]{3}-[0-9]{4}" 
+						messageWhenPatternMismatch="Please enter in (XXX)XXX-XXXX format" required="true"/>
+				</div>
+				<div class="slds-size_1-of-2">
+					<lightning:input type="tel" label="{!$Label.c.CC_CONTACT_INFO_MAIN_PHN_DUP}" name="tel" 
+							value="{!v.mainPhoneDup}" pattern="([0-9]{3})[0-9]{3}-[0-9]{4}" 
+							messageWhenPatternMismatch="Please enter in (XXX)XXX-XXXX format"
+							required="true"/>
+				</div>
+				<br/>
+				<div class="slds-size_1-of-2">
+				<!-- <force:inputField value="{!v.contactInfo.CC_Other_Phone_Type__c}" required="true"/> -->
+
+					<lightning:input type="tel" label="{!$Label.c.CC_CONTACT_INFO_OTHER_PHN}" name="tel" value="{!v.contactInfo.OtherPhone}" pattern="([0-9]{3})[0-9]{3}-[0-9]{4}" 
+						messageWhenPatternMismatch="Please enter in (XXX)XXX-XXXX format" required="true"/>
+					<br/>
+					<lightning:input type="tel" label="{!$Label.c.CC_CONTACT_INFO_OTHER_PHN_DUP}" name="tel" value="{!v.otherPhoneDup}" pattern="([0-9]{3})[0-9]{3}-[0-9]{4}" 
+						messageWhenPatternMismatch="Please enter in (XXX)XXX-XXXX format" required="true"/>
+				</div>
+			</lightning:layoutItem>
+		</lightning:layout>
+
+		<lightning:layout horizontalAlign="space" multipleRows="true" class="slds-p-around_medium">
+			<div class="slds-page-header">
+			    <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="Other Information">Other Information</h1>
+			</div>
+			<lightning:layoutItem flexibility="grow" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+				
+
+			</lightning:layoutItem>
+		</lightning:layout>
+
+	</div>
+
+	
+</aura:component>

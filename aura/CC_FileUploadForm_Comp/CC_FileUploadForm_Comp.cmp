@@ -1,0 +1,17 @@
+<aura:component controller="CC_FileUpload_Controller" access="global" extends="c:CC_BaseSuperComponent"
+	implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId,forceCommunity:availableForAllPageTypes" >
+	
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	
+	<lightning:layout horizontalAlign="spread" multipleRows="true" class="slds-p-around_medium slds-box slds-theme--default" >
+		<lightning:layoutItem flexibility="grow" padding="around-small" size="12" largeDeviceSize="12" 
+								mediumDeviceSize="12" smallDeviceSize="12">
+		    <lightning:fileUpload label="Select File" 
+		        accept=".pdf, .png,"
+		        recordId="{!v.recordId}" 
+		        onuploadfinished="{!c.handleUploadFinished}" />
+	    </lightning:layoutItem>
+    </lightning:layout>
+
+
+</aura:component>

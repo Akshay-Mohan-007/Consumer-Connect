@@ -1,0 +1,12 @@
+<aura:component access="global" extends="c:CC_BaseSuperComponent" controller="CC_FileUpload_Controller" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction">
+	<aura:attribute name="sContactId" type="String" />
+    <aura:attribute name="sAppId" type="String" default="a0B18000002aQ7f" />
+    <aura:attribute name="bIsReadOnly" type="Boolean" default="true" />
+    <aura:attribute name="mapLabels" type="Map"/>
+    
+     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <c:CC_FileUpload_Component aura:id="CC_FileUpload_Component" masterRecordId="{!v.sAppId}" lookupField="Application__c"
+                     validator="CC_ApplicationDocumentUpload_Validator" module="{!v.mapLabels.CC_MODULE}" bDoReview="{!v.bIsReadOnly}"/>
+
+</aura:component>

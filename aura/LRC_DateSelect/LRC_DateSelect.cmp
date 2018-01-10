@@ -1,0 +1,35 @@
+<aura:component >
+
+  <aura:attribute name="value" type="String" />
+  <aura:attribute name="options" type="SelectOption[]" />
+
+  <aura:registerEvent name="selectChange" type="c:LRC_DataChange" />
+  <aura:handler name="change" value="{!v.value}" action="{!c.init}"/>
+  <aura:handler name="change" value="{!v.options}" action="{!c.init}"/>
+ <style type="text/css">
+  .slds-select_container:after, .slds-select_container:before{
+    border: none;
+     background-image: url({!$Resource.ISD_DatepickerAssets+'/left-arrow-blue.svg'});
+    position: absolute;
+    display: block;
+    width: 0.6125rem;
+    height: 0.6125rem;
+    right: 0.4rem;
+    pointer-events: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+ </style>
+  <div class="slds-select_container">
+      <label class="slds-assistive-text" for="year-label">Select Year</label>
+    <select id="year-label" aura:id="select-element"  value="{!v.value}" class="slds-select" onchange="{!c.handleSelectChange}">
+      <aura:iteration items="{!v.options}" var="option">
+        <option value="{!option.value}" selected="{!option.selected}">{!option.label}</option>
+      </aura:iteration>
+      <!--<option value="2017">2017</option>
+      <option value="2018" selected="true">2018</option>
+      <option value="2019">2019</option>-->
+    </select>
+  </div>
+
+</aura:component>

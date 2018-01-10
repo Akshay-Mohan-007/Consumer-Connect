@@ -1,0 +1,88 @@
+<!--*********************************************************************************************************
+ * NAME   : CC_UrgencyComponent
+ * DESCRIPTION  : Urgency Of Need Page
+ *    
+ * @AUTHOR : Debalina Chatterjee
+ * @DATE   : 12-12-2017
+ *
+ * MODIFICATION LOG:  
+ * **********************************************************************************************************
+ * DEVELOPER               DATE               DESCRIPTION 
+ * **********************************************************************************************************  
+ * Debalina                12-12-2017        Initial Version
+ *********************************************************************************************************-->
+
+<aura:component controller="CC_UrgencyOfNeedController" extends="c:CC_BaseSuperComponent" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+
+<aura:handler name="init" value="{!this}" action="{!c.init}" />
+<aura:method name="save" action="{!c.save}" access="PUBLIC">
+    <aura:attribute name="callback" type="Function"/>
+</aura:method>
+<aura:attribute name="sAppDetailId" type="String" default="a0D18000002WRLI"/>
+<aura:attribute name="sUrgencyDateLabel" type="String"/>
+<aura:attribute name="objAppDetail" type="CC_Application_Detail__c"
+									default="{ sobjectType: 'CC_Application_Detail__c',
+								                             Reason__c: '',
+								                             Urgency_Comment__c: '',
+								                             Urgency_Request_Date__c: '',
+								                             }"/>
+<aura:attribute name="lstErrors" type="List" default="[]"/>
+<aura:attribute name="lstReason" type="List" default="[]"/>
+<aura:attribute name="bIsError" type="boolean" default="false"/>
+<aura:attribute name="bLoaded" type="boolean" default="false"/>
+<aura:attribute name="dUrgencyDate" type="Date" description="dUrgencyDate" />
+
+<aura:attribute name="mapLabels" type="Map"/>
+
+<!--Page Starts here-->
+<c:CC_SubPageHeader iconName="standard:household" pageName="{!v.mapLabels.CC_LBL_UrgencyHeader}" errorListShow="{!v.lstErrors.length> 0}" lstErrors='{!v.lstErrors}'></c:CC_SubPageHeader>
+
+<aura:if isTrue="{!v.bLoaded}" >
+<lightning:layout horizontalAlign="left" multipleRows="true">
+		<lightning:layoutItem flexibility="grow" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+        <ui:inputDate aura:id="urgencyDate" 
+            value="{!v.objAppDetail.Urgency_Request_Date__c}" 
+            label="{!v.sUrgencyDateLabel}"
+            labelClass="slds-form-element__label slds-no-flex required-asterisk-datePicker"
+            class="{!and(v.bIsError,empty(v.objAppDetail.Urgency_Request_Date__c))? 'slds-input slds-has-error':'slds-input'}"
+            displayDatePicker="true" 
+            format="MM/DD/YYYY"/>	
+		<!-- <c:LRC_DatePicker value="{!v.objAppDetail.Urgency_Request_Date__c}" label="{!v.mapLabels.CC_LBL_UrgencyRequestDate}" required="true" extendedYearRange="true" startYear="1900" finishYear="2100" year="2017" placeholder="{!$Label.c.CC_Select_Date}" formatSpecifier="MM/DD/YYYY"  class="{!and(v.bIsError,empty(v.objAppDetail.Urgency_Request_Date__c))? 'slds-form-element slds-has-error':'slds-form-element'}"/> -->
+        </lightning:layoutItem>
+        <lightning:layoutItem flexibility="grow" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+            <lightning:select name="reason" 
+                              label="{!v.mapLabels.CC_LBL_Reason}" 
+                              aura:id="reason" 
+                              value="{!v.objAppDetail.Reason__c}"
+                              class="{!and(v.bIsError,empty(v.objAppDetail.Reason__c))? 'slds-has-error required-asterisk':'required-asterisk'}">
+                
+                <aura:iteration items="{!v.lstReason}" var="item">
+                	<option text="{!item.sValue}" value="{!item.sKey}" selected ="{! item.sValue == v.objAppDetail.Reason__c}"/>
+                </aura:iteration>
+            </lightning:select>
+        </lightning:layoutItem>
+</lightning:layout>
+
+<lightning:layout horizontalAlign="left" multipleRows="true">
+    <lightning:layoutItem flexibility="grow" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+    <lightning:textarea name="comment" 
+                        value="{!v.objAppDetail.Urgency_Comment__c}" 
+                        label="{!v.mapLabels.CC_Label_Comments}" 
+                        maxlength="1000"
+                        aura:id="comment"
+                        class="{!and(v.bIsError,empty(v.objAppDetail.Urgency_Comment__c))? 'slds-has-error required-asterisk':'required-asterisk'}"
+                        />
+    </lightning:layoutItem>
+</lightning:layout>
+
+<c:CC_FileUpload_Component aura:id="CC_FileUpload_Component" 
+                           sPageHeader="{!v.mapLabels.CC_Document_Upload_Header}"
+						   masterRecordId="{!v.sAppDetailId}" 
+						   lookupField="Application_Detail__c"
+					       validator="CC_UrgencyDocUpload_Validator"
+					       module="{!v.mapLabels.CC_MODULE}"
+					       bDoReview="false" /> 
+
+</aura:if>
+<!--Page Ends here-->	
+</aura:component>

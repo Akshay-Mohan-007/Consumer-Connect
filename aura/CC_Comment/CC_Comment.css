@@ -1,0 +1,28 @@
+.THIS .slds-button{
+    /*float:right;*/
+    border:none;
+    line-height:3;
+}
+
+.THIS .slds-button:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.THIS .show{
+    display:block;
+}
+
+.THIS .hide{
+    display:none;
+}
+
+.THIS .pagination-button{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+.THIS .slds-button_inverse, .THIS .slds-button--inverse{
+    border-color: #0070d2;
+    color: rgb(0, 112, 210);
+}

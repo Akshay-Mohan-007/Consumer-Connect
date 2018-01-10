@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPageWebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <availability>online</availability>
+    <description>Display Flex Pipeline Shaper</description>
+    <displayType>link</displayType>
+    <height>600</height>
+    <linkType>sControl</linkType>
+    <masterLabel>Pipeline Shaper</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <scontrol>Pipeline_Shaper_Flex</scontrol>
+</CustomPageWebLink>

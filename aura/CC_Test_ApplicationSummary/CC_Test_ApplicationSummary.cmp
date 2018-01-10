@@ -1,0 +1,132 @@
+<!--************************************************************************************************
+*NAME: CC_ApplicationSummaryComponent
+*DESCRIPTION: To Display Summary of all pages
+*AUTHOR: Debalina Chatterjee
+*DATE: 10/27/2017
+*
+*************************************************************************************************-->
+
+<aura:component extends="c:CC_BaseSuperComponent" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    
+    <!--<aura:handler name="init" value="{!this}" action="{!c.doInit}" />-->
+    
+    
+    <aura:attribute name="objAppDetailService" type="List" default="{ sobjectType: 'CC_Application_Detail__c'}"/>
+   
+    <aura:attribute name="sResidentAddress" type="String" default=""/>
+    <aura:attribute name="sMailingAddress" type="String" default=""/>
+    
+   
+    
+   
+
+       <!--**************************************************************************************************-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <aura:attribute name="objApp" type="CC_Application__c"/>
+    <aura:attribute name="objContact" type="Contact"/>
+    <aura:attribute name="bIsError" type="Boolean" default="false"/>
+    <aura:attribute name="bIsFirstNameError" type="Boolean" default="false"/>
+    <aura:attribute name="bIsMiddleNameError" type="Boolean" default="false"/>
+    <aura:attribute name="bIsLastNameError" type="Boolean" default="false"/>
+    <aura:attribute name="bIsSuffixError" type="Boolean" default="false"/>
+    <aura:attribute name="sFirstName" type="String"/>
+    <aura:attribute name="sMiddleName" type="String"/>
+    <aura:attribute name="sLastName" type="String"/>
+    <aura:attribute name="sSuffix" type="String"/>
+    <aura:attribute name="lstSuffix" type="String"/>
+    <aura:attribute name="lstErrors" type="List" default="[]"/>
+    <aura:attribute name="mapLabels" type="Map"/>
+
+ 	<div>
+		<c:CC_HeaderComponent Header1="{!v.mapLabels.CC_Label_Header_Other_Question}"/>
+	</div>
+
+	    <lightning:layout horizontalAlign="left" multipleRows="true">
+			<lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="6" 
+	                mediumDeviceSize="6" smallDeviceSize="12" padding="around-small">		
+				<lightning:input type="checkbox" 
+								 aura:id="onApplicantsBehalf" 
+								 label="{!v.mapLabels.CC_Label_Behalf_of_Applicant}" 
+								 name="onApplicantsBehalf" 
+								 value="{!v.objApp.CC_Applying_on_behalf_of_applicant__c}"
+								 class="{!and(v.bIsError,!(v.bOnBehalfApplicant))? 'slds-has-error required-asterisk':'required-asterisk'}"/>						 
+			</lightning:layoutItem>
+        </lightning:layout>
+
+        <lightning:layout horizontalAlign="left" multipleRows="true">
+			<lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="6" 
+	                mediumDeviceSize="6" smallDeviceSize="12" padding="around-small">		
+				<lightning:input type="checkbox" 
+								 aura:id="correctInfo" 
+								 label="{!v.mapLabels.CC_Label_Correct_Information}" 
+								 name="correctInfo" 
+								 value="{!v.objApp.CC_Information_is_correct__c}"
+								 class="{!and(v.bIsError,!(v.bCorrectInfo))? 'slds-has-error required-asterisk':'required-asterisk'}"/>						 
+			</lightning:layoutItem>
+        </lightning:layout>
+
+        <lightning:layout horizontalAlign="left" multipleRows="true">
+			<lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="6" 
+	                mediumDeviceSize="6" smallDeviceSize="12" padding="around-small">		
+				<lightning:input type="checkbox" 
+								 aura:id="signatureReceived" 
+								 label="{!v.mapLabels.CC_Label_Hard_Signature_Received}" 
+								 name="signatureReceived" 
+								 value="{!v.objApp.CC_Hard_copy_Signature_received__c}"
+								 class="{!and(v.bIsError,!(v.bSignatureReceived))? 'slds-has-error required-asterisk':'required-asterisk'}"/>						 
+			</lightning:layoutItem>
+        </lightning:layout>
+
+        <lightning:layout horizontalAlign="left" multipleRows="true">
+        	<lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12" padding="around-small">
+        		<lightning:input type="String" 
+        						 name="FirstName" 
+        						 aura:id="FirstName" 
+        						 label="{!v.mapLabels.CC_LBL_FirstName}" 
+                             	 value="{!v.sFirstName}"
+                             	 class="{!(v.bIsFirstNameError)? 'slds-has-error required-asterisk':'required-asterisk'}"/>
+            </lightning:layoutItem>		
+        </lightning:layout>	
+
+        <lightning:layout horizontalAlign="left" multipleRows="true">
+        	<lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12" padding="around-small">
+        		<lightning:input type="String" 
+        						 name="MiddleName" 
+        						 aura:id="MiddleName" 
+        						 label="{!v.mapLabels.CC_LBL_Middle_Initial}" 
+                             	 value="{!v.sMiddleName}"
+                             	 maxlength="1"
+                             	 class="{!(v.bIsMiddleNameError)? 'slds-has-error':''}"
+      							 />
+            </lightning:layoutItem>		
+        </lightning:layout>	
+
+         <lightning:layout horizontalAlign="left" multipleRows="true">
+        	<lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12" padding="around-small">
+        		<lightning:input type="String" 
+        						 name="LastName" 
+        						 aura:id="LastName" 
+        						 label="{!v.mapLabels.CC_LBL_LastName}" 
+                             	 value="{!v.sLastName}"
+                             	 class="{!(v.bIsLastNameError)? 'slds-has-error required-asterisk':'required-asterisk'}"
+      							 />
+            </lightning:layoutItem>		
+        </lightning:layout>	
+
+         <lightning:layout horizontalAlign="left" multipleRows="true">
+		    <lightning:layoutItem flexibility="grow" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12" padding="around-small">
+				<lightning:select name="Suffix" 
+								  label="{!v.mapLabels.CC_LBL_Suffix}" 
+								  value="{!v.sSuffix}"
+								  class="{!(v.bIsSuffixError)? 'slds-has-error':''}">
+							<aura:iteration items="{!v.lstSuffix}" var="item">
+								<option text="{!item.sVal}" value="{!item.sKey}" selected="{!item.selected}"/>
+							</aura:iteration>
+				</lightning:select>
+			</lightning:layoutItem>	
+    	</lightning:layout>
+
+
+</aura:component>

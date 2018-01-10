@@ -1,0 +1,143 @@
+<!--
+ ***************************************************************************************************************************************
+ * NAME   : CC_TasksComponent
+ * DESCRIPTION  : Lists all the tasks assigned to the user and queue.
+ *    				Before using this make sure that labels 'CC_SITE_NAME_SELF_SERVICE' 'CC_SITE_NAME_SERVICE_PROVIDER' and
+ *					custom settings field 'Task_Dashboard_Page_Size__c', 'Task_Dashboard_Pages_Per_Screen__c' 
+ *					in 'CC_Master_Settings__c' are populated correctly
+ *    
+ * @AUTHOR   : Nidhin V K
+ * @DATE   : 11-09-2017
+ *
+ * MODIFICATION LOG:  
+ * ______________________________________________________________________________________________________________________________________
+ * DEVELOPER                DATE                DESCRIPTION 
+ * ______________________________________________________________________________________________________________________________________
+ * Nidhin V K               11-09-2017          Initial version        
+ * Sayari Mandal            11-27-2017          UI Modifications
+ * Akshay Mohan             11-29-2017          Launch individual summary
+ * Sayari Mandal            12-02-2017          UI Enhancements
+ * Akshay Mohan             12-06-2017          TKT-000809 laucnhing of duplicate tab 
+ * Nidhin V K               12-06-2017          Integrating Task Row component 
+ * Sayari Mandal            12-12-2017          Pagination css style addition
+ ****************************************************************************************************************************************
+-->
+<aura:component access="global" controller="CC_TasksComponentController" extends="c:CC_BaseSuperComponent" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction">
+    <aura:attribute type="String" name="sQueueDevName" default="Application_Reviewer" description="Queue DeveloperName" />
+    <aura:attribute type="Integer" name="iPageSize" default="5"/>
+    <aura:attribute type="Integer" name="iPagesPerChunk" default="5"/>
+    <aura:attribute type="Integer" name="iChunkSize" default="25"/>
+    <aura:attribute type="List" name="lstPageNumbers" default="[]" />
+    <aura:attribute type="String" name="sSortField" default="CreatedDate" />
+    <aura:attribute type="String" name="sSortOrder" default="DESC" />
+    <aura:attribute type="String" name="sSearchText" default="" />
+    <aura:attribute type="String" name="sSiteName" default="" />
+    <aura:attribute type="Integer" name="iSelectedPage" default="1" />
+    <aura:attribute type="Integer" name="iListSize" default="0" />
+    <aura:attribute type="Integer" name="iOffset" default="0" />
+    <aura:attribute type="Integer" name="iOffsetClient" default="0" />
+    <aura:attribute type="List" name="lstTotalTasks" default="[]" />
+    <aura:attribute type="List" name="lstTasks" default="[]" />
+    <aura:attribute type="Boolean" name="bIsNotSelfService" default="true" />
+    <aura:attribute type="Map" name="mapLabels" />
+    <aura:attribute type="List" name="lstOwnerPicklist" default="[]" />
+    <aura:attribute type="String" name="selectedOwnerId" default="" />
+    <aura:attribute name="bIsError" type="Boolean" default="false" />
+    <aura:attribute name="lstAllError" type="List" />
+    <aura:attribute name="bIsOpen" type="Boolean" default="false" />
+    <aura:attribute type="String" name="sComment" default="" />
+    <aura:attribute name="bDisableFirst" type="Boolean" default="false"/>
+	<aura:attribute name="bDisablePrevSet" type="Boolean" default="false"/>
+	<aura:attribute name="bDisableNextSet" type="Boolean" default="false"/>
+	<aura:attribute name="bDisableLast" type="Boolean" default="false"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <!--<lightning:layout horizontalAlign="left" multipleRows="true">
+        <lightning:layoutItem flexibility="grow" size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12" padding="around-small">
+            <div aria-labelledby="detailform">-->
+                <aura:if isTrue="{!v.bIsError}">
+                    <c:CC_ErrorNotification lstErrors="{!v.lstAllError}" />
+                </aura:if>
+            <!--</div>
+        </lightning:layoutItem>
+    </lightning:layout>-->
+	<aura:if isTrue="{!v.bIsOpen}">
+    	<c:CC_CommentModal aura:id="commentModal" showModal="{!v.bIsOpen}" comment="{!v.sComment}" commentType="{!v.mapLabels.CC_LBL_Comment}"></c:CC_CommentModal> 
+    </aura:if>
+    <aura:if isTrue="{!v.bIsNotSelfService}">
+        <lightning:layout horizontalAlign="left" multipleRows="true">
+
+            <lightning:layoutItem flexibility="grow" size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" class="slds-p-around_xx-small slds-p-left_small">
+                <lightning:select name="TaskOwner" label="{!v.mapLabels.CC_SELECT_QUEUE}" value="{!v.selectedOwnerId}" onchange="{!c.changeOwner}">
+                    <aura:iteration items="{!v.lstOwnerPicklist}" var="val">
+                        <option text="{!val.sValue}" value="{!val.sKey}" />
+                    </aura:iteration>
+                </lightning:select>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="grow" size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" class="slds-p-around_xx-small slds-p-left_small">
+                <lightning:input type="search" name="search" value="{!v.sSearchText}" label="{!v.mapLabels.CC_SEARCH}" maxlength="50" />
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="grow" size="12" largeDeviceSize="3" mediumDeviceSize="3" smallDeviceSize="12" class="slds-m-around_small slds-p-around_small slds-p-left_none">
+                <lightning:button variant="brand" label="{!v.mapLabels.CC_SEARCH}" onclick="{!c.searchTask}" />
+            </lightning:layoutItem>
+        </lightning:layout>
+    </aura:if>
+
+    <lightning:layout horizontalAlign="left" multipleRows="true">
+        <lightning:layoutItem flexibility="grow" size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12" class="slds-p-around_xx-small slds-p-left_small">
+            <table class="slds-table slds-table_bordered slds-max-medium-table_stacked-horizontal">
+                <thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col">
+                            <div class="slds-truncate" title="TaskName">{!v.mapLabels.CC_TASK_NAME}</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="AppCase">{!v.mapLabels.CC_APP_CASE}</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Individual">{!v.mapLabels.CC_INDIVIDUAL_NAME}</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Status">{!v.mapLabels.CC_LBL_Comment}</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Status">{!v.mapLabels.CC_Label_Status}</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Action">{!v.mapLabels.CC_ACTION}</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Received Date">{!v.mapLabels.CC_RECEIVED_DATE}</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Due Date">{!v.mapLabels.CC_DUE_DATE}</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <aura:if isTrue="{!v.lstTasks.length > 0}">
+                        <aura:iteration items="{!v.lstTasks}" var="row">
+                            <c:CC_TaskRow row="{!row}" sSiteName="{!v.sSiteName}" mapLabels="{!v.mapLabels}" bIsOpen="{!v.bIsOpen}" sComment="{!v.sComment}"/>
+                        </aura:iteration>
+                        <aura:set attribute="else">
+                            <tr>
+                                {!v.mapLabels.CC_NO_TASKS}
+                            </tr>
+                        </aura:set>
+                    </aura:if>
+                </tbody>
+            </table>
+        </lightning:layoutItem>
+    </lightning:layout>
+    <lightning:layout horizontalAlign="left" multipleRows="true">
+        <lightning:layoutItem flexibility="grow" class="slds-p-around_xx-small slds-p-left_small" size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12">
+            <lightning:button aura:id="first" disabled="{!v.bDisableFirst}" variant="brand" label="«" onclick="{!c.first}" />
+            <lightning:button aura:id="prevSet" disabled="{!v.bDisablePrevSet}" variant="brand" label="‹" onclick="{!c.prevSet}" />
+            <aura:iteration items="{!v.lstPageNumbers}" var="row" indexVar="index">
+                <lightning:button name="{!row}" aura:id="{!'some' + row}" variant="{!(row == v.iSelectedPage) ? 'brand' : 'inverse'}" label="{!row}" onclick="{!c.gotoSelectedPage}" class="pagination-button" />
+            </aura:iteration>
+            <lightning:button aura:id="nextSet" disabled="{!v.bDisableNextSet}" variant="brand" label="›" onclick="{!c.nextSet}" />
+            <lightning:button aura:id="last" disabled="{!v.bDisableLast}" variant="brand" label="»" onclick="{!c.last}" />
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>

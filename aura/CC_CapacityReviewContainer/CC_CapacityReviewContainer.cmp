@@ -1,0 +1,118 @@
+<!--***************************************************************************************************************************************
+ * NAME   : CC_CapacityReviewContainer
+ * DESCRIPTION  : Main container for Capacity Review
+ *				Make sure that the home page urls in CC_Module__mdt is populated with 'Application' as record DeveloperName
+ *    
+ * @AUTHOR   : Sourav Ghosh
+ * @DATE   : 18-Dec-2017
+ *
+ * MODIFICATION LOG:  
+ * ***************************************************************************************************************************************
+ * DEVELOPER        DATE        DESCRIPTION 
+ * ***************************************************************************************************************************************
+ *Sourav Ghosh		  18/12/2017		Container component to hold Capacity Review Tabs
+ * Akshay Mohan   	20/12/2017    Integration with other tabs
+ * Debalina         05-Jan-2018   Defect Fix for Targeting
+ * Akshay Mohan     05-Jan-2018   Fix for targetting criteria navigation
+ * Akshay Mohan     09-Jan-2018   Fix for TKT-000878
+ ****************************************************************************************************************************************-->
+
+
+<aura:component access="global" extends="c:CC_BaseSuperComponent" controller="CC_CapacityReviewContainer_Controller"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction">
+    
+    <aura:attribute name="bIsReadOnly" type="Boolean" default="true" />
+    <aura:attribute name="selectedTab" type="String" description="The list of sections and their items." default="CC_Services_Component"/>
+    <aura:attribute name="navigationData" type="Object" description="The list of sections and their items." />
+    <aura:attribute name="bPageLoaded" type="Boolean" default="false" />
+    <aura:attribute name="sContactId" type="String" />
+    <aura:attribute name="sAppId" type="String" />
+    <aura:attribute name="sAppDetailId" type="String" />
+    <aura:attribute name="sTaskId" type="String"/>
+    <aura:attribute name="sCompleteIcon" type="String"  />
+    <aura:attribute name="sIncompleteIcon" type="String"  />
+    <aura:attribute name="mapLabels" type="Map"/>
+    <aura:attribute name="sModule" type="String" default="Application_Review" />
+    <aura:attribute name="sCommentMasterId" type="String" />
+    <aura:attribute name="sCommentLookup" type="String" default="Related_Application__c"/>
+    <aura:attribute name="sCommentLabel" type="String"/>
+
+    <aura:attribute name="bCanAddComment" type="Boolean"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>  
+    <aura:handler name="saveDetails" event="c:CC_Left_Navigator_Event" action="{!c.saveAndChangeTab}" />
+    <aura:handler name="navigateToTab" event="c:CC_Left_Navigator_Event" action="{!c.navigateTo}" />
+    
+    <ui:scrollerWrapper class="scrollerSize">
+        
+         <lightning:layout horizontalAlign="left" multipleRows="true" class="slds-theme--default">
+            <lightning:layoutItem flexibility="grow" size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12">
+                 <div class="slds-text-heading_large slds-p-bottom_small">{!v.mapLabels.CC_Capacity_Review}</div>
+            </lightning:layoutItem>
+         </lightning:layout>
+        
+        <aura:if isTrue="{! v.bPageLoaded}">
+            <lightning:layout horizontalAlign="left" multipleRows="true" class="slds-theme--default">
+               <lightning:layoutItem flexibility="grow" size="12" largeDeviceSize="3" mediumDeviceSize="4" smallDeviceSize="12" class="slds-p-horizontal_x-small">
+                <c:CC_Left_Navigator sAppId="{!v.sAppId}" selectedTab="{!v.selectedTab}" navigationData="{!v.navigationData}" />
+               </lightning:layoutItem>
+            
+               <lightning:layoutItem flexibility="grow" size="12" largeDeviceSize="9" mediumDeviceSize="8" smallDeviceSize="12" class="slds-p-horizontal_x-small">
+            
+                
+                <aura:if isTrue="{! v.selectedTab == 'CC_Services_Component' ? 'true' : ''}">
+                    <c:CC_Services_Component aura:id="CC_Services_Component" sAppId="{!v.sAppId}" bIsReadOnly="{!v.bIsReadOnly}" />
+                    
+                </aura:if> 
+                <aura:if isTrue="{! v.selectedTab == 'CC_LivingSituation' ? 'true' : ''}">
+                    <c:CC_LivingSituation aura:id="CC_LivingSituation" sAppId="{!v.sAppId}" bIsReadOnly="{!v.bIsReadOnly}" />
+                    
+                </aura:if>
+                <aura:if isTrue="{! v.selectedTab == 'CC_FileUpload_Component' ? 'true' : ''}">
+                    <c:CC_FileUpload_Component aura:id="CC_FileUpload_Component" masterRecordId="{!v.sAppId}" lookupField="Application__c"
+                                               validator="CC_ApplicationDocumentUpload_Validator" module="{!v.mapLabels.CC_MODULE}"
+                                               bDoReview="false" bIsReadOnly="true" bReviewComplete="true"
+                                               sPageHeader="{!v.mapLabels.CC_Document_Review_Header}" />
+                </aura:if>
+                <aura:if isTrue="{! v.selectedTab == 'CC_TargetingCriteria' ? 'true' : ''}">
+                   <c:CC_TargetingCriteria aura:id="CC_TargetingCriteria" 
+                                           sAppDetailId="{!v.sAppDetailId}" sTaskIdToClose="{!v.sTaskId}"/>
+                </aura:if>
+                <aura:if isTrue="{! v.selectedTab == 'CC_UrgencyComponent' ? 'true' : ''}">
+                   <c:CC_UrgencyComponent aura:id="CC_UrgencyComponent" 
+                                          sAppDetailId="{!v.sAppDetailId}"/>
+                </aura:if>
+                <aura:if isTrue="{! v.selectedTab == 'CC_Manage_Allotment' ? 'true' : ''}">
+                   <c:CC_Manage_Allotment aura:id="CC_Manage_Allotment" sAppDetId="{!v.sAppDetailId}" sTaskIdToClose="{!v.sTaskId}"/>
+                </aura:if>
+
+                            
+                    <c:CC_Comment aura:id="CommentComp" 
+                              sMasterRecordId="{!v.sCommentMasterId}" 
+                              selectedTab="{!v.selectedTab}" 
+                              bCanEnterComment="{!v.bCanAddComment}"
+                              bCanViewCommentHistory="true"
+                              sModuleName="{!v.sModule}"
+                              sLookupField="{!v.sCommentLookup}"
+                              sCommentLabel="{!v.sCommentLabel}"
+
+                    />
+                <lightning:layout horizontalAlign="left" multipleRows="true">
+               <lightning:layoutItem flexibility="grow" size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12" class="slds-p-left_small slds-p-top_medium slds-p-bottom_medium"> 
+                    <aura:if isTrue="{! v.selectedTab != 'CC_Services_Component' ? 'true' : ''}">
+                      <lightning:button class="back-button"  label="{!v.mapLabels.CC_Back_Button}" onclick="{!c.back}"/>
+                    </aura:if>
+                    <lightning:button variant="neutral" label="{!v.mapLabels.CC_Save_Exit}" onclick="{!c.save}"/>
+                    <aura:if isTrue="{! v.selectedTab != 'CC_Manage_Allotment' ? 'true' : ''}">
+                      <lightning:button variant="brand" label="{!v.mapLabels.CC_Next_Button}" onclick="{!c.next}" />
+                        <aura:set attribute="else">
+                            <lightning:button variant="brand" label="{!v.mapLabels.CC_Contact_SubmitButton}" onclick="{!c.submit}" />
+                        </aura:set>
+                    </aura:if>
+                    </lightning:layoutItem>
+                   </lightning:layout>
+                </lightning:layoutItem>
+            </lightning:layout>
+        </aura:if>
+    </ui:scrollerWrapper>
+</aura:component>

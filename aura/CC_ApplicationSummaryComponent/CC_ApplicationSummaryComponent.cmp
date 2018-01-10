@@ -1,0 +1,425 @@
+<!--************************************************************************************************
+*NAME: CC_ApplicationSummaryComponent
+*DESCRIPTION: To Display Summary of all pages
+*AUTHOR: Debalina Chatterjee
+*DATE: 10/27/2017 
+*
+* MODIFICATION LOG:  
+* ***************************************************************************************************************************************
+* DEVELOPER        DATE        DESCRIPTION 
+* ***************************************************************************************************************************************
+* Akshay Mohan     22-Nov-2017  Modified for navigation
+* Akshay Mohan     30-Nov-2017  Modified for submission success
+* Sayari Mandal    02-Dec-2017  UI Modifications(TKT-000787)
+* Sourav Ghosh     05-Jan-2018  Bug Fix(TKT- 847) IN PROGRESS
+*************************************************************************************************-->
+
+<aura:component extends="c:CC_BaseSuperComponent" controller="CC_ApplicationSummaryController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    
+   <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+   <aura:registerEvent name="navigateToTab" type="c:CC_Left_Navigator_Event"/> 
+   <aura:method name="save" action="{!c.save}" access="PUBLIC">
+        <aura:attribute name="callback" type="Function"/>
+    </aura:method>
+     <aura:method name="submit" action="{!c.submit}" access="PUBLIC">
+        <aura:attribute name="callback" type="Function"/>
+    </aura:method>
+    
+    <aura:attribute name="objApp" type="CC_Application__c"/>
+    <aura:attribute name="strAppId" type="String"/>
+    <aura:attribute name="objAppDetailService" type="List" default="{ sobjectType: 'CC_Application_Detail__c'}"/>
+    <aura:attribute name="objContact" type="Contact"/>
+    <aura:attribute name="objRepContact" type="Contact"/>
+    <aura:attribute name="objLegContact" type="Contact"/>
+    <aura:attribute name="sVisitedPages" type="String" default=""/>
+    <aura:attribute name="sResidentAddress" type="String" default=""/>
+    <aura:attribute name="sMailingAddress" type="String" default=""/>
+    <aura:attribute name="sName" type="String"/>
+    <aura:attribute name="sRepName" type="String"/>
+    <aura:attribute name="sLegalName" type="String"/>
+    <aura:attribute name="sFirstName" type="String"/>
+    <aura:attribute name="sMiddleName" type="String"/>
+    <aura:attribute name="sLastName" type="String"/>
+    <aura:attribute name="sSuffix" type="String"/>
+    <aura:attribute name="lstAppDetailService" type="List"/>
+    <aura:attribute name="lstSuffix" type="List"/>
+    <aura:attribute name="lstTabNames" type="List"/>
+    <aura:attribute name="bIsError" type="Boolean" default="false"/>
+    <aura:attribute name="bIsFirstNameError" type="Boolean" default="false"/>
+    <aura:attribute name="bIsMiddleNameError" type="Boolean" default="false"/>
+    <aura:attribute name="bSignatureReceived" type="Boolean" default="false"/>  
+    <aura:attribute name="bOnBehalfApplicant" type="Boolean" default="false"/>
+    <aura:attribute name="bIsLastNameError" type="Boolean" default="false"/>
+    <aura:attribute name="bCorrectInfo" type="Boolean" default="false"/>
+    <aura:attribute name="bIsSuffixError" type="Boolean" default="false"/>
+    <aura:attribute name="bIsLegalExist" type="Boolean" default="false"/>
+    <aura:attribute name="bIsSituationWorking" type="String" default=""/>
+    <aura:attribute name="bIsWavierOnWaitingList" type="String" default=""/>
+    <aura:attribute name="lstDocs" type="List"/>
+    <aura:attribute name="bIsReadOnly" type="Boolean" default="false"/>
+
+    <aura:attribute name="sRepPhyAddress" type="String" default=""/>
+    <aura:attribute name="sLegPhyAddress" type="String" default=""/>
+    <aura:attribute name="sRepMailAddress" type="String" default=""/>
+    <aura:attribute name="sLegMailAddress" type="String" default=""/>
+
+    <aura:attribute name="sWhyServiceNeeded" type="String" default=""/>
+    <aura:attribute name="sFullComment" type="String" default=""/>
+    
+    <aura:attribute name="lstErrors" type="List" default="[]"/>
+    <aura:attribute name="mapLabels" type="Map"/>
+    <aura:attribute name="commentPassed" type="String"/>
+    <aura:attribute name="commentType" type="String"/>
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+    <aura:attribute name="sShortWhyServiceNeeded" type="String" default=""/>
+    <aura:attribute name="bIsLongText" type="boolean" default="false"/>
+    <aura:attribute name="sTaskToClose" type="String"/>
+    
+    <aura:if isTrue="{!v.isOpen}">
+        <c:CC_CommentModal aura:id="commentModal" showModal="{!v.isOpen}" comment="{!v.commentPassed}" commentType="{!v.commentType}"></c:CC_CommentModal> 
+    </aura:if>
+
+    <c:CC_SubPageHeader iconName="standard:lead_list" pageName="Application Summary" errorListShow="{!v.lstErrors.length> 0}" lstErrors='{!v.lstErrors}'></c:CC_SubPageHeader>
+    
+     <lightning:layout horizontalAlign="left" multipleRows="true">	
+        <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12" padding="around-small">
+         <p>{!v.mapLabels.CC_APPSUMMARY_HEADING}</p> 
+         </lightning:layoutItem>
+    </lightning:layout>
+   
+       <!--  <c:CC_HeaderComponent Header1="{!v.mapLabels.CC_INDIVIDUAL_INFORMATION}"/> -->
+
+    <!-- <lightning:accordion >
+        <lightning:accordionSection name="{!v.mapLabels.CC_INDIVIDUAL_INFORMATION}"
+                                    label="{!v.mapLabels.CC_INDIVIDUAL_INFORMATION}">
+          <lightning:buttonIcon iconName="utility:edit" variant="border" size="small" title="Edit" alternativeText="Edit Section Data" onclick="{!c.editIndInfo}" disabled="false"/>
+           
+            <lightning:layout horizontalAlign="left" multipleRows="true">   
+                <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">
+                    <c:CC_StaticContent label="{!v.mapLabels.CC_Label_Name}" text="{!v.sName}"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">   
+                    <c:CC_StaticContent label="{!v.mapLabels.CC_CONTACT_INFO_MAIN_PHN}" text="{!v.objContact.Phone}"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">   
+                    <c:CC_StaticContent label="{!v.mapLabels.CC_CONTACT_INFO_OTHER_PHN}" text="{!v.objContact.OtherPhone}"/>
+                 </lightning:layoutItem>
+                  <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small"> 
+                      <c:CC_StaticContent label="{!v.mapLabels.CC_Label_Physical_Address}" text="{!v.sResidentAddress}"/>        </lightning:layoutItem>
+                <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">
+                    <c:CC_StaticContent label="{!v.mapLabels.CC_Mailing_Address}" text="{!v.sMailingAddress}"/>
+                   </lightning:layoutItem>
+            </lightning:layout>
+        
+        </lightning:accordionSection>                       
+     </lightning:accordion>  -->
+
+
+
+
+
+
+    <c:CC_ApplicationSummaryAccordian >
+        
+        <aura:set attribute="accordianHeader1">
+            <div>
+            {!v.mapLabels.CC_INDIVIDUAL_INFORMATION}
+            <span class="slds-m-horizontal_medium">
+              <lightning:buttonIcon iconName="utility:edit" variant="border" size="small" title="Edit" alternativeText="Edit Section Data" onclick="{!c.editIndInfo}" disabled="false"/>
+            </span>
+            </div>
+        </aura:set>
+
+        <aura:set attribute="accordianHeader2">
+            <div>
+            {!v.mapLabels.CC_Label_Representative_Info}
+            <span class="slds-m-horizontal_medium">
+              <lightning:buttonIcon iconName="utility:edit" variant="border" size="small" title="Edit" alternativeText="Edit Section Data" onclick="{!c.editRepInfo}"/>
+            </span>
+            </div>
+        </aura:set>
+
+        <aura:set attribute="accordianHeader3">
+            <div>
+            {!v.mapLabels.CC_Label_Services}
+            <span class="slds-m-horizontal_medium">
+              <lightning:buttonIcon iconName="utility:edit" variant="border" size="small" title="Edit" alternativeText="Edit Section Data" onclick="{!c.editServiceRecord}"/>
+            </span>
+            </div>
+        </aura:set>
+            
+        <aura:set attribute="accordianHeader4">
+            <div>
+            {!v.mapLabels.CC_Label_LivingSituation}
+            <span class="slds-m-horizontal_medium">
+              <lightning:buttonIcon iconName="utility:edit" variant="border" size="small" title="Edit" alternativeText="Edit Section Data" onclick="{!c.editLSRecord}"/>
+            </span>
+            </div>
+        </aura:set>
+
+        <aura:set attribute="accordianHeader5">
+            <div>
+            {!v.mapLabels.CC_Label_Uploaded_Docs}
+            <span class="slds-m-horizontal_medium">
+              <lightning:buttonIcon iconName="utility:edit" variant="border" size="small" title="Edit" alternativeText="Edit Section Data" onclick="{!c.editDocuments}"/>
+            </span>
+            </div>
+        </aura:set>
+
+        <aura:set attribute="accordianSection1">
+            <lightning:layout horizontalAlign="left" multipleRows="true">	
+                <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">
+                    <c:CC_StaticContent label="{!v.mapLabels.CC_Label_Name}" text="{!v.sName}"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">	
+                    <c:CC_StaticContent label="{!v.mapLabels.CC_CONTACT_INFO_MAIN_PHN}" text="{!v.objContact.Phone}"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">	
+                    <c:CC_StaticContent label="{!v.mapLabels.CC_CONTACT_INFO_OTHER_PHN}" text="{!v.objContact.OtherPhone}"/>
+                 </lightning:layoutItem>
+                  <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="6" smallDeviceSize="12" padding="around-small">	
+                      <c:CC_StaticContent label="{!v.mapLabels.CC_Label_Physical_Address}" text="{!v.sResidentAddress}"/>        </lightning:layoutItem>
+                <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="6" smallDeviceSize="12" padding="around-small">
+                    <c:CC_StaticContent label="{!v.mapLabels.CC_Mailing_Address}" text="{!v.sMailingAddress}"/>
+                   </lightning:layoutItem>
+            </lightning:layout>
+        </aura:set>
+
+        <aura:set attribute="accordianSection2">    
+        <c:CC_HeaderComponent Header1="{!v.objApp.CC_Does_Individual_have_Auth_Rep__c ? v.mapLabels.CC_Label_Authorized_Rep : v.mapLabels.CC_Label_Authorized_Rep + ' : ' +v.mapLabels.NA}"/>
+        <aura:if isTrue="{!v.objApp.CC_Does_Individual_have_Auth_Rep__c}">
+            <lightning:layout horizontalAlign="left" multipleRows="true">  
+                <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small"> 
+                    <c:CC_StaticContent label="{!v.mapLabels.CC_Label_Name}" text="{!v.sRepName}"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">   
+                    <c:CC_StaticContent label="{!v.mapLabels.CC_CONTACT_INFO_MAIN_PHN}" text="{!v.objRepContact.Phone}"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small"> 
+                    <c:CC_StaticContent label="{!v.mapLabels.CC_CONTACT_INFO_OTHER_PHN}" text="{!v.objRepContact.OtherPhone}"/>
+                 </lightning:layoutItem>
+                  <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="6" smallDeviceSize="12" padding="around-small">
+                      <c:CC_StaticContent label="{!v.mapLabels.CC_Label_Physical_Address}" text="{!v.sRepPhyAddress}"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="6" smallDeviceSize="12" padding="around-small">   
+                    <c:CC_StaticContent label="{!v.mapLabels.CC_Mailing_Address}" text="{!v.sRepMailAddress}"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+        </aura:if>
+        <c:CC_HeaderComponent Header1="{!v.objApp.CC_individual_have_LegalGuardian__c ? v.mapLabels.CC_Label_Legal_Gurdian : v.mapLabels.CC_Label_Legal_Gurdian + ' : ' + v.mapLabels.NA}"/>
+        
+        <aura:if isTrue="{!v.objApp.CC_individual_have_LegalGuardian__c}">        
+             <lightning:layout horizontalAlign="left" multipleRows="true">  
+                <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">   
+                    <c:CC_StaticContent label="{!v.mapLabels.CC_Label_Name}" text="{!v.sLegalName}"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small"> 
+                    <c:CC_StaticContent label="{!v.mapLabels.CC_CONTACT_INFO_MAIN_PHN}" text="{!v.objLegContact.Phone}"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="4" smallDeviceSize="12" padding="around-small">  
+                    <c:CC_StaticContent label="{!v.mapLabels.CC_CONTACT_INFO_OTHER_PHN}" text="{!v.objLegContact.OtherPhone}"/>
+                 </lightning:layoutItem>
+                  <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="6" smallDeviceSize="12" padding="around-small"> 
+                      <c:CC_StaticContent label="{!v.mapLabels.CC_Label_Physical_Address}" text="{!v.sLegPhyAddress}"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="4" mediumDeviceSize="6" smallDeviceSize="12" padding="around-small">  
+                    <c:CC_StaticContent label="{!v.mapLabels.CC_Mailing_Address}" text="{!v.sLegMailAddress}"/>
+                </lightning:layoutItem>
+            </lightning:layout>   
+        </aura:if>
+        </aura:set>
+    <!-- </c:CC_ApplicationSummaryAccordian> -->
+    <!--  -->
+            
+        <aura:set attribute="accordianSection3">
+            <lightning:layout horizontalAlign="left" multipleRows="true">
+
+                <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12" padding="around-small">
+                    <table class="slds-table slds-table_bordered slds-max-medium-table_stacked-horizontal 
+                        slds-border_top slds-border_bottom slds-border_right slds-border_left">
+                        <thead>
+                            <tr class="slds-text-title_caps">
+                                <th scope="col">
+                                    <div class="slds-truncate" title="type">{!v.mapLabels.CC_Label_Services}</div>
+                                </th>
+                                <th scope="col" class="slds-text-align_center">
+                                    <div class="slds-truncate" title="comments">{!v.mapLabels.CC_Label_Getting_Service}</div>
+                                </th>
+                                <th scope="col" class="slds-text-align_center">
+                                    <div class="slds-truncate" title="Date">{!v.mapLabels.CC_Label_Service_Needed}</div>
+                                </th>
+                                
+                                <th scope="col">
+                                    {!v.mapLabels.CC_LBL_Program_Name}
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <aura:iteration items="{!v.lstAppDetailService}" var="serviceRec" indexVar="index">
+                                <tr>
+                                    <td data-label="SERVICE">
+                                        <div class="slds-truncate" title="">{!serviceRec.sServiceName}</div>
+                                    </td>
+                                    <td data-label="GETTING THE SERVICE" class="slds-text-align_center">
+                                        <aura:if isTrue="{!serviceRec.bGettingCurrently == true}"> 
+                                            <lightning:icon iconName="utility:check" variant="check" size="x-small"/>
+                                            <aura:set attribute="else">
+                                                <lightning:icon iconName="utility:close" variant="cross" size="x-small"/>
+                                            </aura:set>
+                                        </aura:if>
+                                    </td>
+                                    <td data-label="SERVICE NEEDED" class="slds-text-align_center">
+                                        <aura:if isTrue="{!serviceRec.bNeededInFuture  == true}"> 
+                                            <lightning:icon iconName="utility:check" variant="check" size="x-small"/>
+                                            <aura:set attribute="else">
+                                                <lightning:icon iconName="utility:close" variant="cross" size="x-small"/>
+                                            </aura:set>
+                                        </aura:if>
+                                    </td>
+                                    <td data-label="PROGRAM NAME">
+                                        <div class="slds-truncate" title="">{!serviceRec.sCurrentlyGettingProgramName}</div>
+                                    </td>
+                                </tr>
+                                </aura:iteration>
+                            </tbody>
+                        </table>
+                    </lightning:layoutItem>
+                </lightning:layout>
+            
+            <lightning:layout horizontalAlign="left" multipleRows="true">
+                <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12" padding="around-small">
+                     <c:CC_StaticContent label="{!v.mapLabels.CC_How_soon_are_the_services_needed}" text="{!v.objApp.CC_How_soon_services_needed__c}"/>
+                     
+                </lightning:layoutItem>
+                     <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12" padding="around-small">	
+                            <label class="slds-form-element__label slds-no-flex" >
+                                <b>{!v.mapLabels.CC_Service_WhyServiceNeeded}</b>
+                            </label>
+                            <br/>
+                            {!v.sShortWhyServiceNeeded}
+                            <aura:if isTrue="{!v.bIsLongText}">
+                                <a onclick="{!c.openCommentModal}">...</a>
+                            </aura:if>    
+                           <!--  <c:CC_StaticContent label="{!v.mapLabels.CC_Service_WhyServiceNeeded}" text="{!v.objApp.CC_Describe_why_services_are_needed__c}"/> -->
+                    </lightning:layoutItem>                  
+                <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12" padding="around-small">	
+                     <c:CC_StaticContent label="{!v.mapLabels.CC_Are_you_currently_on_waiting_list}" text="{!v.bIsWavierOnWaitingList}"/>
+                     
+                </lightning:layoutItem>
+             </lightning:layout>
+        </aura:set> 
+            
+            
+            
+        <aura:set attribute="accordianSection4">
+           <lightning:layout horizontalAlign="left" multipleRows="true">
+                <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12" padding="around-small">	
+                 
+                  <c:CC_StaticContent label="{!v.mapLabels.CC_Label_CurrentLiving}" text="{!v.objApp.CC_Where_does_the_individual_live__c}"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12" padding="around-small">	
+                  <c:CC_StaticContent label="{!v.mapLabels.CC_Label_IsCurrentLivingWorking}" text="{!v.bIsSituationWorking}"/>
+                </lightning:layoutItem>
+           </lightning:layout>
+        </aura:set>
+
+
+        <aura:set attribute="accordianSection5">
+                    <div class="slds-size_1-of-1">    
+                       <c:CC_DocumentUpload_DetailTable docDetailList="{!v.lstDocs}" mapLabels="{!v.mapLabels}" 
+                                aura:id="docGrid" bIsReadOnly="true"
+                                />
+                    </div>                    
+        </aura:set>
+</c:CC_ApplicationSummaryAccordian>
+
+        <div>
+            <c:CC_HeaderComponent Header1="{!v.mapLabels.CC_Label_E_Sign}"/>
+        </div>
+	   <lightning:layout horizontalAlign="left" multipleRows="true">
+            <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="12" 
+                    mediumDeviceSize="12" smallDeviceSize="12" padding="around-small">       
+                <lightning:input type="checkbox" 
+                                 aura:id="onApplicantsBehalf" 
+                                 label="{!v.mapLabels.CC_Label_Behalf_of_Applicant}" 
+                                 name="onApplicantsBehalf" 
+                                 checked="{!v.bOnBehalfApplicant}"
+                                 class="{!and(v.bIsError, !(v.bOnBehalfApplicant))? 'slds-has-error required-asterisk-control':'required-asterisk-control'}"/>                       
+            </lightning:layoutItem>
+        </lightning:layout>
+
+        <lightning:layout horizontalAlign="left" multipleRows="true">
+            <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="12" 
+                    mediumDeviceSize="12" smallDeviceSize="12" padding="around-small">       
+                <lightning:input type="checkbox" 
+                                 aura:id="correctInfo" 
+                                 label="{!v.mapLabels.CC_Label_Correct_Information}" 
+                                 name="correctInfo" 
+                                 checked="{!v.bCorrectInfo}"
+                                 class="{!and(v.bIsError, !(v.bCorrectInfo))? 'slds-has-error required-asterisk-control':'required-asterisk-control'}"/>                         
+            </lightning:layoutItem>
+        </lightning:layout>
+
+        <lightning:layout horizontalAlign="left" multipleRows="true">
+            <lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="12" 
+                    mediumDeviceSize="12" smallDeviceSize="12" padding="around-small">       
+                <lightning:input type="checkbox" 
+                                 aura:id="signatureReceived" 
+                                 label="{!v.mapLabels.CC_Label_Hard_Signature_Received}" 
+                                 name="signatureReceived" 
+                                 checked="{!v.bSignatureReceived}"
+                                 class="{!and(v.bIsError, !(v.bSignatureReceived))? 'slds-has-error required-asterisk-control':'required-asterisk-control'}"/>                       
+            </lightning:layoutItem>
+        </lightning:layout>
+
+        <lightning:layout horizontalAlign="left" multipleRows="true">
+        	<lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12" padding="around-small">
+        		<lightning:input type="String" 
+        						 name="FirstName" 
+        						 aura:id="FirstName" 
+        						 label="{!v.mapLabels.CC_LBL_FirstName}" 
+                             	 value="{!v.sFirstName}"
+                             	 class="{!(v.bIsFirstNameError)? 'slds-has-error required-asterisk':'required-asterisk'}"/>
+            </lightning:layoutItem>		
+        </lightning:layout>	
+
+        <lightning:layout horizontalAlign="left" multipleRows="true">
+        	<lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12" padding="around-small">
+        		<lightning:input type="String" 
+        						 name="MiddleName" 
+        						 aura:id="MiddleName" 
+        						 label="{!v.mapLabels.CC_LBL_Middle_Initial}" 
+                             	 value="{!v.sMiddleName}"
+                             	 maxlength="1"
+                             	 class="{!(v.bIsMiddleNameError)? 'slds-has-error':''}"
+      							 />
+            </lightning:layoutItem>		
+        </lightning:layout>	
+
+         <lightning:layout horizontalAlign="left" multipleRows="true">
+        	<lightning:layoutItem flexibility="grow"  size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12" padding="around-small">
+        		<lightning:input type="String" 
+        						 name="LastName" 
+        						 aura:id="LastName" 
+        						 label="{!v.mapLabels.CC_LBL_LastName}" 
+                             	 value="{!v.sLastName}"
+                             	 class="{!(v.bIsLastNameError)? 'slds-has-error required-asterisk':'required-asterisk'}"
+      							 />
+            </lightning:layoutItem>		
+        </lightning:layout>	
+
+         <lightning:layout horizontalAlign="left" multipleRows="true">
+		    <lightning:layoutItem flexibility="grow" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12" padding="around-small">
+				<lightning:select name="Suffix" 
+								  label="{!v.mapLabels.CC_LBL_Suffix}" 
+								  value="{!v.sSuffix}"
+								  class="{!(v.bIsSuffixError)? 'slds-has-error':''}">
+							<aura:iteration items="{!v.lstSuffix}" var="item">
+								<option text="{!item.sValue}" value="{!item.sKey}" selected="{!item.selected}"/>
+							</aura:iteration>
+				</lightning:select>
+			</lightning:layoutItem>	
+    	</lightning:layout>
+        
+    </aura:component>

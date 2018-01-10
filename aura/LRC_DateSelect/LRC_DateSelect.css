@@ -1,0 +1,6 @@
+.THIS.slds-select_container:before{
+	transform:rotate(90deg);
+}
+.THIS.slds-select_container:after{
+	transform:rotate(-90deg);
+}

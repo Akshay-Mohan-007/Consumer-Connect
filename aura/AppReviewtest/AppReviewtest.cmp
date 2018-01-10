@@ -1,0 +1,77 @@
+<!--
+ ***************************************************************************************************************************************
+ * NAME   : CC_ApplicationReview
+ * DESCRIPTION  : Container class for Application review
+ *    
+ * @AUTHOR   : Nidhin V K
+ * @DATE   : 11-27-2017
+ *
+ * MODIFICATION LOG:  
+ * ______________________________________________________________________________________________________________________________________
+ * DEVELOPER                DATE                DESCRIPTION 
+ * ______________________________________________________________________________________________________________________________________
+ * Nidhin V K               11-27-2017          Initial version        
+ *
+ ****************************************************************************************************************************************
+-->
+<aura:component access="global" extends="c:CC_BaseSuperComponent" controller="CC_ApplicationContainer_Controller"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction">
+    
+    <aura:attribute name="bIsReadOnly" type="Boolean" default="true" />
+    <aura:attribute name="selectedTab" type="String" description="The list of sections and their items." default="CC_FileUpload_Component"/>
+    <aura:attribute name="navigationData" type="Object" description="The list of sections and their items." />
+    <aura:attribute name="bPageLoaded" type="Boolean" default="false" />
+    <aura:attribute name="sContactId" type="String" />
+    <aura:attribute name="sAppId" type="String" default="a0B18000002aSJj"  />
+    <aura:attribute name="sCompleteIcon" type="String"  />
+    <aura:attribute name="sIncompleteIcon" type="String"  />
+    <aura:attribute name="mapLabels" type="Map"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>  
+    <aura:handler name="saveDetails" event="c:CC_Left_Navigator_Event" action="{!c.saveAndChangeTab}" />
+    <aura:handler name="navigateToTab" event="c:CC_Left_Navigator_Event" action="{!c.navigateTo}" />
+    
+    
+    
+     <div class="slds-grid slds-wrap slds-grid_pull-padded">
+        <div class="slds-p-horizontal_small slds-size_1-of-1">
+            <div class="slds-text-heading_large">{!v.mapLabels.CC_Application_Review}</div>
+        </div>
+        <aura:if isTrue="{! v.bPageLoaded}">
+            <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_1-of-6 slds-large-size_3-of-12">
+                <c:CC_Left_Navigator sAppId="{!v.sAppId}" selectedTab="{!v.selectedTab}" navigationData="{!v.navigationData}" />
+            </div>
+            <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_5-of-6 slds-large-size_9-of-12">
+                
+              
+                
+                <aura:if isTrue="{! v.selectedTab == 'CC_FileUpload_Component' ? 'true' : ''}">
+                    <c:CC_FileUpload_Component aura:id="CC_FileUpload_Component" masterRecordId="{!v.sAppId}" lookupField="Application__c"
+                                               validator="CC_ApplicationDocumentUpload_Validator" module="{!v.mapLabels.CC_MODULE}"
+                                               bDoReview="{!v.bIsReadOnly}"/>
+                </aura:if>
+                <aura:if isTrue="{! v.selectedTab == 'CC_LivingSituation' ? 'true' : ''}">
+                    <c:CC_LivingSituation aura:id="CC_LivingSituation" sAppId="{!v.sAppId}" bIsReadOnly="{!v.bIsReadOnly}" />
+                    
+                </aura:if>
+              <!-- <aura:if isTrue="{! v.selectedTab == 'CC_WaiverConfirmation' ? 'true' : ''}">
+                    <c:CC_WaiverConfirmation aura:id="CC_WaiverConfirmation" sAppId="{!v.sAppId}" />
+                </aura:if> -->
+                <div class="slds-grid slds-grid_align-right slds-p-left_small slds-p-top_medium">
+                    <aura:if isTrue="{! v.selectedTab != 'CC_ContactInformation' ? 'true' : ''}">
+                    	<lightning:button class="back-button"  label="{!v.mapLabels.CC_Back_Button}" onclick="{!c.back}"/>
+                    </aura:if>
+                    <lightning:button variant="neutral" label="{!v.mapLabels.CC_Save_Exit}" onclick="{!c.save}"/>
+                    <aura:if isTrue="{! v.selectedTab != 'CC_WaiverConfirmation' ? 'true' : ''}">
+                    	<lightning:button variant="brand" label="{!v.mapLabels.CC_Next_Button}" onclick="{!c.next}" />
+                        <aura:set attribute="else">
+                            <lightning:button variant="brand" label="{!v.mapLabels.CC_Contact_SubmitButton}" onclick="{!c.submit}" />
+                        </aura:set>
+                    </aura:if>
+                </div>
+            </div>
+        </aura:if>
+    </div>
+    
+    
+</aura:component>
